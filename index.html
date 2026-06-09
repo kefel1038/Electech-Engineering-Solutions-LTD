@@ -3,823 +3,541 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Electech Engineering Solutions Ltd - Engineering Innovation. Powering Possibilities. Electrical, Telecommunications, Renewable Energy, ICT, Automation solutions in Uganda and East Africa." />
-  <meta name="keywords" content="Engineering Company Uganda, Electrical Engineering Uganda, Solar Energy Uganda, Telecommunications Uganda, ICT Solutions Uganda, Automation Company Uganda, Electronics Engineering Uganda, Renewable Energy Uganda, Engineering Consultancy Uganda, Technology Solutions Uganda" />
-  <meta name="author" content="Electech Engineering Solutions Ltd" />
-  <meta property="og:title" content="Electech Engineering Solutions Ltd | Engineering Innovation. Powering Possibilities." />
-  <meta property="og:description" content="Delivering cutting-edge engineering, energy, telecommunications, automation, and digital transformation solutions across Uganda and East Africa." />
-  <meta property="og:type" content="website" />
-  <title>Electech Engineering Solutions Ltd | Engineering Innovation. Powering Possibilities.</title>
-
+  <title>Electech Engineering Solutions Ltd | Electrical, Solar, Telecom & Automation Experts</title>
+  <meta name="description" content="Electech Engineering Solutions Ltd delivers electrical engineering, renewable energy, telecommunications, ICT, and automation solutions across Uganda and East Africa." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="icon" type="image/png" href="img/startup%20logo.jpg" />
 </head>
 <body>
 
-<!-- Top Bar -->
-<div class="top-bar">
-  <div class="container">
-    <div class="top-bar-left">
-      <a href="tel:+256787531336"><i class="fas fa-phone"></i> +256 787 531 336</a>
-      <a href="mailto:kefel1038@gmail.com"><i class="fas fa-envelope"></i> kefel1038@gmail.com</a>
-      <span><i class="fas fa-map-marker-alt"></i> Mugema Road, Kampala, Uganda</span>
-    </div>
-    <div class="top-bar-right">
-      <div class="top-bar-social">
-        <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="#" target="_blank" title="X/Twitter"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-      </div>
-      <button class="theme-toggle" id="themeToggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
-    </div>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="header" id="header">
+<!-- ===== NAVIGATION ===== -->
+<header class="site-header" id="siteHeader">
   <div class="container">
     <nav class="navbar">
-      <a href="index.html" class="nav-brand">
-        <img src="img/startup%20logo.jpg" alt="Electech Engineering Solutions Ltd" class="nav-logo" />
-        <div class="nav-brand-text">
-          <span class="nav-brand-name">Electech</span>
-          <span class="nav-brand-tagline">Engineering Solutions Ltd</span>
-        </div>
+      <a href="index.html" class="logo">
+        <img src="img/startup%20logo.jpg" alt="Electech Engineering Solutions" class="logo-img" />
+        <span class="logo-text">ELECTECH</span>
       </a>
       <ul class="nav-menu" id="navMenu">
-        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-        <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <a href="#contact" class="btn btn-primary btn-sm nav-cta"><i class="fas fa-paper-plane"></i> Get a Quote</a>
+      <a href="#contact" class="btn btn-accent btn-sm nav-cta"><i class="fas fa-file-invoice"></i> Get a Quote</a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
   </div>
 </header>
 
-<!-- Hero Section -->
+<!-- ===== HERO ===== -->
 <section class="hero" id="home">
-  <div class="hero-canvas" id="heroCanvas"></div>
+  <div class="hero-bg-grid"></div>
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
-      <div class="hero-badge"><span class="dot-pulse"></span> Electrical | Solar | Telecom | Automation</div>
-      <h1 class="hero-title">Engineering Solutions <span class="gradient-text">for Uganda</span> &amp; East Africa</h1>
-      <p class="hero-subtitle">Electech delivers reliable electrical, renewable energy, telecommunications, and automation solutions — designed for local conditions, backed by international standards.</p>
+      <div class="hero-badge"><span class="dot-pulse"></span> Electrical &middot; Solar &middot; Telecom &middot; Automation</div>
+      <h1 class="hero-title">Engineering Africa's Future <span class="gradient-text">Through Innovation, Energy</span> &amp; Technology</h1>
+      <p class="hero-subtitle">Providing Electrical Engineering, Renewable Energy, Telecommunications, ICT Infrastructure, Industrial Automation, and Smart Technology Solutions Across Uganda and East Africa.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary btn-lg"><i class="fas fa-clipboard-list"></i> Request a Site Survey</a>
-        <a href="#services" class="btn btn-outline btn-lg"><i class="fas fa-cogs"></i> Our Services</a>
+        <a href="#contact" class="btn btn-accent btn-lg"><i class="fas fa-clipboard-list"></i> Request Site Survey</a>
+        <a href="#projects" class="btn btn-outline btn-lg"><i class="fas fa-project-diagram"></i> View Our Projects</a>
       </div>
-      <div class="hero-stats">
-        <div><span class="hero-stat-value">85+</span><span class="hero-stat-label">Projects Completed</span></div>
-        <div><span class="hero-stat-value">52+</span><span class="hero-stat-label">Clients Served</span></div>
-        <div><span class="hero-stat-value">12MW</span><span class="hero-stat-label">Energy Delivered</span></div>
-        <div><span class="hero-stat-value">8+</span><span class="hero-stat-label">Years Experience</span></div>
+      <div class="hero-trust">
+        <span><i class="fas fa-check-circle"></i> Registered Engineering Company</span>
+        <span><i class="fas fa-check-circle"></i> Renewable Energy Specialists</span>
+        <span><i class="fas fa-check-circle"></i> ICT &amp; Telecom Experts</span>
+        <span><i class="fas fa-check-circle"></i> Industry Professionals</span>
       </div>
     </div>
   </div>
-  <div class="hero-scroll-indicator">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
+  <div class="hero-scroll"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- ===== TRUST LOGO MARQUEE ===== -->
+<section class="trust-marquee">
+  <div class="container">
+    <p class="trust-marquee-label">Trusted By Organizations Across Uganda</p>
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <span class="marquee-logo">Ministry of Energy</span>
+        <span class="marquee-logo">UECCC</span>
+        <span class="marquee-logo">UMEME</span>
+        <span class="marquee-logo">MTN Uganda</span>
+        <span class="marquee-logo">Airtel Uganda</span>
+        <span class="marquee-logo">Makerere University</span>
+        <span class="marquee-logo">UNRA</span>
+        <span class="marquee-logo">NWSC</span>
+        <span class="marquee-logo">Ministry of Energy</span>
+        <span class="marquee-logo">UECCC</span>
+        <span class="marquee-logo">UMEME</span>
+        <span class="marquee-logo">MTN Uganda</span>
+        <span class="marquee-logo">Airtel Uganda</span>
+        <span class="marquee-logo">Makerere University</span>
+        <span class="marquee-logo">UNRA</span>
+        <span class="marquee-logo">NWSC</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- About Section -->
+<!-- ===== ABOUT ===== -->
 <section class="about-section section-py" id="about">
   <div class="container">
-    <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-building"></i> Who We Are</span>
-      <h2 class="section-title">Engineering Innovation. Powering Possibilities.</h2>
-      <p class="section-subtitle">Electech Engineering Solutions Ltd is a technology-driven engineering company committed to providing innovative solutions in electrical systems, telecommunications, renewable energy, industrial automation, ICT infrastructure, and smart technologies. We empower organizations and communities through reliable engineering systems designed for today's needs and tomorrow's opportunities.</p>
-    </div>
     <div class="about-grid">
-      <div class="about-card reveal">
-        <div class="about-card-icon"><i class="fas fa-bullseye"></i></div>
-        <h3>Our Mission</h3>
-        <p>To deliver innovative, reliable, and sustainable engineering and technology solutions that improve lives, businesses, and communities across Africa.</p>
+      <div class="about-image reveal-left">
+        <div class="about-image-frame">
+          <img src="img/founder%20image.png" alt="Eng Lubega Felix Ken - Founder & CEO" />
+        </div>
+        <div class="about-image-card">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Est. 2018</span>
+        </div>
       </div>
-      <div class="about-card reveal">
-        <div class="about-card-icon"><i class="fas fa-eye"></i></div>
-        <h3>Our Vision</h3>
-        <p>To become East Africa's leading engineering and technology solutions company, driving innovation, industrial transformation, and sustainable development.</p>
-      </div>
-      <div class="about-card reveal">
-        <div class="about-card-icon"><i class="fas fa-handshake"></i></div>
-        <h3>Our Values</h3>
-        <p>Innovation, Integrity, Excellence, Professionalism, Reliability, Sustainability, Customer Focus, Continuous Learning.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Founder & Company Story -->
-<section class="founder-section section-py">
-  <div class="container">
-    <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-user-tie"></i> Our Story</span>
-      <h2 class="section-title">Founded on Expertise &amp; Passion</h2>
-      <p class="section-subtitle">From a vision to transform Uganda's engineering landscape, Electech was built by engineers who understand the challenges and opportunities of African infrastructure.</p>
-    </div>
-    <div class="founder-grid">
-      <div class="founder-content reveal-left">
-        <div class="founder-profile">
-          <img src="img/founder%20image.png" alt="Eng Lubega Felix Ken - Founder & CEO" class="founder-photo" />
-          <div class="founder-profile-info">
-            <h3>Eng Lubega Felix Ken</h3>
-            <span>Founder & CEO</span>
-            <div class="founder-creds">BSc. Electrical Eng., Dip. TelecomEng</div>
+      <div class="about-content reveal-right">
+        <span class="badge"><i class="fas fa-building"></i> About Electech</span>
+        <h2 class="section-title left">Engineering Innovation. Powering Possibilities.</h2>
+        <p>Electech Engineering Solutions Ltd was established by a team of experienced engineers with a clear mission: to deliver world-class engineering solutions tailored to the unique needs of East Africa.</p>
+        <p>Our founder, Eng. Lubega Felix Ken, recognised a gap in the market for a company that combines international engineering standards with deep local knowledge. Today, we serve government institutions, private enterprises, and development organisations across the region.</p>
+        <div class="about-cards">
+          <div class="about-mini-card">
+            <i class="fas fa-bullseye"></i>
+            <h4>Mission</h4>
+            <p>To deliver innovative, reliable, and sustainable engineering solutions that improve lives across Africa.</p>
+          </div>
+          <div class="about-mini-card">
+            <i class="fas fa-eye"></i>
+            <h4>Vision</h4>
+            <p>To become East Africa's leading engineering and technology solutions company.</p>
+          </div>
+          <div class="about-mini-card">
+            <i class="fas fa-handshake"></i>
+            <h4>Values</h4>
+            <p>Innovation, Integrity, Excellence, Professionalism, Sustainability.</p>
           </div>
         </div>
-        <p class="founder-intro">Electech Engineering Solutions Ltd was established by a team of experienced engineers with a clear mission: to deliver world-class engineering solutions tailored to the unique needs of East Africa.</p>
-        <p>Our founder, Eng. Lubega Felix Ken, recognised a gap in the market for a company that combines international engineering standards with deep local knowledge and practical innovation.</p>
-        <p>What began as a specialised electrical consultancy has evolved into a multidisciplinary engineering firm serving government institutions, private enterprises, NGOs, and community development projects.</p>
-        <p>Today, Electech delivers solutions in electrical engineering, telecommunications, renewable energy, automation, ICT infrastructure, and technology innovation — maintaining a strong commitment to quality, safety, sustainability, and excellence.</p>
-        <div class="founder-philosophy">
-          <div class="philosophy-item"><i class="fas fa-check-circle"></i><span>Hands-on engineering leadership in every project</span></div>
-          <div class="philosophy-item"><i class="fas fa-check-circle"></i><span>Deep understanding of local regulatory and operational context</span></div>
-          <div class="philosophy-item"><i class="fas fa-check-circle"></i><span>Long-term partnerships built on trust and delivery</span></div>
-        </div>
-      </div>
-      <div class="founder-highlights reveal-right">
-        <div class="founder-stat-card">
-          <i class="fas fa-calendar-alt"></i>
-          <span class="founder-stat-num">2018</span>
-          <span class="founder-stat-label">Year Founded</span>
-        </div>
-        <div class="founder-stat-card">
-          <i class="fas fa-users"></i>
-          <span class="founder-stat-num">35+</span>
-          <span class="founder-stat-label">Team Members</span>
-        </div>
-        <div class="founder-stat-card">
-          <i class="fas fa-globe-africa"></i>
-          <span class="founder-stat-num">4</span>
-          <span class="founder-stat-label">Countries Served</span>
-        </div>
-        <div class="founder-stat-card">
-          <i class="fas fa-trophy"></i>
-          <span class="founder-stat-num">20+</span>
-          <span class="founder-stat-label">Industry Awards</span>
-        </div>
+        <a href="#contact" class="btn btn-accent"><i class="fas fa-arrow-right"></i> Learn More</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Services Section -->
+<!-- ===== SERVICES ===== -->
 <section class="services-section section-py" id="services">
   <div class="container">
     <div class="section-header text-center reveal">
       <span class="badge"><i class="fas fa-cogs"></i> Our Services</span>
       <h2 class="section-title">Comprehensive Engineering Solutions</h2>
-      <p class="section-subtitle">From electrical systems to digital transformation, we deliver end-to-end engineering services that power progress.</p>
+      <p class="section-subtitle">From power systems to digital infrastructure, we deliver end-to-end engineering services across East Africa.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal" data-service="electrical">
-        <div class="service-card-bg"></div>
         <div class="service-icon"><i class="fas fa-bolt"></i></div>
         <h3>Electrical Engineering</h3>
-        <p>Power systems, installations, audits, and maintenance.</p>
-        <a href="#contact" class="service-link">Consult Us <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card reveal" data-service="telecom">
-        <div class="service-card-bg"></div>
-        <div class="service-icon"><i class="fas fa-satellite-dish"></i></div>
-        <h3>Telecommunications</h3>
-        <p>Fiber optics, wireless, and network infrastructure deployment.</p>
-        <a href="#contact" class="service-link">Consult Us <i class="fas fa-arrow-right"></i></a>
+        <p>Power system design, installations, substations, distribution, audits, and maintenance.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="service-card reveal" data-service="energy">
-        <div class="service-card-bg"></div>
         <div class="service-icon"><i class="fas fa-solar-panel"></i></div>
         <h3>Renewable Energy</h3>
-        <p>Solar design, hybrid power, storage, and off-grid solutions.</p>
-        <a href="#contact" class="service-link">Consult Us <i class="fas fa-arrow-right"></i></a>
+        <p>Solar design, hybrid power, energy storage, off-grid solutions, and energy management.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card reveal" data-service="telecom">
+        <div class="service-icon"><i class="fas fa-satellite-dish"></i></div>
+        <h3>Telecommunications</h3>
+        <p>Fiber optics, wireless networks, tower deployment, and communication infrastructure.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="service-card reveal" data-service="ict">
-        <div class="service-card-bg"></div>
         <div class="service-icon"><i class="fas fa-network-wired"></i></div>
-        <h3>ICT & Digital Infrastructure</h3>
-        <p>Networking, cloud, cybersecurity, and data centers.</p>
-        <a href="#contact" class="service-link">Consult Us <i class="fas fa-arrow-right"></i></a>
+        <h3>ICT Infrastructure</h3>
+        <p>Networking, data centers, cloud systems, cybersecurity, and digital transformation.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="service-card reveal" data-service="automation">
-        <div class="service-card-bg"></div>
         <div class="service-icon"><i class="fas fa-robot"></i></div>
         <h3>Industrial Automation</h3>
-        <p>PLC, SCADA, IoT, and smart monitoring systems.</p>
-        <a href="#contact" class="service-link">Consult Us <i class="fas fa-arrow-right"></i></a>
+        <p>PLC, SCADA, IoT, smart monitoring, and industrial control systems.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="service-card reveal" data-service="electronics">
-        <div class="service-card-bg"></div>
         <div class="service-icon"><i class="fas fa-microchip"></i></div>
-        <h3>Electronics & Embedded Systems</h3>
-        <p>PCB design, IoT devices, and embedded development.</p>
-        <a href="#contact" class="service-link">Consult Us <i class="fas fa-arrow-right"></i></a>
+        <h3>Electronics &amp; Embedded</h3>
+        <p>PCB design, embedded development, IoT devices, and smart products.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="service-card reveal" data-service="rd">
-        <div class="service-card-bg"></div>
         <div class="service-icon"><i class="fas fa-flask"></i></div>
-        <h3>Research & Development</h3>
-        <p>Product development, prototyping, and technology incubation.</p>
-        <a href="#contact" class="service-link">Consult Us <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card reveal" data-service="consulting">
-        <div class="service-card-bg"></div>
-        <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
-        <h3>Technical Consultancy</h3>
-        <p>Feasibility studies, project management, and audits.</p>
-        <a href="#contact" class="service-link">Consult Us <i class="fas fa-arrow-right"></i></a>
+        <h3>Research &amp; Innovation</h3>
+        <p>Product development, prototyping, technology incubation, and STEM training.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Trust Badges -->
-<section class="trust-section">
-  <div class="container">
-    <div class="trust-grid reveal">
-      <div class="trust-item"><i class="fas fa-check-circle"></i> Registered Ugandan Company</div>
-      <div class="trust-item"><i class="fas fa-check-circle"></i> Certified Engineering Professionals</div>
-      <div class="trust-item"><i class="fas fa-check-circle"></i> Renewable Energy Specialists</div>
-      <div class="trust-item"><i class="fas fa-check-circle"></i> Telecom &amp; ICT Experts</div>
-      <div class="trust-item"><i class="fas fa-check-circle"></i> Local Support &amp; Maintenance</div>
-      <div class="trust-item"><i class="fas fa-check-circle"></i> ISO &amp; Industry Certified</div>
-    </div>
-  </div>
-</section>
-
-<!-- Why Choose Us -->
+<!-- ===== WHY ELECTECH ===== -->
 <section class="why-section section-py">
   <div class="container">
     <div class="section-header text-center reveal">
       <span class="badge"><i class="fas fa-star"></i> Why Electech</span>
       <h2 class="section-title">Built for Excellence</h2>
-      <p class="section-subtitle">What sets us apart in the engineering and technology landscape.</p>
+      <p class="section-subtitle">What sets us apart in East Africa's engineering landscape.</p>
     </div>
     <div class="why-grid">
-      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-certificate"></i></div><h3>Engineering Expertise</h3><p>Deep technical knowledge across multiple engineering disciplines with proven project delivery.</p></div>
-      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-lightbulb"></i></div><h3>Innovative Solutions</h3><p>Cutting-edge technology and creative problem-solving for complex engineering challenges.</p></div>
-      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-user-tie"></i></div><h3>Certified Professionals</h3><p>Qualified engineers and technicians with industry certifications and continuous training.</p></div>
-      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-headset"></i></div><h3>Reliable Support</h3><p>24/7 technical support and maintenance services to ensure uninterrupted operations.</p></div>
-      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-microchip"></i></div><h3>Modern Technologies</h3><p>Leveraging the latest tools, software, and methodologies for optimal outcomes.</p></div>
-      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-hand-holding-usd"></i></div><h3>Affordable Excellence</h3><p>World-class engineering solutions at competitive rates tailored to local markets.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-certificate"></i></div><h3>Engineering Expertise</h3><p>Deep technical knowledge across multiple disciplines with proven delivery.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-headset"></i></div><h3>Reliable Support</h3><p>24/7 technical support and maintenance services for uninterrupted operations.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-lightbulb"></i></div><h3>Innovation Driven</h3><p>Cutting-edge technology and creative problem-solving for complex challenges.</p></div>
       <div class="why-card reveal"><div class="why-icon"><i class="fas fa-leaf"></i></div><h3>Sustainable Solutions</h3><p>Environmentally responsible engineering that promotes long-term sustainability.</p></div>
-      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-smile"></i></div><h3>Customer-Centered</h3><p>Your goals drive our approach. We listen, adapt, and deliver what matters most.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-check-double"></i></div><h3>Quality Assurance</h3><p>Rigorous quality control and adherence to international engineering standards.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><i class="fas fa-user-tie"></i></div><h3>Experienced Team</h3><p>Qualified engineers with industry certifications and continuous training.</p></div>
     </div>
   </div>
 </section>
 
-<!-- Industries -->
-<section class="industries-section section-py">
+<!-- ===== STATISTICS ===== -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal"><span class="stat-number" data-target="85">0</span><span class="stat-label">Projects Completed</span></div>
+      <div class="stat-item reveal"><span class="stat-number" data-target="52">0</span><span class="stat-label">Clients Served</span></div>
+      <div class="stat-item reveal"><span class="stat-number" data-target="35">0</span><span class="stat-label">Engineers &amp; Technicians</span></div>
+      <div class="stat-item reveal"><span class="stat-number" data-target="12">0</span><span class="stat-label">Solar Capacity (MW)</span></div>
+      <div class="stat-item reveal"><span class="stat-number" data-target="200">0</span><span class="stat-label">Networks Deployed</span></div>
+      <div class="stat-item reveal"><span class="stat-number" data-target="8">0</span><span class="stat-label">Years of Experience</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED PROJECTS ===== -->
+<section class="projects-section section-py" id="projects">
   <div class="container">
     <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-industry"></i> Industries We Serve</span>
-      <h2 class="section-title">Serving Key Sectors</h2>
-      <p class="section-subtitle">Our engineering solutions power diverse industries across Uganda and East Africa.</p>
+      <span class="badge"><i class="fas fa-project-diagram"></i> Featured Projects</span>
+      <h2 class="section-title">Delivering Results Across East Africa</h2>
+      <p class="section-subtitle">Real projects. Real impact. From rural solar electrification to industrial automation.</p>
     </div>
-    <div class="industries-grid">
-      <div class="industry-item reveal"><i class="fas fa-graduation-cap"></i><span>Education</span></div>
-      <div class="industry-item reveal"><i class="fas fa-hospital"></i><span>Healthcare</span></div>
-      <div class="industry-item reveal"><i class="fas fa-industry"></i><span>Manufacturing</span></div>
-      <div class="industry-item reveal"><i class="fas fa-seedling"></i><span>Agriculture</span></div>
-      <div class="industry-item reveal"><i class="fas fa-landmark"></i><span>Government</span></div>
-      <div class="industry-item reveal"><i class="fas fa-satellite-dish"></i><span>Telecommunications</span></div>
-      <div class="industry-item reveal"><i class="fas fa-bolt"></i><span>Energy</span></div>
-      <div class="industry-item reveal"><i class="fas fa-hand-holding-heart"></i><span>NGOs</span></div>
-      <div class="industry-item reveal"><i class="fas fa-university"></i><span>Financial Institutions</span></div>
-      <div class="industry-item reveal"><i class="fas fa-city"></i><span>Smart Cities</span></div>
+    <div class="project-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="solar">Solar</button>
+      <button class="filter-btn" data-filter="electrical">Electrical</button>
+      <button class="filter-btn" data-filter="telecom">Telecom</button>
+      <button class="filter-btn" data-filter="automation">Automation</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal" data-category="solar">
+        <div class="project-image" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+          <i class="fas fa-solar-panel"></i>
+          <span class="project-badge">Solar</span>
+        </div>
+        <div class="project-info">
+          <h3>Rural Solar Electrification Program</h3>
+          <span class="project-location"><i class="fas fa-map-marker-alt"></i> Eastern Uganda</span>
+          <p>Design and installation of 500kW off-grid solar systems for 20 rural communities, including battery storage and distribution networks.</p>
+          <a href="#contact" class="project-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card reveal" data-category="electrical">
+        <div class="project-image" style="background: linear-gradient(135deg, #0f3460, #16213e);">
+          <i class="fas fa-bolt"></i>
+          <span class="project-badge">Electrical</span>
+        </div>
+        <div class="project-info">
+          <h3>Industrial Plant Electrical Systems</h3>
+          <span class="project-location"><i class="fas fa-map-marker-alt"></i> Kampala Industrial Park</span>
+          <p>Complete electrical design, switchgear installation, and power distribution for a 50,000 sqm manufacturing facility.</p>
+          <a href="#contact" class="project-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card reveal" data-category="telecom">
+        <div class="project-image" style="background: linear-gradient(135deg, #1a1a2e, #0f3460);">
+          <i class="fas fa-satellite-dish"></i>
+          <span class="project-badge">Telecom</span>
+        </div>
+        <div class="project-info">
+          <h3>National Fiber Optic Backbone</h3>
+          <span class="project-location"><i class="fas fa-map-marker-alt"></i> National Coverage</span>
+          <p>Deployment of 200+ km of fiber optic cable, including tower installations and last-mile connectivity for underserved districts.</p>
+          <a href="#contact" class="project-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card reveal" data-category="automation">
+        <div class="project-image" style="background: linear-gradient(135deg, #16213e, #1a1a2e);">
+          <i class="fas fa-robot"></i>
+          <span class="project-badge">Automation</span>
+        </div>
+        <div class="project-info">
+          <h3>Water Treatment Plant Automation</h3>
+          <span class="project-location"><i class="fas fa-map-marker-alt"></i> Jinja, Uganda</span>
+          <p>SCADA system design and PLC integration for a municipal water treatment facility serving 500,000+ residents.</p>
+          <a href="#contact" class="project-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card reveal" data-category="solar">
+        <div class="project-image" style="background: linear-gradient(135deg, #0f3460, #1a1a2e);">
+          <i class="fas fa-solar-panel"></i>
+          <span class="project-badge">Solar</span>
+        </div>
+        <div class="project-info">
+          <h3>Commercial Solar Hybrid System</h3>
+          <span class="project-location"><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</span>
+          <p>1.2MW hybrid solar installation for a major commercial complex with battery backup and grid-tie integration.</p>
+          <a href="#contact" class="project-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card reveal" data-category="electrical">
+        <div class="project-image" style="background: linear-gradient(135deg, #16213e, #0f3460);">
+          <i class="fas fa-bolt"></i>
+          <span class="project-badge">Electrical</span>
+        </div>
+        <div class="project-info">
+          <h3>Hospital Power Reliability Project</h3>
+          <span class="project-location"><i class="fas fa-map-marker-alt"></i> Multiple Sites</span>
+          <p>Backup power systems, UPS installation, and electrical upgrades for 5 regional hospitals ensuring critical care continuity.</p>
+          <a href="#contact" class="project-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Team Section -->
+<!-- ===== INNOVATION HUB ===== -->
+<section class="innovation-section section-py">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="badge"><i class="fas fa-microchip"></i> Innovation Hub</span>
+      <h2 class="section-title">Driving Technology Forward</h2>
+      <p class="section-subtitle">Where engineering meets innovation — research, development, and training for tomorrow's challenges.</p>
+    </div>
+    <div class="innovation-grid">
+      <div class="innovation-card reveal"><i class="fas fa-flask"></i><h3>Research</h3><p>Applied engineering research focused on local challenges and practical solutions.</p></div>
+      <div class="innovation-card reveal"><i class="fas fa-wifi"></i><h3>IoT Development</h3><p>Connected devices and smart monitoring systems for industry and agriculture.</p></div>
+      <div class="innovation-card reveal"><i class="fas fa-tractor"></i><h3>Smart Agriculture</h3><p>Technology-driven farming solutions for improved yields and resource efficiency.</p></div>
+      <div class="innovation-card reveal"><i class="fas fa-robot"></i><h3>Robotics</h3><p>Automation and robotic systems for industrial and educational applications.</p></div>
+      <div class="innovation-card reveal"><i class="fas fa-microchip"></i><h3>Embedded Systems</h3><p>Custom hardware and firmware development for specialized applications.</p></div>
+      <div class="innovation-card reveal"><i class="fas fa-graduation-cap"></i><h3>STEM Training</h3><p>Practical engineering training programs for students and professionals.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section section-py">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="badge"><i class="fas fa-quote-left"></i> Testimonials</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+    </div>
+    <div class="testimonial-carousel">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Electech delivered our solar installation on time and within budget. Professional team with exceptional technical knowledge."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#FF6B00;">DK</div>
+            <div><strong>David K.</strong><span>Operations Manager, Manufacturing Co.</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Their telecommunications network design transformed our connectivity. Reliable, fast, and cost-effective. Highly recommended."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#1a1a2e;">SN</div>
+            <div><strong>Sarah N.</strong><span>Director, Telecom NGO</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"The automation system Electech installed at our plant improved efficiency by 40%. Their after-sales support is outstanding."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#FF6B00;">JM</div>
+            <div><strong>James M.</strong><span>Plant Manager, Agro-Processing</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"From electrical design to commissioning, Electech demonstrated true professionalism. A partner we trust for all our engineering needs."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar" style="background:#1a1a2e;">PO</div>
+            <div><strong>Peter O.</strong><span>CEO, Construction Firm</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="testimonial-arrow prev" id="testPrev"><i class="fas fa-chevron-left"></i></button>
+        <div class="testimonial-dots" id="testDots"></div>
+        <button class="testimonial-arrow next" id="testNext"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
 <section class="team-section section-py">
   <div class="container">
     <div class="section-header text-center reveal">
       <span class="badge"><i class="fas fa-users"></i> Our Team</span>
-      <h2 class="section-title">Meet the Leadership</h2>
-      <p class="section-subtitle">Experienced engineers and industry professionals driving innovation and excellence across every project.</p>
+      <h2 class="section-title">Meet the People Behind Electech</h2>
+      <p class="section-subtitle">Experienced engineers, technicians, and professionals dedicated to engineering excellence.</p>
     </div>
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="team-avatar"><img src="img/founder%20image.png" alt="Eng Lubega Felix Ken" class="team-photo" /></div>
+        <div class="team-photo"><img src="img/founder%20image.png" alt="Eng Lubega Felix Ken" /></div>
         <h3>Eng Lubega Felix Ken</h3>
-        <span class="team-role">Founder & CEO</span>
-        <p class="team-bio">Over 15 years of experience in electrical engineering, telecommunications, and renewable energy. Leads strategic direction and project oversight.</p>
-        <div class="team-creds"><i class="fas fa-certificate"></i> BSc. Electrical Eng., Dip. TelecomEng</div>
+        <span class="team-role">Founder &amp; CEO</span>
+        <p>BSc. Electrical Eng., Dip. TelecomEng. Over 15 years of experience in electrical, telecom, and energy sectors.</p>
+        <div class="team-social"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
       </div>
       <div class="team-card reveal">
-        <div class="team-avatar"><i class="fas fa-user-circle"></i></div>
-        <h3>Eng. Grace Nakato</h3>
-        <span class="team-role">Technical Director</span>
-        <p class="team-bio">Specialist in telecommunications and ICT infrastructure with 12 years of network deployment experience across East Africa.</p>
-        <div class="team-creds"><i class="fas fa-certificate"></i> MSc. Telecom Eng., PMP, CCNA</div>
+        <div class="team-photo" style="background:linear-gradient(135deg,var(--accent),#e06000);"><i class="fas fa-user-tie"></i></div>
+        <h3>Eng. Sarah Nakato</h3>
+        <span class="team-role">Head of Engineering</span>
+        <p>MSc. Electrical Engineering. Specializes in power systems and renewable energy project management.</p>
+        <div class="team-social"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
       </div>
       <div class="team-card reveal">
-        <div class="team-avatar"><i class="fas fa-user-circle"></i></div>
-        <h3>Eng. Paul Ssempijja</h3>
-        <span class="team-role">Head of Renewable Energy</span>
-        <p class="team-bio">Leads solar and hybrid energy projects. Certified by the Renewable Energy Association with 10+ years in the energy sector.</p>
-        <div class="team-creds"><i class="fas fa-certificate"></i> BSc. Energy Eng., NABCEP Certified</div>
+        <div class="team-photo" style="background:linear-gradient(135deg,var(--accent),#e06000);"><i class="fas fa-user-tie"></i></div>
+        <h3>David Musoke</h3>
+        <span class="team-role">ICT &amp; Telecom Lead</span>
+        <p>CCNA, CCNP certified. Expert in network infrastructure, fiber optics, and digital transformation.</p>
+        <div class="team-social"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
       </div>
       <div class="team-card reveal">
-        <div class="team-avatar"><i class="fas fa-user-circle"></i></div>
-        <h3>Sarah Nantumbwe</h3>
-        <span class="team-role">Head of Operations</span>
-        <p class="team-bio">Manages project delivery, supply chain, and quality assurance. Ensures every project meets our standards of excellence.</p>
-        <div class="team-creds"><i class="fas fa-certificate"></i> BBA, MSc. Project Management, PRINCE2</div>
+        <div class="team-photo" style="background:linear-gradient(135deg,var(--accent),#e06000);"><i class="fas fa-user-tie"></i></div>
+        <h3>Grace Achieng</h3>
+        <span class="team-role">Projects Director</span>
+        <p>PMP certified. Over 10 years managing complex engineering projects across East Africa.</p>
+        <div class="team-social"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Projects Section -->
-<section class="projects-section section-py" id="projects">
-  <div class="container">
-    <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-project-diagram"></i> Our Portfolio</span>
-      <h2 class="section-title">Featured Projects</h2>
-      <p class="section-subtitle">Delivering impact through engineering excellence across sectors.</p>
-    </div>
-    <div class="project-filters reveal">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="electrical">Electrical</button>
-      <button class="filter-btn" data-filter="solar">Solar</button>
-      <button class="filter-btn" data-filter="telecom">Telecommunication</button>
-      <button class="filter-btn" data-filter="automation">Automation</button>
-      <button class="filter-btn" data-filter="ict">ICT</button>
-      <button class="filter-btn" data-filter="research">Research</button>
-    </div>
-    <div class="projects-grid" id="projectsGrid">
-      <div class="project-card reveal" data-category="electrical">
-        <div class="project-image"><i class="fas fa-bolt" style="font-size:3rem;color:var(--electric-blue);"></i></div>
-        <div class="project-info">
-          <span class="project-category">Electrical</span>
-          <h3>Industrial Power Distribution – Luzira Factory</h3>
-          <p><strong>Challenge:</strong> A large manufacturing plant required a complete power distribution overhaul to support 40% capacity expansion.</p>
-          <p><strong>Solution:</strong> Designed and installed 2MVA substation with redundant feeds, automatic transfer switching, and power factor correction.</p>
-          <p><strong>Result:</strong> Zero unplanned downtime in 18 months, 15% energy savings through power factor optimisation.</p>
-          <div class="project-tags"><span>Power Systems</span><span>Substations</span><span>Manufacturing</span></div>
-        </div>
-      </div>
-      <div class="project-card reveal" data-category="solar">
-        <div class="project-image"><i class="fas fa-solar-panel" style="font-size:3rem;color:var(--electric-blue);"></i></div>
-        <div class="project-info">
-          <span class="project-category">Solar</span>
-          <h3>500kW Hybrid Solar – Greenfield Academy</h3>
-          <p><strong>Challenge:</strong> A large educational institution faced unreliable grid power and high electricity costs exceeding UGX 60M monthly.</p>
-          <p><strong>Solution:</strong> Installed 500kW hybrid solar PV system with 400kWh lithium-ion battery storage and diesel generator integration.</p>
-          <p><strong>Result:</strong> 62% reduction in grid dependency, monthly savings of UGX 37M, ROI achieved in 3.2 years.</p>
-          <div class="project-tags"><span>Solar PV</span><span>Hybrid</span><span>Energy Storage</span></div>
-        </div>
-      </div>
-      <div class="project-card reveal" data-category="telecom">
-        <div class="project-image"><i class="fas fa-satellite-dish" style="font-size:3rem;color:var(--electric-blue);"></i></div>
-        <div class="project-info">
-          <span class="project-category">Telecommunication</span>
-          <h3>200km Fiber Backbone – Eastern Uganda</h3>
-          <p><strong>Challenge:</strong> Underserved districts in eastern Uganda lacked reliable broadband connectivity for government services and schools.</p>
-          <p><strong>Solution:</strong> Deployed 200km of aerial and buried fiber optic cable with 10Gbps backbone capacity and 25 access points.</p>
-          <p><strong>Result:</strong> Connected 50+ government offices and 30 schools to high-speed internet, serving 200,000+ residents.</p>
-          <div class="project-tags"><span>Fiber Optic</span><span>Backbone</span><span>Connectivity</span></div>
-        </div>
-      </div>
-      <div class="project-card reveal" data-category="automation">
-        <div class="project-image"><i class="fas fa-robot" style="font-size:3rem;color:var(--electric-blue);"></i></div>
-        <div class="project-info">
-          <span class="project-category">Automation</span>
-          <h3>SCADA System – Ggaba Water Treatment</h3>
-          <p><strong>Challenge:</strong> Manual operations at a municipal water treatment plant led to inefficiencies and delayed response to system faults.</p>
-          <p><strong>Solution:</strong> Implemented full SCADA system with PLC controls, remote sensors, and real-time monitoring dashboard.</p>
-          <p><strong>Result:</strong> 40% reduction in operational costs, 90% faster fault response, 24/7 remote monitoring capability.</p>
-          <div class="project-tags"><span>SCADA</span><span>PLC</span><span>IoT</span></div>
-        </div>
-      </div>
-      <div class="project-card reveal" data-category="ict">
-        <div class="project-image"><i class="fas fa-network-wired" style="font-size:3rem;color:var(--electric-blue);"></i></div>
-        <div class="project-info">
-          <span class="project-category">ICT</span>
-          <h3>Tier III Data Center – Kampala</h3>
-          <p><strong>Challenge:</strong> A financial institution needed a resilient, secure data center to support digital banking and regulatory compliance.</p>
-          <p><strong>Solution:</strong> Designed and deployed Tier III data center with N+1 redundancy, biometric access, and 24/7 environmental monitoring.</p>
-          <p><strong>Result:</strong> Achieved 99.98% uptime, passed regulatory audit with zero findings, supported 300% digital transaction growth.</p>
-          <div class="project-tags"><span>Data Center</span><span>Cloud</span><span>Security</span></div>
-        </div>
-      </div>
-      <div class="project-card reveal" data-category="research">
-        <div class="project-image"><i class="fas fa-flask" style="font-size:3rem;color:var(--electric-blue);"></i></div>
-        <div class="project-info">
-          <span class="project-category">Research</span>
-          <h3>AI Smart Grid Prototype</h3>
-          <p><strong>Challenge:</strong> Urban power distribution faces significant losses from theft, inefficiency, and lack of real-time load management.</p>
-          <p><strong>Solution:</strong> Developed AI-powered smart grid prototype with IoT sensors, predictive load balancing, and automated fault isolation.</p>
-          <p><strong>Result:</strong> 28% reduction in distribution losses, prototype selected for government innovation grant scale-up program.</p>
-          <div class="project-tags"><span>Smart Grid</span><span>AI</span><span>Energy</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery Section -->
+<!-- ===== GALLERY ===== -->
 <section class="gallery-section section-py" id="gallery">
   <div class="container">
     <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-images"></i> Our Gallery</span>
-      <h2 class="section-title">Project & Innovation Showcase</h2>
-      <p class="section-subtitle">A glimpse into our work, team, and engineering projects across Uganda and East Africa.</p>
+      <span class="badge"><i class="fas fa-images"></i> Gallery</span>
+      <h2 class="section-title">Our Work in Action</h2>
+      <p class="section-subtitle">Real projects, real results — browse our portfolio of completed works.</p>
+    </div>
+    <div class="gallery-filters reveal">
+      <button class="gallery-filter-btn active" data-filter="all">All</button>
+      <button class="gallery-filter-btn" data-filter="solar">Solar</button>
+      <button class="gallery-filter-btn" data-filter="electrical">Electrical</button>
+      <button class="gallery-filter-btn" data-filter="telecom">Telecom</button>
+      <button class="gallery-filter-btn" data-filter="automation">Automation</button>
+      <button class="gallery-filter-btn" data-filter="training">Training</button>
     </div>
     <div class="gallery-grid" id="galleryGrid"></div>
   </div>
 </section>
 
-<script>
-(function() {
-  var grid = document.getElementById('galleryGrid');
-  if (!grid || grid.children.length > 0) return;
-  var files = [
-    "116363666_1803845613091293_3190002061562231843_n.jpg","116882352_1805623442913510_7819026327708559621_n.jpg","117973628_1820740681401786_8852297143243833428_n.jpg","118003424_1823860824423105_8818571609410715163_n.jpg","120040565_1852353344907186_6132075019586387228_n.jpg","120042773_1852353538240500_5204626069860258112_n.jpg","122024919_1883233578485829_9062144332802943422_n.jpg","123392517_1893556504120203_3875509733133310775_n.jpg","123452711_1895632490579271_324458252909728803_n.jpg","124171550_1901347826674404_3894256006364433758_n.jpg","124445497_1901348000007720_3185292525878599346_n.jpg","144240205_172238271366093_2816302673846830628_n.jpg","147398970_176437527612834_7077236171885483964_n.jpg","147892102_176437227612864_9014445873704145937_n.jpg","147911712_176437270946193_708857527863100088_n.jpg","179736787_233364278586825_6106631139195701861_n.jpg","203922245_273431844580068_3417934875253393871_n.jpg","34199599_1124350431040818_6872658452032782336_n.jpg","468567464_1078641224059122_8212291243043276245_n.jpg","470164255_1089084786348099_2015868360761215441_n.jpg","472019889_1102026985053879_2744094857665442204_n.jpg","472052157_1102022291721015_1974009967947644256_n.jpg","472209857_1102026955053882_5236468992333811574_n.jpg","472210008_1102021935054384_2035695693369726376_n.jpg","472309512_1102027185053859_7527040684057209300_n.jpg","472309956_1102018888388022_3791014398111395147_n.jpg","472348354_1102606484995929_3597291804769732204_n.jpg","472459722_1102022271721017_125774249356400735_n.jpg","472670911_1102019838387927_7865064423008279263_n.jpg","474065823_1114007450522499_8737604322852876822_n.jpg","475091108_1116762293580348_63728835556522456_n.jpg","504350248_3308968745912298_2353387083406532083_n.jpg","505506738_3316262238516282_4418640922675795366_n.jpg","720126196_1449706320533026_8506114185016250635_n.jpg","77396556_1558649470944243_1494412567605411840_n.jpg","78893698_1563846150424575_6147374866719834112_n.jpg","79010386_1573164142826109_4458986251583750144_n.jpg","79393582_1558478340961356_5869497281601863680_n.jpg","79423417_1571977109611479_6353994241407975424_n.jpg","80233389_1573163932826130_8213752975072428032_n.jpg","80781461_1581464675329389_5711376815059107840_n.jpg","95224395_1710937955715393_8858558012948742144_n.jpg","95601798_1710938159048706_3097740682589110272_n.jpg"
-  ];
-  window.galleryImages = files.map(function(f) { return 'img/' + f; });
-  window.galleryImages.forEach(function(src, index) {
-    var item = document.createElement('div');
-    item.className = 'gallery-item';
-    item.setAttribute('data-index', index);
-    item.innerHTML = '<img src="' + encodeURI(src) + '" alt="Electech Project Photo" loading="lazy" /><div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>';
-    grid.appendChild(item);
-  });
-})();
-</script>
-
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
-  <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
-  <div class="lightbox-content">
-    <img src="" alt="" id="lightboxImg" />
-  </div>
-  <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
-</div>
-
-<!-- Innovation Hub -->
-<section class="innovation-section section-py" id="innovation">
-  <div class="container">
-    <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-flask"></i> Research & Innovation Hub</span>
-      <h2 class="section-title">Where Ideas Become Reality</h2>
-      <p class="section-subtitle">Our dedicated innovation hub drives engineering research, technology development, and breakthrough solutions.</p>
-    </div>
-    <div class="innovation-grid">
-      <div class="innovation-card reveal"><i class="fas fa-microscope"></i><h3>Research Initiatives</h3><p>Pioneering research in renewable energy, smart systems, and sustainable engineering.</p></div>
-      <div class="innovation-card reveal"><i class="fas fa-cube"></i><h3>Technology Development</h3><p>Building next-generation engineering products and platforms for local and global markets.</p></div>
-      <div class="innovation-card reveal"><i class="fas fa-print"></i><h3>Prototyping Lab</h3><p>State-of-the-art prototyping facilities for rapid design, testing, and validation.</p></div>
-      <div class="innovation-card reveal"><i class="fas fa-chalkboard-teacher"></i><h3>Student Mentorship</h3><p>Nurturing young engineering talent through hands-on projects and industry exposure.</p></div>
-      <div class="innovation-card reveal"><i class="fas fa-file-alt"></i><h3>Technical Publications</h3><p>Contributing to engineering knowledge through research papers and technical articles.</p></div>
-      <div class="innovation-card reveal"><i class="fas fa-handshake"></i><h3>Innovation Partnerships</h3><p>Collaborating with universities, research institutions, and technology partners.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Academy -->
-<section class="academy-section section-py">
-  <div class="container">
-    <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-graduation-cap"></i> Electech Academy</span>
-      <h2 class="section-title">Building Engineering Capacity</h2>
-      <p class="section-subtitle">Empowering the next generation of engineers through training, mentorship, and practical experience.</p>
-    </div>
-    <div class="academy-grid">
-      <div class="academy-card reveal"><i class="fas fa-tools"></i><h3>Engineering Training</h3><p>Hands-on training programs in electrical, solar, telecom, and automation systems.</p></div>
-      <div class="academy-card reveal"><i class="fas fa-briefcase"></i><h3>Industrial Attachment</h3><p>Structured internship programs providing real-world engineering experience.</p></div>
-      <div class="academy-card reveal"><i class="fas fa-workshop"></i><h3>Technical Workshops</h3><p>Specialized workshops on emerging technologies and industry best practices.</p></div>
-      <div class="academy-card reveal"><i class="fas fa-chart-line"></i><h3>Professional Development</h3><p>Continuing education for engineers to stay ahead in a rapidly evolving field.</p></div>
-      <div class="academy-card reveal"><i class="fas fa-rocket"></i><h3>STEM Outreach</h3><p>Inspiring young minds to pursue careers in science, technology, engineering, and mathematics.</p></div>
-      <div class="academy-card reveal"><i class="fas fa-users"></i><h3>Engineering Mentorship</h3><p>One-on-one mentorship connecting aspiring engineers with industry veterans.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Certifications & Compliance -->
-<section class="cert-section section-py">
-  <div class="container">
-    <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-shield-alt"></i> Quality & Compliance</span>
-      <h2 class="section-title">Certified for Excellence</h2>
-      <p class="section-subtitle">Our certifications reflect our unwavering commitment to quality, safety, and professional standards.</p>
-    </div>
-    <div class="cert-grid">
-      <div class="cert-card reveal">
-        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-        <h3>ISO 9001:2015</h3>
-        <p>Quality Management Systems certified for engineering design, installation, and maintenance services.</p>
-      </div>
-      <div class="cert-card reveal">
-        <div class="cert-icon"><i class="fas fa-hard-hat"></i></div>
-        <h3>OSHAS 18001</h3>
-        <p>Occupational Health and Safety management ensuring safe work environments on all project sites.</p>
-      </div>
-      <div class="cert-card reveal">
-        <div class="cert-icon"><i class="fas fa-leaf"></i></div>
-        <h3>ISO 14001</h3>
-        <p>Environmental Management Systems demonstrating our commitment to sustainable engineering practices.</p>
-      </div>
-      <div class="cert-card reveal">
-        <div class="cert-icon"><i class="fas fa-bolt"></i></div>
-        <h3>UECCC Registered</h3>
-        <p>Registered with the Uganda Energy Credit Capitalisation Company for solar and renewable energy projects.</p>
-      </div>
-      <div class="cert-card reveal">
-        <div class="cert-icon"><i class="fas fa-tower-cell"></i></div>
-        <h3>UCC Licensed</h3>
-        <p>Licensed by the Uganda Communications Commission for telecommunications infrastructure deployment.</p>
-      </div>
-      <div class="cert-card reveal">
-        <div class="cert-icon"><i class="fas fa-drafting-compass"></i></div>
-        <h3>ERB Registered</h3>
-        <p>Registered with the Engineers Registration Board of Uganda for professional engineering practice.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Sustainability -->
-<section class="sustainability-section section-py">
-  <div class="container">
-    <div class="sustainability-grid">
-      <div class="sustainability-content reveal-left">
-        <span class="badge" style="color:var(--electric-blue);border-color:rgba(0,153,255,0.3);background:rgba(0,153,255,0.1);"><i class="fas fa-leaf"></i> Sustainability</span>
-        <h2 class="section-title">Engineering a Greener Future</h2>
-        <p class="section-subtitle">We are committed to environmental responsibility and sustainable engineering practices that protect our planet for future generations.</p>
-        <div class="sustainability-list">
-          <div class="sustainability-item"><i class="fas fa-check-circle"></i><span>Green engineering principles in every project</span></div>
-          <div class="sustainability-item"><i class="fas fa-check-circle"></i><span>Renewable energy solutions reducing carbon footprint</span></div>
-          <div class="sustainability-item"><i class="fas fa-check-circle"></i><span>Environmental responsibility in operations</span></div>
-          <div class="sustainability-item"><i class="fas fa-check-circle"></i><span>Carbon reduction initiatives</span></div>
-          <div class="sustainability-item"><i class="fas fa-check-circle"></i><span>Community impact and empowerment programs</span></div>
-        </div>
-      </div>
-      <div class="sustainability-visual reveal-right">
-        <div class="sustainability-icon-grid">
-          <div><i class="fas fa-solar-panel"></i><span>Solar</span></div>
-          <div><i class="fas fa-wind"></i><span>Wind</span></div>
-          <div><i class="fas fa-water"></i><span>Hydro</span></div>
-          <div><i class="fas fa-recycle"></i><span>Recycle</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimonials -->
-<section class="testimonials-section section-py">
-  <div class="container">
-    <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-quote-right"></i> Success Stories</span>
-      <h2 class="section-title">What Our Clients Say</h2>
-      <p class="section-subtitle">Trusted by leading organizations across Uganda and East Africa.</p>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal">
-        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="testimonial-text">"Electech delivered our solar installation on time and within budget. Their professionalism and technical expertise exceeded our expectations."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar"><i class="fas fa-user-circle"></i></div>
-          <div><strong>Dr. Sarah K.</strong><span>Director, Greenfield Academy</span></div>
-        </div>
-      </div>
-      <div class="testimonial-card reveal">
-        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="testimonial-text">"The SCADA system implementation by Electech transformed our water treatment operations. Remote monitoring has been a game-changer for our team."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar"><i class="fas fa-user-circle"></i></div>
-          <div><strong>Eng. Michael O.</strong><span>Operations Manager, City Water Authority</span></div>
-        </div>
-      </div>
-      <div class="testimonial-card reveal">
-        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <p class="testimonial-text">"Their fiber optic backbone project connected our rural branches seamlessly. Electech's team understood our needs and delivered exceptional quality."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar"><i class="fas fa-user-circle"></i></div>
-          <div><strong>James M.</strong><span>CTO, ConnectNet Uganda</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Partners -->
-<section class="partners-section section-py">
-  <div class="container">
-    <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-handshake"></i> Partners & Clients</span>
-      <h2 class="section-title">Trusted By</h2>
-    </div>
-    <div class="partners-grid reveal">
-      <div class="partner-logo"><i class="fas fa-building"></i><span>Government Ministries</span></div>
-      <div class="partner-logo"><i class="fas fa-industry"></i><span>Manufacturing Firms</span></div>
-      <div class="partner-logo"><i class="fas fa-university"></i><span>Universities & Schools</span></div>
-      <div class="partner-logo"><i class="fas fa-microchip"></i><span>Telecom Operators</span></div>
-      <div class="partner-logo"><i class="fas fa-hand-holding-heart"></i><span>Development Partners</span></div>
-      <div class="partner-logo"><i class="fas fa-bolt"></i><span>Energy Developers</span></div>
-      <div class="partner-logo"><i class="fas fa-hospital"></i><span>Hospitals & Clinics</span></div>
-      <div class="partner-logo"><i class="fas fa-landmark"></i><span>Financial Institutions</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- Knowledge Center -->
-<section class="news-section section-py">
-  <div class="container">
-    <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-newspaper"></i> Knowledge Center</span>
-      <h2 class="section-title">Insights & Updates</h2>
-      <p class="section-subtitle">Engineering articles, industry trends, and innovation stories from Electech.</p>
-    </div>
-    <div class="news-grid">
-      <div class="news-card reveal">
-        <div class="news-image"><i class="fas fa-solar-panel" style="font-size:2.5rem;color:var(--electric-blue);"></i></div>
-        <div class="news-content">
-          <span class="news-date"><i class="far fa-calendar"></i> June 2026</span>
-          <h3>The Future of Solar Energy in Uganda</h3>
-          <p>How hybrid solar systems are transforming commercial energy consumption across East Africa.</p>
-          <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="news-card reveal">
-        <div class="news-image"><i class="fas fa-robot" style="font-size:2.5rem;color:var(--electric-blue);"></i></div>
-        <div class="news-content">
-          <span class="news-date"><i class="far fa-calendar"></i> May 2026</span>
-          <h3>Automation in Ugandan Manufacturing</h3>
-          <p>How PLC and SCADA systems are driving efficiency in local industries.</p>
-          <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="news-card reveal">
-        <div class="news-image"><i class="fas fa-network-wired" style="font-size:2.5rem;color:var(--electric-blue);"></i></div>
-        <div class="news-content">
-          <span class="news-date"><i class="far fa-calendar"></i> April 2026</span>
-          <h3>Bridging the Digital Divide</h3>
-          <p>Electech's fiber optic projects connecting underserved communities to the digital world.</p>
-          <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
+<!-- ===== CONTACT ===== -->
 <section class="contact-section section-py" id="contact">
   <div class="container">
     <div class="section-header text-center reveal">
-      <span class="badge"><i class="fas fa-headset"></i> Get In Touch</span>
-      <h2 class="section-title">Let's Build Something Great Together</h2>
-      <p class="section-subtitle">Ready to start your next project? Reach out to our team for a consultation.</p>
+      <span class="badge"><i class="fas fa-envelope"></i> Contact Us</span>
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">Ready to start your project? Reach out for a consultation or site survey.</p>
     </div>
     <div class="contact-grid">
-      <div class="contact-info reveal-left">
-        <div class="contact-info-item"><i class="fas fa-map-marker-alt"></i><div><h4>Visit Us</h4><p>Mugema Road, Kampala, Uganda</p></div></div>
-        <div class="contact-info-item"><i class="fas fa-phone-alt"></i><div><h4>Call Us</h4><p>+256 787 531 336</p></div></div>
-        <div class="contact-info-item"><i class="fas fa-envelope"></i><div><h4>Email Us</h4><p>kefel1038@gmail.com</p></div></div>
-        <div class="contact-info-item"><i class="fas fa-clock"></i><div><h4>Working Hours</h4><p>Mon - Fri: 8:00 AM - 5:00 PM</p></div></div>
-        <div class="contact-info-item emergency"><i class="fas fa-exclamation-triangle"></i><div><h4>Emergency Support</h4><p>24/7 Technical Support Available</p></div></div>
-        <div class="contact-social">
-          <a href="#" class="contact-social-link"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="contact-social-link"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="contact-social-link"><i class="fab fa-youtube"></i></a>
-          <a href="#" class="contact-social-link"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" class="contact-social-link"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="contact-social-link"><i class="fab fa-tiktok"></i></a>
-          <a href="#" class="contact-social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <div class="contact-map reveal-left">
+        <div class="map-placeholder">
+          <i class="fas fa-map-marked-alt"></i>
+          <h3>Mugema Road, Kampala, Uganda</h3>
+          <p>Visit our offices or call us to schedule a meeting with our engineering team.</p>
+          <div class="contact-info-list">
+            <div><i class="fas fa-phone-alt"></i> <a href="tel:+256787531336">+256 787 531 336</a></div>
+            <div><i class="fas fa-envelope"></i> <a href="mailto:kefel1038@gmail.com">kefel1038@gmail.com</a></div>
+            <div><i class="fas fa-clock"></i> Mon – Fri: 8:00 AM – 5:00 PM</div>
+          </div>
         </div>
       </div>
-      <div class="contact-form-wrap reveal-right">
-        <form class="contact-form" id="contactForm">
+      <div class="contact-form reveal-right">
+        <form id="contactForm">
           <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name *</label>
-              <input type="text" id="name" name="name" required placeholder="Your full name" />
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" required placeholder="your@email.com" />
-            </div>
+            <div class="form-group"><input type="text" id="formName" placeholder="Your Name" required /></div>
+            <div class="form-group"><input type="text" id="formCompany" placeholder="Company Name" /></div>
           </div>
           <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="+256 XXX XXX XXX" />
-            </div>
-            <div class="form-group">
-              <label for="service">Service Needed</label>
-              <select id="service" name="service">
-                <option value="">Select a service</option>
-                <option value="electrical">Electrical Engineering</option>
-                <option value="telecom">Telecommunications</option>
-                <option value="solar">Renewable Energy</option>
-                <option value="ict">ICT & Digital Infrastructure</option>
-                <option value="automation">Industrial Automation</option>
-                <option value="electronics">Electronics & Embedded</option>
-                <option value="consulting">Technical Consultancy</option>
-              </select>
-            </div>
+            <div class="form-group"><input type="tel" id="formPhone" placeholder="Phone Number" required /></div>
+            <div class="form-group"><input type="email" id="formEmail" placeholder="Email Address" required /></div>
           </div>
-          <div class="form-group">
-            <label for="message">Your Message *</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project or inquiry..."></textarea>
+          <div class="form-group"><select id="formService"><option value="">Service Needed</option><option>Electrical Engineering</option><option>Renewable Energy / Solar</option><option>Telecommunications</option><option>ICT Infrastructure</option><option>Industrial Automation</option><option>Electronics & Embedded</option><option>Research & Innovation</option><option>Other</option></select></div>
+          <div class="form-group"><textarea id="formMessage" rows="4" placeholder="Tell us about your project..." required></textarea></div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-accent btn-lg"><i class="fas fa-paper-plane"></i> Request Consultation</button>
+            <button type="button" class="btn btn-outline btn-lg" onclick="window.location.href='https://wa.me/256787531336'"><i class="fab fa-whatsapp"></i> Get a Quote</button>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
         </form>
-        <div class="contact-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.747727343248!2d32.5753!3d0.3136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTgnNDkuMCJOIDMywrAzNCczMS4wIkU!5e0!3m2!1sen!2sug!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Electech Engineering Solutions Ltd Location"></iframe>
-        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Newsletter -->
-<section class="newsletter-section">
-  <div class="container">
-    <div class="newsletter-inner">
-      <div class="newsletter-text">
-        <h2>Stay Connected</h2>
-        <p>Subscribe for engineering insights, project updates, and industry news.</p>
-      </div>
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" class="newsletter-input" id="newsletterEmail" placeholder="Enter your email address" required />
-        <button type="submit" class="newsletter-submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">
+      <div class="footer-col">
         <div class="footer-logo">
-          <img src="img/startup%20logo.jpg" alt="Electech Engineering Solutions Ltd" class="footer-logo-img" />
-          <div>
-            <div class="footer-company-name">Electech Engineering Solutions Ltd</div>
-            <div class="footer-tagline">Engineering Innovation. Powering Possibilities.</div>
-          </div>
+          <img src="img/startup%20logo.jpg" alt="Electech" />
+          <span>ELECTECH</span>
         </div>
-        <p class="footer-desc">Building Africa's future through engineering excellence, technological innovation, and sustainable solutions.</p>
+        <p>Engineering Solutions Ltd delivers innovative electrical, energy, telecommunications, and automation solutions across Uganda and East Africa.</p>
         <div class="footer-social">
-          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="#" title="X/Twitter"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/256787531336" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <div>
-        <h4 class="footer-col-title">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Electrical Engineering</a></li>
+          <li><a href="#services">Renewable Energy</a></li>
+          <li><a href="#services">Telecommunications</a></li>
+          <li><a href="#services">ICT Infrastructure</a></li>
+          <li><a href="#services">Industrial Automation</a></li>
+          <li><a href="#services">Research &amp; Innovation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#innovation">Innovation Hub</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="footer-col-title">Services</h4>
-        <ul class="footer-links">
-          <li><a href="#services">Electrical Engineering</a></li>
-          <li><a href="#services">Telecommunications</a></li>
-          <li><a href="#services">Renewable Energy</a></li>
-          <li><a href="#services">ICT Infrastructure</a></li>
-          <li><a href="#services">Industrial Automation</a></li>
-          <li><a href="#services">R&D</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-title">Contact</h4>
-        <ul class="footer-links contact-links">
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
           <li><i class="fas fa-map-marker-alt"></i> Mugema Road, Kampala, Uganda</li>
-          <li><a href="tel:+256787531336"><i class="fas fa-phone"></i> +256 787 531 336</a></li>
-          <li><a href="mailto:kefel1038@gmail.com"><i class="fas fa-envelope"></i> kefel1038@gmail.com</a></li>
-          <li><a href="#" class="whatsapp-link"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></li>
+          <li><i class="fas fa-phone-alt"></i> <a href="tel:+256787531336">+256 787 531 336</a></li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:kefel1038@gmail.com">kefel1038@gmail.com</a></li>
         </ul>
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <form id="newsletterForm">
+            <input type="email" id="newsletterEmail" placeholder="Your email" required />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-bottom-text">© 2026 Electech Engineering Solutions Ltd. All rights reserved.</div>
+      <p>&copy; 2026 Electech Engineering Solutions Ltd. All rights reserved.</p>
       <div class="footer-bottom-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
@@ -828,46 +546,24 @@
   </div>
 </footer>
 
-<!-- Mobile Sticky CTA Bar -->
+<!-- ===== FLOATING ELEMENTS ===== -->
+<a href="https://wa.me/256787531336" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+<!-- ===== MOBILE STICKY CTA ===== -->
 <div class="mobile-cta-bar">
   <a href="tel:+256787531336" class="mcta-item"><i class="fas fa-phone-alt"></i><span>Call</span></a>
   <a href="https://wa.me/256787531336" class="mcta-item" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
   <a href="mailto:kefel1038@gmail.com" class="mcta-item"><i class="fas fa-envelope"></i><span>Email</span></a>
-  <a href="#contact" class="mcta-item mcta-primary"><i class="fas fa-file-invoice"></i><span>Get Quote</span></a>
+  <a href="#contact" class="mcta-item mcta-primary"><i class="fas fa-file-invoice"></i><span>Quote</span></a>
 </div>
 
-<!-- WhatsApp Float -->
-<a href="https://wa.me/256787531336" class="whatsapp-float" target="_blank" title="Chat on WhatsApp" id="whatsappFloat">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- Back to Top -->
-<button class="back-to-top" id="backToTop" title="Back to top">
-  <i class="fas fa-chevron-up"></i>
-</button>
-
-<!-- Chatbot -->
-<div class="chatbot-toggle" id="chatbotToggle">
-  <i class="fas fa-robot"></i>
-</div>
-<div class="chatbot-window" id="chatbotWindow">
-  <div class="chatbot-header">
-    <i class="fas fa-robot"></i>
-    <span>Electech Assistant</span>
-    <button id="chatbotClose"><i class="fas fa-times"></i></button>
-  </div>
-  <div class="chatbot-body" id="chatbotBody">
-    <div class="chatbot-msg bot">Hello! Welcome to Electech Engineering Solutions. How can I help you today?</div>
-  </div>
-  <div class="chatbot-footer">
-    <input type="text" id="chatbotInput" placeholder="Type your message..." />
-    <button id="chatbotSend"><i class="fas fa-paper-plane"></i></button>
-  </div>
-</div>
-
-<!-- Toast -->
+<!-- ===== TOAST ===== -->
 <div id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg">Message sent!</span></div>
 
+<!-- ===== SCRIPTS ===== -->
 <script src="js/script.js"></script>
 </body>
 </html>
