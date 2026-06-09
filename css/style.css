@@ -2363,6 +2363,22 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 
   .chatbot-window { width: calc(100% - 32px); right: 16px; height: 400px; }
 
+  .founder-intro, .founder-content p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+  .founder-photo {
+    width: 80px;
+    height: 80px;
+  }
+  .founder-profile {
+    padding: 16px;
+    gap: 14px;
+  }
+  .founder-profile-info h3 {
+    font-size: 1rem;
+  }
+
   .whatsapp-float { bottom: 76px; }
   .back-to-top { bottom: 76px; }
   .mobile-cta-bar { display: flex; }
@@ -2382,4 +2398,15 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   .project-card { flex: 0 0 260px; }
   .trust-item { font-size: 0.75rem; padding: 6px 12px; }
   .trust-grid { gap: 8px; }
+  .founder-intro, .founder-content p {
+    font-size: 0.85rem;
+  }
+  .founder-photo {
+    width: 64px;
+    height: 64px;
+  }
+  .founder-profile {
+    flex-direction: column;
+    text-align: center;
+  }
 }
