@@ -1925,9 +1925,9 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
    ANIMATIONS
    ============================================ */
 .reveal {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .reveal.visible {
@@ -1936,9 +1936,9 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 }
 
 .reveal-left {
-  opacity: 0;
+  opacity: 1;
   transform: translateX(-40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .reveal-left.visible {
@@ -1947,9 +1947,9 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 }
 
 .reveal-right {
-  opacity: 0;
+  opacity: 1;
   transform: translateX(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .reveal-right.visible {
