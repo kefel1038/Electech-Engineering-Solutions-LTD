@@ -440,7 +440,6 @@ document.addEventListener('DOMContentLoaded', function() {
       "179736787_233364278586825_6106631139195701861_n.jpg",
       "203922245_273431844580068_3417934875253393871_n.jpg",
       "34199599_1124350431040818_6872658452032782336_n.jpg",
-      "468567464_1078641224059122_8212291243043276245_n (1).jpg",
       "468567464_1078641224059122_8212291243043276245_n.jpg",
       "470164255_1089084786348099_2015868360761215441_n.jpg",
       "472019889_1102026985053879_2744094857665442204_n.jpg",
@@ -469,11 +468,11 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     galleryImages = imageFiles.map(f => 'img/' + f);
-
+    // Pre-encode all image URIs to handle special characters in filenames
     galleryImages.forEach((src, index) => {
       const item = document.createElement('div');
       item.className = 'gallery-item reveal';
-      item.innerHTML = '<img src="' + src + '" alt="Electech Project Photo" loading="lazy" /><div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>';
+      item.innerHTML = '<img src="' + encodeURI(src) + '" alt="Electech Project Photo" loading="lazy" /><div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>';
       item.addEventListener('click', function() {
         openLightbox(index);
       });
@@ -484,7 +483,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function openLightbox(index) {
     currentImageIndex = index;
     if (lightbox && lightboxImg) {
-      lightboxImg.src = galleryImages[index];
+      lightboxImg.src = encodeURI(galleryImages[index]);
       lightbox.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
