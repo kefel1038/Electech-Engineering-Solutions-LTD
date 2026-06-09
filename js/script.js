@@ -526,6 +526,18 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ============================================
+  // FALLBACK: reveal all sections after 3s
+  // Ensures content is visible even if IntersectionObserver fails
+  // ============================================
+  setTimeout(function() {
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function(el) {
+      if (!el.classList.contains('visible')) {
+        el.classList.add('visible');
+      }
+    });
+  }, 3000);
+
+  // ============================================
   // WAIT / LOADING SIMULATION (remove .is-loading)
   // ============================================
   document.body.classList.remove('is-loading');
