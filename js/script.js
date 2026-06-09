@@ -471,7 +471,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Pre-encode all image URIs to handle special characters in filenames
     galleryImages.forEach((src, index) => {
       const item = document.createElement('div');
-      item.className = 'gallery-item reveal';
+      item.className = 'gallery-item';
+      item.style.opacity = '1';
+      item.style.transform = 'translateY(0)';
       item.innerHTML = '<img src="' + encodeURI(src) + '" alt="Electech Project Photo" loading="lazy" /><div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>';
       item.addEventListener('click', function() {
         openLightbox(index);
@@ -498,12 +500,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function prevImage() {
     currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-    lightboxImg.src = galleryImages[currentImageIndex];
+    lightboxImg.src = encodeURI(galleryImages[currentImageIndex]);
   }
 
   function nextImage() {
     currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-    lightboxImg.src = galleryImages[currentImageIndex];
+    lightboxImg.src = encodeURI(galleryImages[currentImageIndex]);
   }
 
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
