@@ -567,6 +567,105 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 }
 
 /* ============================================
+   FOUNDER / COMPANY STORY
+   ============================================ */
+.founder-section {
+  background: var(--bg-secondary);
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.founder-intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.founder-content p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.founder-philosophy {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+}
+
+.philosophy-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.philosophy-item i {
+  color: var(--electric-blue);
+  font-size: 1.1rem;
+}
+
+.founder-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.founder-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.founder-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+  border-color: rgba(0,153,255,0.3);
+}
+
+.founder-stat-card i {
+  font-size: 2rem;
+  color: var(--electric-blue);
+  margin-bottom: 16px;
+}
+
+.founder-stat-num {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--electric-blue), #00D4FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.founder-stat-label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ============================================
    SERVICES
    ============================================ */
 .services-section {
@@ -789,6 +888,129 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
 .industry-item i {
   font-size: 2rem;
   color: var(--electric-blue);
+}
+
+/* ============================================
+   TEAM
+   ============================================ */
+.team-section {
+  background: var(--bg-secondary);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow);
+  border-color: rgba(0,153,255,0.3);
+}
+
+.team-avatar i {
+  font-size: 4rem;
+  color: var(--electric-blue);
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.team-card h3 {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--electric-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.team-bio {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.team-creds {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--radius-sm);
+}
+
+.team-creds i {
+  color: var(--electric-blue);
+  font-size: 0.75rem;
+}
+
+/* ============================================
+   CERTIFICATIONS
+   ============================================ */
+.cert-section {
+  background: var(--bg-primary);
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cert-card {
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+  border-color: rgba(0,153,255,0.3);
+}
+
+.cert-icon i {
+  font-size: 2.8rem;
+  color: var(--electric-blue);
+  margin-bottom: 20px;
+}
+
+.cert-card h3 {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
 /* ============================================
@@ -1969,6 +2191,9 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .newsletter-inner { flex-direction: column; text-align: center; }
   .newsletter-input { min-width: 0; width: 100%; }
+  .founder-highlights { grid-template-columns: 1fr 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -2007,6 +2232,7 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   .news-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .sustainability-grid { grid-template-columns: 1fr; gap: 40px; }
+  .founder-grid { grid-template-columns: 1fr; gap: 40px; }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: 1fr; }
@@ -2014,6 +2240,8 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   .projects-grid { grid-template-columns: 1fr; }
   .partners-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .cert-grid { grid-template-columns: 1fr; }
 
   .form-row { grid-template-columns: 1fr; }
   .top-bar-left { display: none; }
@@ -2034,4 +2262,6 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   .contact-form { padding: 24px; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .nav-cta { display: none; }
+  .team-grid { grid-template-columns: 1fr; }
+  .founder-highlights { grid-template-columns: 1fr; }
 }
