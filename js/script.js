@@ -157,7 +157,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // ============================================
   // SCROLL REVEAL ANIMATIONS
   // ============================================
-  const heroStatValues = document.querySelectorAll('.hero-stat-value');
   if (typeof IntersectionObserver !== 'undefined') {
     const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
@@ -175,49 +174,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // ANIMATED COUNTERS (Stats)
     // ============================================
-    const statNumbers = document.querySelectorAll('.stat-number');
-    const allCounters = [...statNumbers, ...heroStatValues];
-
-    const counterObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.dataset.animated) {
-          entry.target.dataset.animated = 'true';
-          animateCounter(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    allCounters.forEach(el => counterObserver.observe(el));
+    // Stats are pre-rendered with real values (no "0+" flash).
+    // Counter animation removed for credibility.
   }
-
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.target || el.dataset.count) || 0;
-    const suffix = el.dataset.suffix || '';
-    const duration = 2000;
-    const start = performance.now();
-
-    function update(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(eased * target);
-      el.textContent = current + suffix;
-      if (progress < 1) requestAnimationFrame(update);
-      else el.textContent = target + suffix;
-    }
-
-    requestAnimationFrame(update);
-  }
-
-  // Force-trigger hero counters on load
-  setTimeout(() => {
-    heroStatValues.forEach(el => {
-      if (!el.dataset.animated && el.getBoundingClientRect().top < window.innerHeight) {
-        el.dataset.animated = 'true';
-        animateCounter(el);
-      }
-    });
-  }, 500);
 
   // ============================================
   // PROJECT FILTER
