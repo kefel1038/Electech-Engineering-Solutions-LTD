@@ -3,6 +3,15 @@
    Main JavaScript
    ============================================ */
 
+// Supabase Configuration
+const SUPABASE_URL = 'https://zxnckpruztdlkurmfbfp.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_MLCl5C6F85scgwNbYZCDdQ_lq9njK-_';
+
+let supabaseClient = null;
+if (typeof supabase !== 'undefined') {
+  supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
   // ============================================
@@ -288,19 +297,36 @@ document.addEventListener('DOMContentLoaded', function() {
   const toastMsg = document.getElementById('toastMsg');
 
   if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       const btn = this.querySelector('button[type="submit"]');
       const originalText = btn.innerHTML;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
       btn.disabled = true;
 
-      setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.disabled = false;
-        showToast('Thank you! We will get back to you shortly.');
-        this.reset();
-      }, 1500);
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        service: document.getElementById('service').value,
+        message: document.getElementById('message').value,
+        created_at: new Date().toISOString()
+      };
+
+      if (supabaseClient) {
+        const { error } = await supabaseClient
+          .from('contact_submissions')
+          .insert([formData]);
+
+        if (error) {
+          console.error('Supabase error:', error);
+        }
+      }
+
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+      showToast('Thank you! We will get back to you shortly.');
+      this.reset();
     });
   }
 
@@ -317,9 +343,26 @@ document.addEventListener('DOMContentLoaded', function() {
   // ============================================
   const newsletterForm = document.getElementById('newsletterForm');
   if (newsletterForm) {
-    newsletterForm.addEventListener('submit', function(e) {
+    newsletterForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       const input = this.querySelector('.newsletter-input');
+      const email = input.value.trim();
+
+      if (supabaseClient) {
+        const { error } = await supabaseClient
+          .from('newsletter_subscribers')
+          .insert([{ email, created_at: new Date().toISOString() }]);
+
+        if (error) {
+          if (error.code === '23505') {
+            showToast('You are already subscribed!');
+            input.value = '';
+            return;
+          }
+          console.error('Supabase error:', error);
+        }
+      }
+
       showToast('Subscribed successfully! Thank you.');
       input.value = '';
     });
