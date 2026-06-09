@@ -8,16 +8,51 @@ document.addEventListener('DOMContentLoaded', function() {
   // ============================================
   // GALLERY IMAGES
   // ============================================
-  var galleryImages = [];
-  (function() {
-    var categories = ['solar', 'electrical', 'telecom', 'automation', 'training'];
-    for (var i = 1; i <= 43; i++) {
-      galleryImages.push({
-        src: 'img/' + encodeURI('image' + i + '.webp'),
-        category: categories[(i - 1) % categories.length]
-      });
-    }
-  })();
+  var galleryImages = [
+    { src: 'img/116363666_1803845613091293_3190002061562231843_n.jpg', category: 'electrical' },
+    { src: 'img/116882352_1805623442913510_7819026327708559621_n.jpg', category: 'solar' },
+    { src: 'img/117973628_1820740681401786_8852297143243833428_n.jpg', category: 'telecom' },
+    { src: 'img/118003424_1823860824423105_8818571609410715163_n.jpg', category: 'automation' },
+    { src: 'img/120040565_1852353344907186_6132075019586387228_n.jpg', category: 'training' },
+    { src: 'img/120042773_1852353538240500_5204626069860258112_n.jpg', category: 'solar' },
+    { src: 'img/122024919_1883233578485829_9062144332802943422_n.jpg', category: 'electrical' },
+    { src: 'img/123392517_1893556504120203_3875509733133310775_n.jpg', category: 'telecom' },
+    { src: 'img/123452711_1895632490579271_324458252909728803_n.jpg', category: 'automation' },
+    { src: 'img/124171550_1901347826674404_3894256006364433758_n.jpg', category: 'training' },
+    { src: 'img/124445497_1901348000007720_3185292525878599346_n.jpg', category: 'solar' },
+    { src: 'img/144240205_172238271366093_2816302673846830628_n.jpg', category: 'electrical' },
+    { src: 'img/147398970_176437527612834_7077236171885483964_n.jpg', category: 'telecom' },
+    { src: 'img/147892102_176437227612864_9014445873704145937_n.jpg', category: 'automation' },
+    { src: 'img/147911712_176437270946193_708857527863100088_n.jpg', category: 'training' },
+    { src: 'img/179736787_233364278586825_6106631139195701861_n.jpg', category: 'solar' },
+    { src: 'img/203922245_273431844580068_3417934875253393871_n.jpg', category: 'electrical' },
+    { src: 'img/34199599_1124350431040818_6872658452032782336_n.jpg', category: 'telecom' },
+    { src: 'img/468567464_1078641224059122_8212291243043276245_n.jpg', category: 'automation' },
+    { src: 'img/470164255_1089084786348099_2015868360761215441_n.jpg', category: 'training' },
+    { src: 'img/472019889_1102026985053879_2744094857665442204_n.jpg', category: 'solar' },
+    { src: 'img/472052157_1102022291721015_1974009967947644256_n.jpg', category: 'electrical' },
+    { src: 'img/472209857_1102026955053882_5236468992333811574_n.jpg', category: 'telecom' },
+    { src: 'img/472210008_1102021935054384_2035695693369726376_n.jpg', category: 'automation' },
+    { src: 'img/472309512_1102027185053859_7527040684057209300_n.jpg', category: 'training' },
+    { src: 'img/472309956_1102018888388022_3791014398111395147_n.jpg', category: 'solar' },
+    { src: 'img/472348354_1102606484995929_3597291804769732204_n.jpg', category: 'electrical' },
+    { src: 'img/472459722_1102022271721017_125774249356400735_n.jpg', category: 'telecom' },
+    { src: 'img/472670911_1102019838387927_7865064423008279263_n.jpg', category: 'automation' },
+    { src: 'img/474065823_1114007450522499_8737604322852876822_n.jpg', category: 'training' },
+    { src: 'img/475091108_1116762293580348_63728835556522456_n.jpg', category: 'solar' },
+    { src: 'img/504350248_3308968745912298_2353387083406532083_n.jpg', category: 'electrical' },
+    { src: 'img/505506738_3316262238516282_4418640922675795366_n.jpg', category: 'telecom' },
+    { src: 'img/720126196_1449706320533026_8506114185016250635_n.jpg', category: 'automation' },
+    { src: 'img/77396556_1558649470944243_1494412567605411840_n.jpg', category: 'training' },
+    { src: 'img/78893698_1563846150424575_6147374866719834112_n.jpg', category: 'solar' },
+    { src: 'img/79010386_1573164142826109_4458986251583750144_n.jpg', category: 'electrical' },
+    { src: 'img/79393582_1558478340961356_5869497281601863680_n.jpg', category: 'telecom' },
+    { src: 'img/79423417_1571977109611479_6353994241407975424_n.jpg', category: 'automation' },
+    { src: 'img/80233389_1573163932826130_8213752975072428032_n.jpg', category: 'training' },
+    { src: 'img/80781461_1581464675329389_5711376815059107840_n.jpg', category: 'solar' },
+    { src: 'img/95224395_1710937955715393_8858558012948742144_n.jpg', category: 'electrical' },
+    { src: 'img/95601798_1710938159048706_3097740682589110272_n.jpg', category: 'telecom' }
+  ];
 
   // ============================================
   // NAVIGATION
