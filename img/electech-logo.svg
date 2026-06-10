@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="100%" stop-color="#1F2937"/>
+    </linearGradient>
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <!-- Circle background -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGrad)" stroke="#F59E0B" stroke-width="2"/>
+  <!-- Gear outline -->
+  <g transform="translate(100,100)" stroke="#0EA5E9" stroke-width="1.5" fill="none" opacity="0.3">
+    <circle cx="0" cy="0" r="52" stroke-dasharray="8 6"/>
+    <circle cx="0" cy="0" r="44" stroke-dasharray="6 8"/>
+    <circle cx="0" cy="0" r="36"/>
+  </g>
+  <!-- Lightning bolt -->
+  <polygon points="88,40 72,100 92,100 82,160 130,90 107,90 118,40" fill="url(#boltGrad)"/>
+  <!-- E letter overlay -->
+  <text x="100" y="178" text-anchor="middle" font-family="'Roboto Mono','JetBrains Mono',monospace" font-size="12" font-weight="700" fill="#9CA3AF" letter-spacing="2">ENG</text>
+</svg>

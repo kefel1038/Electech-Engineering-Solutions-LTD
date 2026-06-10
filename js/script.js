@@ -482,6 +482,88 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ============================================
+  // SOLAR ROI CALCULATOR
+  // ============================================
+  var roiBill = document.getElementById('roi-bill');
+  var roiBillValue = document.getElementById('roi-bill-value');
+  var roiArea = document.getElementById('roi-area');
+  var roiAreaValue = document.getElementById('roi-area-value');
+  var roiFacility = document.getElementById('roi-facility');
+  var roiOrientation = document.getElementById('roi-orientation');
+
+  function formatUGX(n) {
+    return 'UGX ' + n.toLocaleString('en-US');
+  }
+
+  function calculateROI() {
+    if (!roiBill || !roiArea) return;
+    var bill = parseFloat(roiBill.value) || 5000000;
+    var area = parseFloat(roiArea.value) || 1000;
+    var fac = roiFacility ? roiFacility.value : 'office';
+    var orient = roiOrientation ? roiOrientation.value : 'good';
+
+    if (roiBillValue) roiBillValue.textContent = formatUGX(bill);
+    if (roiAreaValue) roiAreaValue.textContent = area.toLocaleString() + ' m\u00B2';
+
+    // Determine usable roof area
+    var usableRatio = { office: 0.6, factory: 0.7, warehouse: 0.8, hospital: 0.5, school: 0.5, mall: 0.6, hotel: 0.5, farm: 0.4 };
+    var ratio = usableRatio[fac] || 0.6;
+    var usableArea = area * ratio;
+
+    // Orientation factor
+    var orientFactor = { excellent: 1.0, good: 0.85, fair: 0.7, poor: 0.5 };
+    var ofactor = orientFactor[orient] || 0.85;
+
+    // System size (kWp)
+    var systemKw = Math.round((usableArea * 0.15 * ofactor) * 10) / 10;
+    systemKw = Math.min(systemKw, bill * 0.000012); // Cap by bill (rough)
+
+    // Annual generation (kWh) - Uganda avg ~4.5 peak sun hours
+    var annualKwh = Math.round(systemKw * 4.5 * 365 * 0.85 * ofactor);
+
+    // Cost per kWp (UGX) - ~5.5M per kWp for commercial
+    var costPerKw = 5500000;
+    var capex = Math.round(systemKw * costPerKw);
+
+    // Savings: UGX 500/kWh grid rate
+    var ratePerKwh = 500;
+    var annualSavings = Math.round(annualKwh * ratePerKwh * 0.85); // 85% self-consumption
+
+    // Payback
+    var payback = annualSavings > 0 ? capex / annualSavings : 99;
+
+    // 25-year net benefit
+    var year25Benefit = Math.round(annualSavings * 25 - capex);
+
+    // Compare: solar cost vs grid cost per kWh
+    var gridCostAnnual = bill * 12;
+    var solarCostAnnual = Math.round(capex / 20 + annualKwh * 50 * (1 - 0.85)); // O&M + grid backup
+
+    document.getElementById('roi-system').textContent = systemKw.toFixed(1) + ' kWp';
+    document.getElementById('roi-capex').textContent = formatUGX(capex);
+    document.getElementById('roi-generation').textContent = annualKwh.toLocaleString() + ' kWh';
+    document.getElementById('roi-savings').textContent = formatUGX(annualSavings);
+    document.getElementById('roi-payback').textContent = payback.toFixed(1) + ' years';
+    document.getElementById('roi-benefit').textContent = formatUGX(Math.max(year25Benefit, 0));
+
+    // Compare bars
+    var maxCost = Math.max(gridCostAnnual, solarCostAnnual, 1);
+    var gridPct = Math.min((gridCostAnnual / maxCost) * 100, 100);
+    var solarPct = Math.min((solarCostAnnual / maxCost) * 100, 100);
+    document.getElementById('roi-compare-grid').style.width = gridPct + '%';
+    document.getElementById('roi-compare-solar').style.width = solarPct + '%';
+  }
+
+  // Bind events
+  if (roiBill) roiBill.addEventListener('input', calculateROI);
+  if (roiArea) roiArea.addEventListener('input', calculateROI);
+  if (roiFacility) roiFacility.addEventListener('change', calculateROI);
+  if (roiOrientation) roiOrientation.addEventListener('change', calculateROI);
+
+  // Run initial calculation
+  calculateROI();
+
+  // ============================================
   // NEWSLETTER FORM
   // ============================================
   var newsletterForm = document.getElementById('newsletterForm');
