@@ -35,9 +35,9 @@ export default function Hero() {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white font-sans leading-none">
-            ENGINEERING URBAN <br />
+            INNOVATIVE <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-industrial-400 to-hazard-orange">
-              INFRASTRUCTURE
+              ENGINEERING SOLUTIONS
             </span>
           </h1>
 
