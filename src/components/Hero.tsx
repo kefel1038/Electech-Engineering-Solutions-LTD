@@ -42,7 +42,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-base md:text-lg text-industrial-400 max-w-2xl font-sans leading-relaxed">
-            Delivering high-capacity power distribution, industrial automation, and scalable solar microgrids across the East African Community. Built for operational resilience.
+            We deliver resilient innovative engineering solutions to solve challenges across the East African Community.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
