@@ -387,6 +387,101 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ============================================
+  // ENGINEERING PROJECTS FILTER
+  // ============================================
+  var efilterBtns = document.querySelectorAll('.efilter-btn');
+  var eprojectCards = document.querySelectorAll('.eproject-card');
+  if (efilterBtns.length) {
+    efilterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        efilterBtns.forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.dataset.efilter;
+        eprojectCards.forEach(function(card) {
+          if (filter === 'all' || card.dataset.ecategory === filter) {
+            card.style.display = '';
+            setTimeout(function() { card.style.opacity = '1'; }, 50);
+          } else {
+            card.style.opacity = '0';
+            setTimeout(function() { card.style.display = 'none'; }, 300);
+          }
+        });
+      });
+    });
+  }
+
+  // ============================================
+  // ANIMATED COUNTERS (metrics + impact + flagship)
+  // ============================================
+  var allCounters = document.querySelectorAll('.metric-number, .impact-number, .fresult-num');
+  if (allCounters.length && typeof IntersectionObserver !== 'undefined') {
+    var counterObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          entry.target.dataset.animated = 'true';
+          var target = parseInt(entry.target.dataset.target) || 0;
+          if (target === 0) { entry.target.textContent = '0'; return; }
+          var duration = 2000;
+          var startTime = performance.now();
+          function update(now) {
+            var elapsed = now - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var current = Math.round(eased * target);
+            entry.target.textContent = current;
+            if (progress < 1) requestAnimationFrame(update);
+            else entry.target.textContent = target;
+          }
+          requestAnimationFrame(update);
+        }
+      });
+    }, { threshold: 0.3 });
+    allCounters.forEach(function(el) { counterObserver.observe(el); });
+  }
+
+  // ============================================
+  // PROJECT TESTIMONIAL CAROUSEL
+  // ============================================
+  var ptrack = document.getElementById('ptestimonialTrack');
+  var pprevBtn = document.getElementById('ptestPrev');
+  var pnextBtn = document.getElementById('ptestNext');
+  var pdotsContainer = document.getElementById('ptestDots');
+  if (ptrack) {
+    var pslides = ptrack.querySelectorAll('.ptestimonial-card');
+    var pcurrentSlide = 0;
+    var ptotalSlides = pslides.length;
+    if (pdotsContainer) {
+      for (var p = 0; p < ptotalSlides; p++) {
+        var pdot = document.createElement('button');
+        pdot.className = 'ptestimonial-dot' + (p === 0 ? ' active' : '');
+        pdot.dataset.index = p;
+        pdot.addEventListener('click', function() { pgoToSlide(parseInt(this.dataset.index)); });
+        pdotsContainer.appendChild(pdot);
+      }
+    }
+    function pgoToSlide(idx) {
+      pcurrentSlide = idx;
+      ptrack.style.transform = 'translateX(-' + (pcurrentSlide * 100) + '%)';
+      var pdots = pdotsContainer ? pdotsContainer.querySelectorAll('.ptestimonial-dot') : [];
+      pdots.forEach(function(d, i) { d.classList.toggle('active', i === pcurrentSlide); });
+    }
+    if (pprevBtn) pprevBtn.addEventListener('click', function() {
+      pcurrentSlide = (pcurrentSlide - 1 + ptotalSlides) % ptotalSlides;
+      pgoToSlide(pcurrentSlide);
+    });
+    if (pnextBtn) pnextBtn.addEventListener('click', function() {
+      pcurrentSlide = (pcurrentSlide + 1) % ptotalSlides;
+      pgoToSlide(pcurrentSlide);
+    });
+    setInterval(function() {
+      if (ptrack) {
+        pcurrentSlide = (pcurrentSlide + 1) % ptotalSlides;
+        pgoToSlide(pcurrentSlide);
+      }
+    }, 5000);
+  }
+
+  // ============================================
   // NEWSLETTER FORM
   // ============================================
   var newsletterForm = document.getElementById('newsletterForm');
