@@ -55,7 +55,7 @@ export default function Navbar() {
           <a href="#home" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-full border border-hazard-orange overflow-hidden bg-industrial-900 flex items-center justify-center p-1">
               <img
-                src="/img/electech-logo.svg"
+                src="/img/electech-logo.png"
                 alt="Electech Engineering Solutions LTD Logo"
                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
               />

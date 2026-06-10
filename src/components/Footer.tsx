@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full border border-hazard-orange overflow-hidden bg-industrial-900 flex items-center justify-center p-1">
-                <img src="/img/electech-logo.svg" alt="Electech Engineering Solutions LTD Logo" className="w-full h-full object-contain" />
+                <img src="/img/electech-logo.png" alt="Electech Engineering Solutions LTD Logo" className="w-full h-full object-contain" />
               </div>
               <span className="font-sans font-extrabold tracking-widest text-white text-[10px] uppercase leading-tight">Electech Engineering<br />Solutions LTD</span>
             </div>
