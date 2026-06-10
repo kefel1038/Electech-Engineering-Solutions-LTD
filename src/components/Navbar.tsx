@@ -56,12 +56,12 @@ export default function Navbar() {
             <div className="w-10 h-10 rounded-full border border-hazard-orange overflow-hidden bg-industrial-900 flex items-center justify-center p-1">
               <img
                 src="/img/electech-logo.svg"
-                alt="Electech Logo"
+                alt="Electech Engineering Solutions LTD Logo"
                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
               />
             </div>
-            <span className="font-sans font-extrabold tracking-widest text-white text-sm md:text-base uppercase">
-              ELECTECH
+            <span className="font-sans font-extrabold tracking-widest text-white text-[10px] md:text-sm uppercase leading-tight">
+              Electech Engineering<br />Solutions LTD
             </span>
           </a>
 

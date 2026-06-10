@@ -9,9 +9,9 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full border border-hazard-orange overflow-hidden bg-industrial-900 flex items-center justify-center p-1">
-                <img src="/img/electech-logo.svg" alt="Electech Logo" className="w-full h-full object-contain" />
+                <img src="/img/electech-logo.svg" alt="Electech Engineering Solutions LTD Logo" className="w-full h-full object-contain" />
               </div>
-              <span className="font-sans font-extrabold tracking-widest text-white text-sm uppercase">ELECTECH</span>
+              <span className="font-sans font-extrabold tracking-widest text-white text-[10px] uppercase leading-tight">Electech Engineering<br />Solutions LTD</span>
             </div>
             <p className="text-xs text-industrial-400 font-sans leading-relaxed">
               Engineering Solutions Ltd delivers innovative electrical, energy, telecommunications, and automation solutions across Uganda and East Africa.

@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Compliance from "@/components/Compliance";
 import Projects from "@/components/Projects";
+import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Services />
       <Compliance />
       <Projects />
+      <Gallery />
       <Contact />
       <Footer />
     </>
