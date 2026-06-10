@@ -60,7 +60,7 @@ export default function Navbar() {
                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
               />
             </div>
-            <span className="font-sans font-black tracking-widest text-white text-sm md:text-base uppercase">
+            <span className="font-sans font-extrabold tracking-widest text-white text-sm md:text-base uppercase">
               ELECTECH
             </span>
           </a>
