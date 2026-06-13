@@ -35,6 +35,7 @@ export default function TelemetryHud() {
   // 3. Modbus Logs State
   const [logs, setLogs] = useState<string[]>([]);
   const logsEndRef = useRef<HTMLDivElement>(null);
+  const logsContainerRef = useRef<HTMLDivElement>(null);
 
   // 4. Canvas Waveform
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -89,10 +90,10 @@ export default function TelemetryHud() {
     return () => clearInterval(logInterval);
   }, []);
 
-  // Auto scroll logs
+  // Auto scroll logs (scoped to container only)
   useEffect(() => {
-    if (logsEndRef.current) {
-      logsEndRef.current.scrollIntoView({ behavior: "smooth" });
+    if (logsContainerRef.current) {
+      logsContainerRef.current.scrollTop = logsContainerRef.current.scrollHeight;
     }
   }, [logs]);
 
@@ -267,7 +268,7 @@ export default function TelemetryHud() {
           <span className="text-[9px] text-zinc-600">BUF_SIZE: 30</span>
         </div>
         
-        <div className="h-28 bg-zinc-950/80 border border-zinc-900 p-2 font-mono text-[9px] leading-relaxed overflow-y-auto space-y-1.5 scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800">
+        <div ref={logsContainerRef} className="h-28 bg-zinc-950/80 border border-zinc-900 p-2 font-mono text-[9px] leading-relaxed overflow-y-auto space-y-1.5 scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800">
           {logs.map((log, index) => {
             const isError = log.includes("[ERR]") || log.includes("[SECURITY]");
             const isSolar = log.includes("[SOLAR");

@@ -35,10 +35,13 @@ export default function AiChatbot() {
     ]);
   }, []);
 
-  // Auto scroll
+  // Auto scroll (scoped to container)
   useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    const el = messagesEndRef.current;
+    if (!el) return;
+    const container = el.closest(".overflow-y-auto");
+    if (container) {
+      container.scrollTop = container.scrollHeight;
     }
   }, [messages, isTyping]);
 
