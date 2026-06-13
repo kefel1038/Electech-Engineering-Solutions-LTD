@@ -32,8 +32,7 @@ export default function About() {
                 {/* Visual Label */}
                 <div className="absolute bottom-4 left-4 right-4 bg-slate-900/95 dark:bg-zinc-950/95 border border-slate-800 p-4 font-mono text-[11px] leading-relaxed text-zinc-350">
                   <div className="text-zinc-50 font-bold uppercase tracking-wider">Eng. Lubega Felix Ken</div>
-                  <div className="text-orange-500 dark:text-orange-500 font-bold uppercase tracking-widest text-[9px]">Founder & Lead Systems Architect</div>
-                  <div className="text-zinc-500 text-[9px] mt-1">Reg: ERB-2024-18 // Corporate Member: UIPE</div>
+                  <div className="text-orange-500 dark:text-orange-500 font-bold uppercase tracking-widest text-[9px]">Founder</div>
                 </div>
               </div>
             </div>
@@ -165,7 +164,7 @@ export default function About() {
             {activeTab === "leadership" && (
               <div className="space-y-4 animate-fadeIn">
                 <p className="text-sm md:text-base text-slate-650 dark:text-zinc-400 leading-relaxed font-sans">
-                  Our technical direction is headed by our founder, **Eng. Lubega Felix Ken**, along with a corporate board of directors representing electrical practitioners, communications network architects, and financial analysts.
+                  Our technical direction is headed by our founder, Eng. Lubega Felix Ken, along with other experts & professionals representing electrical practitioners, communications network architects, and financial analysts.
                 </p>
                 
                 <div className="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 rounded-none font-mono text-xs space-y-2 text-slate-700 dark:text-zinc-300">
@@ -174,10 +173,8 @@ export default function About() {
                     Technical Leadership Profile
                   </div>
                   <div>&gt; Chief Executive: Eng. Lubega Felix Ken</div>
-                  <div>&gt; Licensure: Registered Engineer, Engineers Registration Board (ERB)</div>
-                  <div>&gt; Academics: BSc Electrical Engineering (Makerere Univ)</div>
-                  <div>&gt; Affiliation: Corporate Member, Uganda Institution of Professional Engineers (UIPE)</div>
-                  <div>&gt; Expertise: Utility substation design, automation, grid SCADA integrations</div>
+                  <div>&gt; Academics: BSc Electrical Engineering (International Univ of E.Africa), Dip.Telcom Eng(UICT)</div>
+                  <div>&gt; Expertise: Utility Electrical Systems design, Renewable energy, Security Systems Design etc.</div>
                 </div>
               </div>
             )}
