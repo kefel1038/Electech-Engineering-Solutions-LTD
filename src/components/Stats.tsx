@@ -7,7 +7,7 @@ function Counter({ target, suffix = "", decimals = 0 }: { target: number; suffix
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const counted = useRef(false);
-  const timerRef = useRef<ReturnType<typeof setInterval>>();
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     const el = ref.current;
@@ -29,7 +29,7 @@ function Counter({ target, suffix = "", decimals = 0 }: { target: number; suffix
             if (currentStep >= steps) {
               setCount(target);
               clearInterval(timerRef.current);
-              timerRef.current = undefined;
+              timerRef.current = null;
             } else {
               setCount(parseFloat(start.toFixed(decimals)));
             }
