@@ -7,7 +7,7 @@ import Services from "@/components/Services";
 import Compliance from "@/components/Compliance";
 import Projects from "@/components/Projects";
 import Gallery from "@/components/Gallery";
-import ROICalculator from "@/components/ROICalculator";
+import SolarRoiCalculator from "@/components/SolarRoiCalculator";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -23,7 +23,7 @@ export default function Home() {
       <Compliance />
       <Projects />
       <Gallery />
-      <ROICalculator />
+      <SolarRoiCalculator />
       <Contact />
       <Footer />
     </>

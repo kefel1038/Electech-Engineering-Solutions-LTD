@@ -1,112 +1,153 @@
+"use client";
+
+import React from "react";
+import { Zap, Wifi, Sun, Cpu, Binary, LayoutList, ArrowUpRight } from "lucide-react";
+
 export default function Services() {
-  const serviceList = [
+  const serviceCards = [
     {
-      id: "SRV-ELE",
+      icon: Zap,
       title: "Electrical Engineering",
-      icon: "fa-bolt",
-      description: "Comprehensive power system design, low & medium voltage installations, substation design, energy audits, and reactive power compensation.",
-      tags: ["Distribution", "Substations", "Power Audits", "Switchgears"],
+      tagline: "Utility & Grid Infrastructure",
+      items: [
+        "High/Medium voltage substation setup",
+        "Industrial grid distribution design",
+        "HVAC & building electrical systems",
+        "Power quality analysis & stabilization"
+      ],
+      colorClass: "border-blue-600/20 group-hover:border-blue-600 text-blue-600 dark:text-blue-400"
     },
     {
-      id: "SRV-REN",
-      title: "Renewable Energy",
-      icon: "fa-solar-panel",
-      description: "Commercial & industrial solar hybrid engineering, battery energy storage systems (BESS), solar water pumping, and microgrid management.",
-      tags: ["Solar Hybrid", "BESS", "Microgrids", "Pumping"],
-    },
-    {
-      id: "SRV-TEL",
+      icon: Wifi,
       title: "Telecommunications",
-      icon: "fa-satellite-dish",
-      description: "Fiber optic backbone construction, last-mile telecom deployment, civil works, GSM tower builds, and structured cabling solutions.",
-      tags: ["Fiber Splicing", "P2P Wireless", "GSM Towers", "Cabling"],
+      tagline: "Connectivity & Backhaul Transmission",
+      items: [
+        "FTTx fiber deployment (GPON/Active)",
+        "GSM tower & wireless link installations",
+        "Structured corporate cabling systems",
+        "ICT data center architectures"
+      ],
+      colorClass: "border-cyan-500/20 group-hover:border-cyan-400 text-cyan-500 dark:text-cyan-400"
     },
     {
-      id: "SRV-ICT",
-      title: "ICT Infrastructure",
-      icon: "fa-network-wired",
-      description: "Tier-III equivalent data center installations, enterprise network administration, cybersecurity compliance, and cloud systems setup.",
-      tags: ["Data Centers", "Routing", "Cyber Security", "VMware"],
+      icon: Sun,
+      title: "Renewable Energy",
+      tagline: "Commercial & Industrial Solar Solutions",
+      items: [
+        "On-grid & hybrid solar installations",
+        "BESS battery storage integrations",
+        "Corporate facility energy auditing",
+        "Backup UPS & stabilizer systems"
+      ],
+      colorClass: "border-emerald-500/20 group-hover:border-emerald-500 text-emerald-500 dark:text-emerald-400"
     },
     {
-      id: "SRV-AUT",
+      icon: Cpu,
       title: "Industrial Automation",
-      icon: "fa-robot",
-      description: "PLC programming (Siemens S7), SCADA design and telemetry, Modbus/Profibus networking, HMI interface builds, and VFD setups.",
-      tags: ["SCADA", "Siemens S7", "Modbus TCP", "Telemetry"],
+      tagline: "SCADA & Operational Control Systems",
+      items: [
+        "PLC/HMI controller programming",
+        "RTU telemetry & remote sensor loops",
+        "Industrial process controls audits",
+        "Custom instrument integration"
+      ],
+      colorClass: "border-indigo-600/20 group-hover:border-indigo-500 text-indigo-600 dark:text-indigo-400"
     },
     {
-      id: "SRV-EMB",
-      title: "Electronics & Embedded",
-      icon: "fa-microchip",
-      description: "Custom PCB design and prototyping, micro-controller programming (ESP32/Arduino), firmware compilation, and IoT product builds.",
-      tags: ["PCB Layout", "Firmware", "ESP32 Nodes", "Sensors"],
+      icon: Binary,
+      title: "Research & Development",
+      tagline: "IoT, Embedded Systems & AI Integration",
+      items: [
+        "Custom firmware & PCB prototyping",
+        "Wireless telemetry grids (LoRa/NB-IoT)",
+        "AI predictive load analytics engines",
+        "Cyber-physical systems testing"
+      ],
+      colorClass: "border-purple-600/20 group-hover:border-purple-500 text-purple-600 dark:text-purple-400"
     },
     {
-      id: "SRV-RND",
-      title: "Research & Innovation",
-      icon: "fa-flask",
-      description: "Technology prototyping, smart agricultural incubations, custom robotics assemblies, and telemetry field trials.",
-      tags: ["R&D Labs", "Robotics", "IoT Mesh", "Prototypes"],
-    },
+      icon: LayoutList,
+      title: "Technical Consultancy",
+      tagline: "Engineering Design & Audits",
+      items: [
+        "Feasibility modeling & site surveys",
+        "Drafting single-line diagrams (.dwg)",
+        "Turnkey project management (PMO)",
+        "Regulatory compliance audits (ERA/ERB)"
+      ],
+      colorClass: "border-pink-600/20 group-hover:border-pink-500 text-pink-600 dark:text-pink-400"
+    }
   ];
 
   return (
-    <section id="services" className="py-24 bg-industrial-950 border-b border-industrial-800">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="font-mono text-xs text-hazard-orange uppercase tracking-widest block">
-            [ Core Competencies ]
-          </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-            COMPREHENSIVE ENGINEERING SOLUTIONS
+    <section id="services" className="py-24 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-900 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 space-y-16">
+        
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-4">
+          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-1.5 rounded-full text-xs font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest">
+            <Cpu className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: '10s' }} />
+            Operational Divisions
+          </div>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            Engineering Capabilities
           </h2>
-          <p className="text-sm md:text-base text-industrial-400 font-sans leading-relaxed">
-            From power systems to digital infrastructure, we deliver end-to-end engineering services designed for high availability and performance.
+          <p className="text-sm md:text-base text-slate-550 dark:text-zinc-400 font-sans max-w-2xl mx-auto">
+            From hardware prototyping to high-voltage grid integrations, we engineer industrial infrastructures conforming to international quality codes.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {serviceList.map((srv, idx) => (
-            <div
-              key={idx}
-              className="border border-industrial-800 bg-industrial-900/40 p-8 tech-corner flex flex-col justify-between hover:border-hazard-orange/40 hover:bg-industrial-900/60 transition-all duration-300 group"
-            >
-              <div className="space-y-6">
-                <div className="flex justify-between items-center">
-                  <span className="font-mono text-[10px] text-industrial-400 font-semibold tracking-wider">
-                    {srv.id}
-                  </span>
-                  <div className="w-10 h-10 bg-industrial-950 border border-industrial-800 flex items-center justify-center text-hazard-orange group-hover:bg-hazard-orange group-hover:text-industrial-950 transition-all duration-300">
-                    <i className={`fas ${srv.icon} text-sm`} />
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {serviceCards.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <div 
+                key={index} 
+                className="group border bg-slate-50/50 dark:bg-slate-900/20 p-8 tech-corner hover:bg-white dark:hover:bg-slate-900/40 hover:shadow-xl dark:hover:shadow-slate-950/20 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  {/* Top Bar with Icon and Link arrow */}
+                  <div className="flex justify-between items-start mb-6">
+                    <div className={`w-12 h-12 border bg-white dark:bg-slate-900 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300 ${service.colorClass}`}>
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <a href="#contact" className="text-slate-300 dark:text-slate-800 group-hover:text-blue-500 dark:group-hover:text-cyan-400 transition-colors" title="Request consultation">
+                      <ArrowUpRight className="w-5 h-5" />
+                    </a>
                   </div>
+
+                  {/* Title and Tagline */}
+                  <div className="space-y-1 mb-4">
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white font-sans group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-[10px] font-mono text-slate-400 dark:text-zinc-500 uppercase tracking-widest">
+                      {service.tagline}
+                    </p>
+                  </div>
+
+                  {/* Service Items List */}
+                  <ul className="space-y-2 border-t border-slate-200 dark:border-slate-800/80 pt-4">
+                    {service.items.map((item, idx) => (
+                      <li key={idx} className="flex gap-2 text-xs text-slate-600 dark:text-zinc-400 items-start">
+                        <span className="text-blue-600 dark:text-cyan-400 mt-1 shrink-0">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-white font-sans group-hover:text-hazard-orange transition-colors">
-                    {srv.title}
-                  </h3>
-                  <p className="text-xs text-industrial-400 leading-relaxed font-sans">
-                    {srv.description}
-                  </p>
+                {/* Card footer details */}
+                <div className="pt-6 font-mono text-[9px] text-slate-400 dark:text-zinc-500 flex justify-between">
+                  <span>DIV // 0{index + 1}</span>
+                  <span className="uppercase tracking-widest text-[8px] border border-slate-200 dark:border-slate-800 px-1.5 py-0.5">IEC/IEEE Standards</span>
                 </div>
               </div>
-
-              <div className="pt-6 mt-6 border-t border-industrial-800/60">
-                <div className="flex flex-wrap gap-1.5">
-                  {srv.tags.map((tag, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="font-mono text-[9px] text-hazard-electric bg-industrial-950 border border-industrial-800/80 px-2 py-0.5"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
+
       </div>
     </section>
   );

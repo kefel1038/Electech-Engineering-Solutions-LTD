@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { Maximize2, X } from "lucide-react";
 
 const categories = [
-  { id: "all", label: "All" },
-  { id: "solar", label: "Solar" },
+  { id: "all", label: "All Works" },
+  { id: "solar", label: "Solar PV" },
   { id: "electrical", label: "Electrical" },
   { id: "telecom", label: "Telecom" },
   { id: "automation", label: "Automation" },
@@ -64,15 +65,15 @@ export default function Gallery() {
   const filtered = filter === "all" ? images : images.filter((img) => img.category === filter);
 
   return (
-    <section id="gallery" className="py-24 bg-industrial-900 border-b border-industrial-800">
+    <section id="gallery" className="py-24 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span className="font-mono text-xs text-hazard-orange uppercase tracking-widest block">
-            [ Gallery ]
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
+          <span className="font-mono text-xs text-blue-600 dark:text-cyan-400 uppercase tracking-widest block">
+            [ Operations Gallery ]
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Our Work in Action</h2>
-          <p className="text-sm md:text-base text-industrial-400 font-sans leading-relaxed">
-            Real projects, real results — browse our portfolio of completed works.
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Our Work in Action</h2>
+          <p className="text-sm md:text-base text-slate-600 dark:text-zinc-400 font-sans leading-relaxed">
+            Real projects, real results — browse our archives of field installations.
           </p>
         </div>
 
@@ -82,10 +83,10 @@ export default function Gallery() {
             <button
               key={cat.id}
               onClick={() => setFilter(cat.id)}
-              className={`font-mono text-[10px] tracking-wider uppercase px-4 py-2 transition-all duration-200 ${
+              className={`font-mono text-[10px] tracking-wider uppercase px-4 py-2 transition-all duration-200 cursor-pointer ${
                 filter === cat.id
-                  ? "bg-hazard-orange text-industrial-950 font-bold"
-                  : "bg-industrial-900 text-industrial-400 border border-industrial-800 hover:border-hazard-orange/50 hover:text-white"
+                  ? "bg-blue-600 dark:bg-cyan-400 text-white dark:text-slate-950 font-bold"
+                  : "bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-850 text-slate-600 dark:text-zinc-400 hover:border-blue-600/50 dark:hover:border-cyan-400/50 hover:text-slate-900 dark:hover:text-zinc-200"
               }`}
             >
               {cat.label}
@@ -94,23 +95,21 @@ export default function Gallery() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
           {filtered.map((img, idx) => (
             <button
               key={idx}
               onClick={() => setLightbox(img.src)}
-              className="group relative aspect-square overflow-hidden border border-industrial-800 bg-industrial-950 cursor-pointer"
+              className="group relative aspect-square overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 cursor-pointer"
             >
               <img
                 src={img.src}
-                alt={`Electech Engineering Solutions LTD - ${img.category}`}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt={`Electech - ${img.category}`}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-end p-2">
-                <span className="text-[9px] font-mono uppercase tracking-wider text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {img.category}
-                </span>
+              <div className="absolute inset-0 bg-slate-950/0 group-hover:bg-slate-950/60 transition-all duration-300 flex items-center justify-center">
+                <Maximize2 className="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </button>
           ))}
@@ -120,19 +119,19 @@ export default function Gallery() {
       {/* Lightbox */}
       {lightbox && (
         <div
-          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-pointer"
+          className="fixed inset-0 z-[100] bg-slate-950/90 flex items-center justify-center p-4 cursor-pointer backdrop-blur-sm"
           onClick={() => setLightbox(null)}
         >
           <button
             onClick={() => setLightbox(null)}
-            className="absolute top-4 right-4 w-12 h-12 bg-industrial-900 border border-industrial-800 flex items-center justify-center text-white hover:text-hazard-orange transition-colors z-10"
+            className="absolute top-4 right-4 w-12 h-12 border border-slate-800 bg-slate-900 flex items-center justify-center text-white hover:text-cyan-455 transition-colors z-10 cursor-pointer"
           >
-            <i className="fas fa-times text-xl" />
+            <X className="w-5 h-5" />
           </button>
           <img
             src={lightbox}
-            alt="Electech Engineering Solutions LTD Project"
-            className="max-w-full max-h-[90vh] object-contain border border-industrial-800"
+            alt="Electech Project"
+            className="max-w-full max-h-[90vh] object-contain border border-slate-800"
             onClick={(e) => e.stopPropagation()}
           />
         </div>
@@ -140,3 +139,4 @@ export default function Gallery() {
     </section>
   );
 }
+
