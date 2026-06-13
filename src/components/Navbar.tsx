@@ -110,12 +110,12 @@ export default function Navbar() {
         
         {/* Contact Info */}
         <div className="flex items-center gap-6">
-          <a href="tel:+256787531336" className="flex items-center gap-2 hover:text-blue-500 transition-colors">
-            <Phone className="w-3.5 h-3.5 text-blue-500" />
+          <a href="tel:+256787531336" className="flex items-center gap-2 hover:text-orange-500 transition-colors">
+            <Phone className="w-3.5 h-3.5 text-orange-500" />
             +256 787 531 336
           </a>
-          <a href="mailto:info@electech.co.ug" className="flex items-center gap-2 hover:text-blue-500 transition-colors">
-            <Mail className="w-3.5 h-3.5 text-blue-500" />
+          <a href="mailto:info@electech.co.ug" className="flex items-center gap-2 hover:text-orange-500 transition-colors">
+            <Mail className="w-3.5 h-3.5 text-orange-500" />
             info@electech.co.ug
           </a>
         </div>
@@ -137,9 +137,9 @@ export default function Navbar() {
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setLangDropdown(!langDropdown)}
-              className="flex items-center gap-1 hover:text-blue-400 cursor-pointer"
+              className="flex items-center gap-1 hover:text-orange-400 cursor-pointer"
             >
-              <Globe className="w-3.5 h-3.5 text-blue-500" />
+              <Globe className="w-3.5 h-3.5 text-orange-500" />
               <span>{activeLang}</span>
               <ChevronDown className="w-3 h-3 text-zinc-500" />
             </button>
@@ -155,7 +155,7 @@ export default function Navbar() {
                     className="w-full px-3 py-1.5 flex items-center justify-between hover:bg-slate-100 dark:hover:bg-zinc-800 text-left font-mono cursor-pointer text-slate-800 dark:text-zinc-350"
                   >
                     <span>{l.label}</span>
-                    {activeLang === l.code && <Check className="w-3 h-3 text-blue-500" />}
+                    {activeLang === l.code && <Check className="w-3 h-3 text-orange-500" />}
                   </button>
                 ))}
               </div>
@@ -165,7 +165,7 @@ export default function Navbar() {
           {/* Theme Toggler */}
           <button
             onClick={toggleTheme}
-            className="flex items-center gap-1.5 cursor-pointer text-slate-400 hover:text-blue-400"
+            className="flex items-center gap-1.5 cursor-pointer text-slate-400 hover:text-orange-400"
             title="Toggle color theme"
           >
             {theme === "dark" ? (
@@ -175,7 +175,7 @@ export default function Navbar() {
               </>
             ) : (
               <>
-                <Moon className="w-3.5 h-3.5 text-blue-600" />
+                <Moon className="w-3.5 h-3.5 text-orange-600" />
                 <span>DARK_MODE</span>
               </>
             )}
@@ -195,7 +195,7 @@ export default function Navbar() {
           
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full border border-blue-600 overflow-hidden bg-slate-100 flex items-center justify-center p-1.5 transition-transform group-hover:scale-105 duration-300 shadow-sm">
+            <div className="w-10 h-10 rounded-full border border-orange-600 overflow-hidden bg-slate-100 flex items-center justify-center p-1.5 transition-transform group-hover:scale-105 duration-300 shadow-sm">
               <img
                 src="/img/electech-logo.png"
                 alt="Electech Logo"
@@ -204,7 +204,7 @@ export default function Navbar() {
             </div>
             <span className="font-sans font-extrabold tracking-widest text-slate-900 dark:text-zinc-50 text-[10px] md:text-sm uppercase leading-tight">
               Electech Engineering<br />
-              <span className="text-[9px] md:text-xs text-blue-600 tracking-wider">Solutions LTD</span>
+              <span className="text-[9px] md:text-xs text-orange-600 tracking-wider">Solutions LTD</span>
             </span>
           </a>
 
@@ -216,13 +216,13 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-[10px] xl:text-[11px] font-mono tracking-wider uppercase transition-colors relative py-1.5 ${
                   activeSection === link.id
-                    ? "text-blue-600 dark:text-cyan-400 font-bold"
+                    ? "text-orange-600 dark:text-orange-500 font-bold"
                     : "text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-50"
                 }`}
               >
                 {link.label}
                 {activeSection === link.id && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-600 dark:bg-cyan-400" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-orange-600 dark:bg-orange-500" />
                 )}
               </a>
             ))}
@@ -233,7 +233,7 @@ export default function Navbar() {
             {/* Quote Button */}
             <a
               href="#roi"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-mono text-xs tracking-wider uppercase px-5 py-3 transition-colors select-none font-bold"
+              className="bg-orange-600 hover:bg-orange-700 text-white font-mono text-xs tracking-wider uppercase px-5 py-3 transition-colors select-none font-bold"
             >
               Request Quote
             </a>
@@ -244,7 +244,7 @@ export default function Navbar() {
             {/* Mobile Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-cyan-400"
+              className="p-2 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-zinc-300 hover:text-orange-600 dark:hover:text-orange-500"
             >
               {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
@@ -276,7 +276,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className={`text-xs font-mono tracking-widest uppercase py-2 border-b border-slate-100 dark:border-slate-900/60 ${
                 activeSection === link.id
-                  ? "text-blue-600 dark:text-cyan-400 font-bold"
+                  ? "text-orange-600 dark:text-orange-500 font-bold"
                   : "text-slate-600 dark:text-zinc-400"
               }`}
             >
@@ -288,7 +288,7 @@ export default function Navbar() {
             <a
               href="#roi"
               onClick={() => setIsOpen(false)}
-              className="w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-mono text-[10px] font-bold tracking-widest uppercase py-3.5"
+              className="w-full text-center bg-orange-600 hover:bg-orange-700 text-white font-mono text-[10px] font-bold tracking-widest uppercase py-3.5"
             >
               Request Quote
             </a>

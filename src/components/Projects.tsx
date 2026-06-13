@@ -92,7 +92,7 @@ export default function Projects() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-1.5 rounded-full text-xs font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-1.5 rounded-full text-xs font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest">
             <FolderGit2 className="w-3.5 h-3.5" />
             Corporate Portfolio
           </div>
@@ -112,7 +112,7 @@ export default function Projects() {
               onClick={() => setActiveTab(cat.value)}
               className={`py-3 px-4 border-b-2 font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap ${
                 activeTab === cat.value
-                  ? "border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400"
+                  ? "border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-500"
                   : "border-transparent text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200"
               }`}
             >
@@ -126,7 +126,7 @@ export default function Projects() {
           {filteredProjects.map((project, index) => (
             <div 
               key={index}
-              className="group border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/60 p-4 tech-corner hover:border-blue-600 dark:hover:border-cyan-400 transition-all duration-300 flex flex-col justify-between"
+              className="group border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/60 p-4 tech-corner hover:border-orange-600 dark:hover:border-orange-500 transition-all duration-300 flex flex-col justify-between"
             >
               {/* Image Frame */}
               <div className="relative h-48 w-full overflow-hidden border border-slate-200 dark:border-slate-800/80 mb-4 bg-slate-100">
@@ -135,7 +135,7 @@ export default function Projects() {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                 />
-                <span className="absolute top-3 right-3 bg-slate-900/90 dark:bg-zinc-950/90 border border-slate-700 font-mono text-[9px] text-blue-400 dark:text-cyan-400 px-2 py-0.5 uppercase">
+                <span className="absolute top-3 right-3 bg-slate-900/90 dark:bg-zinc-950/90 border border-slate-700 font-mono text-[9px] text-orange-400 dark:text-orange-500 px-2 py-0.5 uppercase">
                   {project.category}
                 </span>
               </div>
@@ -143,7 +143,7 @@ export default function Projects() {
               {/* Text content */}
               <div className="space-y-4">
                 <div>
-                  <h4 className="text-base font-bold text-slate-900 dark:text-white font-sans group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+                  <h4 className="text-base font-bold text-slate-900 dark:text-white font-sans group-hover:text-orange-600 dark:group-hover:text-orange-500 transition-colors">
                     {project.title}
                   </h4>
                   <div className="text-[10px] font-mono text-slate-400 dark:text-zinc-500 uppercase tracking-widest mt-1">
@@ -154,7 +154,7 @@ export default function Projects() {
                 {/* Technical Specs box */}
                 <div className="bg-slate-50 dark:bg-slate-900/50 p-4 border border-slate-200 dark:border-slate-900 text-xs leading-relaxed space-y-2.5">
                   <div className="flex gap-1.5 items-start">
-                    <Target className="w-4 h-4 text-blue-600 dark:text-cyan-400 mt-0.5 shrink-0" />
+                    <Target className="w-4 h-4 text-orange-600 dark:text-orange-500 mt-0.5 shrink-0" />
                     <span className="text-slate-600 dark:text-zinc-400 font-sans">
                       <strong className="text-slate-800 dark:text-white block font-mono text-[10px] uppercase">Scope of Work</strong>
                       {project.scope}
@@ -162,7 +162,7 @@ export default function Projects() {
                   </div>
 
                   <div className="flex gap-1.5 items-start">
-                    <Settings className="w-4 h-4 text-blue-600 dark:text-cyan-400 mt-0.5 shrink-0" />
+                    <Settings className="w-4 h-4 text-orange-600 dark:text-orange-500 mt-0.5 shrink-0" />
                     <span className="text-slate-600 dark:text-zinc-400 font-sans">
                       <strong className="text-slate-800 dark:text-white block font-mono text-[10px] uppercase">Technologies Used</strong>
                       <div className="flex flex-wrap gap-1 mt-1 font-mono text-[9px]">
@@ -176,7 +176,7 @@ export default function Projects() {
                   </div>
 
                   <div className="flex gap-1.5 items-start">
-                    <Calendar className="w-4 h-4 text-blue-600 dark:text-cyan-400 mt-0.5 shrink-0" />
+                    <Calendar className="w-4 h-4 text-orange-600 dark:text-orange-500 mt-0.5 shrink-0" />
                     <span className="text-slate-600 dark:text-zinc-400 font-sans">
                       <strong className="text-slate-800 dark:text-white block font-mono text-[10px] uppercase">Results Achieved</strong>
                       {project.result}

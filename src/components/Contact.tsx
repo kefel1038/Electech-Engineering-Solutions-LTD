@@ -12,7 +12,7 @@ export default function Contact() {
           
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="font-mono text-xs text-blue-650 dark:text-cyan-450 uppercase tracking-widest block">
+            <span className="font-mono text-xs text-orange-600 dark:text-orange-500 uppercase tracking-widest block">
               [ Connect With Us ]
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
@@ -30,7 +30,7 @@ export default function Contact() {
               
               <div>
                 <h3 className="text-lg font-bold text-slate-900 dark:text-white font-sans mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-blue-650 dark:text-cyan-400" />
+                  <MapPin className="w-5 h-5 text-orange-600 dark:text-orange-500" />
                   Kampala Office
                 </h3>
                 
@@ -51,25 +51,25 @@ export default function Contact() {
 
                 <div className="space-y-4 text-xs font-mono text-slate-700 dark:text-zinc-350">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-blue-600 dark:text-cyan-400 shrink-0 shadow-sm">
+                    <div className="w-9 h-9 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-orange-600 dark:text-orange-500 shrink-0 shadow-sm">
                       <Phone className="w-4 h-4" />
                     </div>
-                    <a href="tel:+256787531336" className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
+                    <a href="tel:+256787531336" className="hover:text-orange-600 dark:hover:text-orange-500 transition-colors">
                       +256 787 531 336
                     </a>
                   </div>
                   
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-blue-600 dark:text-cyan-400 shrink-0 shadow-sm">
+                    <div className="w-9 h-9 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-orange-600 dark:text-orange-500 shrink-0 shadow-sm">
                       <Mail className="w-4 h-4" />
                     </div>
-                    <a href="mailto:info@electech.co.ug" className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
+                    <a href="mailto:info@electech.co.ug" className="hover:text-orange-600 dark:hover:text-orange-500 transition-colors">
                       info@electech.co.ug
                     </a>
                   </div>
                   
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-blue-600 dark:text-cyan-400 shrink-0 shadow-sm">
+                    <div className="w-9 h-9 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-orange-600 dark:text-orange-500 shrink-0 shadow-sm">
                       <Clock className="w-4 h-4" />
                     </div>
                     <span>Mon – Fri: 8:00 AM – 5:00 PM</span>
@@ -102,7 +102,7 @@ export default function Contact() {
       {/* Floating Action Button - Back to Top */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-6 right-6 z-40 w-10 h-10 bg-slate-200 dark:bg-slate-850 hover:bg-blue-600 dark:hover:bg-cyan-400 text-slate-600 hover:text-white dark:text-zinc-400 dark:hover:text-slate-950 flex items-center justify-center border border-slate-250 dark:border-slate-800 transition-all duration-300 shadow-md cursor-pointer"
+        className="fixed bottom-6 right-6 z-40 w-10 h-10 bg-slate-200 dark:bg-slate-850 hover:bg-orange-600 dark:hover:bg-orange-500 text-slate-600 hover:text-white dark:text-zinc-400 dark:hover:text-slate-950 flex items-center justify-center border border-slate-250 dark:border-slate-800 transition-all duration-300 shadow-md cursor-pointer"
         title="Back to Top"
       >
         <ChevronUp className="w-5 h-5 animate-pulse" />
@@ -110,13 +110,13 @@ export default function Contact() {
 
       {/* Mobile Sticky CTA */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 flex text-center font-mono select-none">
-        <a href="tel:+256787531336" className="flex-1 py-3 text-[9px] uppercase tracking-wider text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-cyan-400 border-r border-slate-200 dark:border-slate-900 transition-colors">
+        <a href="tel:+256787531336" className="flex-1 py-3 text-[9px] uppercase tracking-wider text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 border-r border-slate-200 dark:border-slate-900 transition-colors">
           Call Office
         </a>
         <a href="https://wa.me/256787531336" target="_blank" rel="noopener noreferrer" className="flex-1 py-3 text-[9px] uppercase tracking-wider text-slate-600 dark:text-zinc-400 hover:text-green-500 border-r border-slate-200 dark:border-slate-900 transition-colors">
           WhatsApp
         </a>
-        <a href="#contact" className="flex-1 py-3 text-[9px] uppercase tracking-wider bg-blue-600 text-white dark:bg-cyan-400 dark:text-slate-950 font-bold">
+        <a href="#contact" className="flex-1 py-3 text-[9px] uppercase tracking-wider bg-orange-600 text-white dark:bg-orange-500 dark:text-slate-950 font-bold">
           Submit RFQ
         </a>
       </div>

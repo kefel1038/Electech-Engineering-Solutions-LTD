@@ -55,7 +55,7 @@ export default function ResearchInnovation() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-1.5 rounded-full text-xs font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-1.5 rounded-full text-xs font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest">
             <LineChart className="w-3.5 h-3.5" />
             R&D Innovation Hub
           </div>
@@ -74,9 +74,9 @@ export default function ResearchInnovation() {
             return (
               <div 
                 key={idx} 
-                className="border border-slate-250 dark:border-slate-850 bg-white dark:bg-slate-950/40 p-8 tech-corner group hover:border-blue-650 dark:hover:border-cyan-400 hover:shadow-lg dark:hover:shadow-slate-950/10 transition-all duration-300"
+                className="border border-slate-250 dark:border-slate-850 bg-white dark:bg-slate-950/40 p-8 tech-corner group hover:border-orange-600 dark:hover:border-orange-500 hover:shadow-lg dark:hover:shadow-slate-950/10 transition-all duration-300"
               >
-                <div className="w-12 h-12 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-blue-600 dark:text-cyan-400 group-hover:scale-105 transition-transform duration-300 shadow-sm mb-6">
+                <div className="w-12 h-12 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-orange-600 dark:text-orange-500 group-hover:scale-105 transition-transform duration-300 shadow-sm mb-6">
                   <Icon className="w-6 h-6" />
                 </div>
                 
@@ -95,7 +95,7 @@ export default function ResearchInnovation() {
         {/* Chronological Roadmap Timeline */}
         <div className="pt-12 border-t border-slate-200 dark:border-slate-800/60">
           <div className="max-w-3xl mx-auto text-center mb-16 space-y-2">
-            <span className="font-mono text-xs text-blue-650 dark:text-cyan-450 uppercase tracking-widest block">
+            <span className="font-mono text-xs text-orange-600 dark:text-orange-500 uppercase tracking-widest block">
               [ Future Outlook ]
             </span>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
@@ -112,14 +112,14 @@ export default function ResearchInnovation() {
               <div key={index} className="relative group">
                 
                 {/* Visual Bullet dot */}
-                <div className="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-full border bg-white dark:bg-slate-950 flex items-center justify-center border-slate-200 dark:border-slate-800 group-hover:border-blue-600 dark:group-hover:border-cyan-400 group-hover:scale-110 transition-all duration-300">
-                  <span className="w-2.5 h-2.5 rounded-full bg-blue-600 dark:bg-cyan-400 animate-pulse" />
+                <div className="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-full border bg-white dark:bg-slate-950 flex items-center justify-center border-slate-200 dark:border-slate-800 group-hover:border-orange-600 dark:group-hover:border-orange-500 group-hover:scale-110 transition-all duration-300">
+                  <span className="w-2.5 h-2.5 rounded-full bg-orange-600 dark:bg-orange-500 animate-pulse" />
                 </div>
 
                 {/* Content Panel */}
-                <div className="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/40 p-6 tech-corner group-hover:border-blue-600 dark:group-hover:border-cyan-400 transition-all duration-300">
+                <div className="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/40 p-6 tech-corner group-hover:border-orange-600 dark:group-hover:border-orange-500 transition-all duration-300">
                   <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2 font-mono text-xs">
-                    <span className="text-lg font-extrabold text-blue-600 dark:text-cyan-400">{item.year}</span>
+                    <span className="text-lg font-extrabold text-orange-600 dark:text-orange-500">{item.year}</span>
                     <span className="text-slate-400 dark:text-zinc-500 uppercase tracking-widest text-[10px]">{item.phase}</span>
                   </div>
                   

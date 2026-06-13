@@ -30,7 +30,7 @@ export default function TrustMarquee() {
           {duplicatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex items-center justify-center px-6 py-3 border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-950/40 text-xs md:text-sm font-mono text-slate-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-cyan-400 hover:border-blue-600 dark:hover:border-cyan-400 transition-all duration-300 select-none whitespace-nowrap cursor-default"
+              className="flex items-center justify-center px-6 py-3 border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-950/40 text-xs md:text-sm font-mono text-slate-600 dark:text-zinc-400 hover:text-orange-600 dark:hover:text-orange-500 hover:border-orange-600 dark:hover:border-orange-500 transition-all duration-300 select-none whitespace-nowrap cursor-default"
             >
               {logo}
             </div>

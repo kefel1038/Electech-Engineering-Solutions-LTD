@@ -68,7 +68,7 @@ export default function Gallery() {
     <section id="gallery" className="py-24 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
-          <span className="font-mono text-xs text-blue-600 dark:text-cyan-400 uppercase tracking-widest block">
+          <span className="font-mono text-xs text-orange-600 dark:text-orange-500 uppercase tracking-widest block">
             [ Operations Gallery ]
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Our Work in Action</h2>
@@ -85,8 +85,8 @@ export default function Gallery() {
               onClick={() => setFilter(cat.id)}
               className={`font-mono text-[10px] tracking-wider uppercase px-4 py-2 transition-all duration-200 cursor-pointer ${
                 filter === cat.id
-                  ? "bg-blue-600 dark:bg-cyan-400 text-white dark:text-slate-950 font-bold"
-                  : "bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-850 text-slate-600 dark:text-zinc-400 hover:border-blue-600/50 dark:hover:border-cyan-400/50 hover:text-slate-900 dark:hover:text-zinc-200"
+                  ? "bg-orange-600 dark:bg-orange-500 text-white dark:text-slate-950 font-bold"
+                  : "bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-850 text-slate-600 dark:text-zinc-400 hover:border-orange-600/50 dark:hover:border-orange-500/50 hover:text-slate-900 dark:hover:text-zinc-200"
               }`}
             >
               {cat.label}

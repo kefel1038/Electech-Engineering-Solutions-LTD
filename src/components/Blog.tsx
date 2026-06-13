@@ -76,7 +76,7 @@ export default function Blog() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-1.5 rounded-full text-xs font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-1.5 rounded-full text-xs font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest">
             <BookOpen className="w-3.5 h-3.5" />
             Knowledge Base
           </div>
@@ -94,7 +94,7 @@ export default function Blog() {
             onClick={() => setActiveTab("All")}
             className={`py-3 px-4 border-b-2 font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "All"
-                ? "border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400"
+                ? "border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-500"
                 : "border-transparent text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200"
             }`}
           >
@@ -104,7 +104,7 @@ export default function Blog() {
             onClick={() => setActiveTab("Articles")}
             className={`py-3 px-4 border-b-2 font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "Articles"
-                ? "border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400"
+                ? "border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-500"
                 : "border-transparent text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200"
             }`}
           >
@@ -114,7 +114,7 @@ export default function Blog() {
             onClick={() => setActiveTab("Insights")}
             className={`py-3 px-4 border-b-2 font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "Insights"
-                ? "border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400"
+                ? "border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-500"
                 : "border-transparent text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200"
             }`}
           >
@@ -124,7 +124,7 @@ export default function Blog() {
             onClick={() => setActiveTab("Publications")}
             className={`py-3 px-4 border-b-2 font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "Publications"
-                ? "border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400"
+                ? "border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-500"
                 : "border-transparent text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200"
             }`}
           >
@@ -137,11 +137,11 @@ export default function Blog() {
           {filteredPosts.map((post, index) => (
             <div 
               key={index} 
-              className="group border border-slate-200 dark:border-slate-850 bg-slate-50/50 dark:bg-slate-900/20 p-6 tech-corner hover:bg-white dark:hover:bg-slate-900/40 hover:border-blue-600 dark:hover:border-cyan-400 hover:shadow-lg dark:hover:shadow-slate-950/10 transition-all duration-300 flex flex-col justify-between"
+              className="group border border-slate-200 dark:border-slate-850 bg-slate-50/50 dark:bg-slate-900/20 p-6 tech-corner hover:bg-white dark:hover:bg-slate-900/40 hover:border-orange-600 dark:hover:border-orange-500 hover:shadow-lg dark:hover:shadow-slate-950/10 transition-all duration-300 flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-slate-800 text-[9px] font-mono font-bold text-blue-600 dark:text-cyan-400 px-2.5 py-0.5 uppercase">
+                  <span className="bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-slate-800 text-[9px] font-mono font-bold text-orange-600 dark:text-orange-500 px-2.5 py-0.5 uppercase">
                     {post.category}
                   </span>
                   <span className="font-mono text-[9px] text-slate-400 dark:text-zinc-550 flex items-center gap-1">
@@ -150,7 +150,7 @@ export default function Blog() {
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-slate-900 dark:text-white font-sans group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors leading-snug">
+                <h3 className="text-base font-bold text-slate-900 dark:text-white font-sans group-hover:text-orange-600 dark:group-hover:text-orange-500 transition-colors leading-snug">
                   {post.title}
                 </h3>
 
@@ -162,13 +162,13 @@ export default function Blog() {
               {/* Footer info & link */}
               <div className="pt-6 mt-5 border-t border-slate-150 dark:border-slate-850/80 flex items-center justify-between">
                 <div className="flex items-center gap-1.5 text-[10px] font-mono text-slate-500 dark:text-zinc-500">
-                  <User className="w-3.5 h-3.5 text-blue-500" />
+                  <User className="w-3.5 h-3.5 text-orange-500" />
                   <span>{post.author}</span>
                 </div>
                 
                 <a 
                   href="#contact" 
-                  className="font-mono text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-cyan-450 hover:underline flex items-center gap-0.5"
+                  className="font-mono text-[10px] font-bold uppercase tracking-wider text-orange-600 dark:text-orange-500 hover:underline flex items-center gap-0.5"
                   title="Request PDF copy of publication"
                 >
                   Request Copy

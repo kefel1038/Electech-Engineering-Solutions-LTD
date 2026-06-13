@@ -102,12 +102,12 @@ export default function Stats() {
             const Icon = m.icon;
             return (
               <div key={i} className="text-center p-6 border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40 tech-corner transition-colors">
-                <div className="w-10 h-10 mx-auto mb-4 border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 flex items-center justify-center text-blue-600 dark:text-cyan-400 shadow-sm">
+                <div className="w-10 h-10 mx-auto mb-4 border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900 flex items-center justify-center text-orange-600 dark:text-orange-500 shadow-sm">
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="text-3xl font-extrabold text-slate-950 dark:text-zinc-50 tracking-tight flex items-baseline justify-center">
                   <Counter target={m.target} decimals={m.decimals} />
-                  <span className="text-blue-600 dark:text-cyan-400 ml-0.5">{m.unit}</span>
+                  <span className="text-orange-600 dark:text-orange-500 ml-0.5">{m.unit}</span>
                 </div>
                 <p className="text-[10px] font-mono text-slate-500 dark:text-zinc-400 uppercase tracking-widest mt-2">{m.label}</p>
               </div>
@@ -118,7 +118,7 @@ export default function Stats() {
         {/* Credentials and safety compliance badges */}
         <div className="pt-12 border-t border-slate-200 dark:border-slate-900/60">
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-2">
-            <span className="font-mono text-xs text-blue-600 dark:text-cyan-400 uppercase tracking-widest block">
+            <span className="font-mono text-xs text-orange-600 dark:text-orange-500 uppercase tracking-widest block">
               [ Accreditation Framework ]
             </span>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
@@ -132,18 +132,18 @@ export default function Stats() {
               return (
                 <div 
                   key={idx} 
-                  className="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900/20 p-6 flex flex-col justify-between group hover:border-blue-600 dark:hover:border-cyan-400 transition-all duration-300"
+                  className="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-900/20 p-6 flex flex-col justify-between group hover:border-orange-600 dark:hover:border-orange-500 transition-all duration-300"
                 >
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-blue-600 dark:text-cyan-400 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-cyan-400 dark:group-hover:text-slate-950 transition-all duration-300 shadow-sm">
+                      <div className="w-10 h-10 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-orange-600 dark:text-orange-500 group-hover:bg-orange-600 group-hover:text-white dark:group-hover:bg-orange-500 dark:group-hover:text-slate-950 transition-all duration-300 shadow-sm">
                         <Icon className="w-5 h-5" />
                       </div>
                       <div>
                         <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase font-mono tracking-wider">
                           {badge.title}
                         </h4>
-                        <span className="text-[9px] font-mono text-blue-600 dark:text-cyan-400 font-bold tracking-widest uppercase">
+                        <span className="text-[9px] font-mono text-orange-600 dark:text-orange-500 font-bold tracking-widest uppercase">
                           {badge.subtitle}
                         </span>
                       </div>

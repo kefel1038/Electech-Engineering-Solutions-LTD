@@ -57,7 +57,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-industrial-950 text-industrial-400 font-sans antialiased selection:bg-hazard-orange selection:text-white">
+      <body className="bg-white dark:bg-industrial-950 text-industrial-400 font-sans antialiased selection:bg-hazard-orange selection:text-white">
         {children}
       </body>
     </html>

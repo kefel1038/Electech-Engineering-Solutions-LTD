@@ -3,25 +3,21 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-brand-navy-950: #030712;
-  --color-brand-navy-900: #0B132B;
-  --color-brand-navy-800: #1C2541;
-  --color-brand-navy-700: #3A506B;
+  --color-brand-black: #09090b;
+  --color-brand-dark: #18181b;
+  --color-brand-gray: #27272a;
+  --color-brand-orange: #f97316;
+  --color-brand-orange-dark: #ea580c;
+  --color-brand-orange-light: #fb923c;
   
-  --color-brand-blue-500: #2563EB;
-  --color-brand-blue-600: #1D4ED8;
-  --color-brand-blue-400: #60A5FA;
-  --color-brand-cyan-400: #22D3EE;
-  --color-brand-emerald-500: #10B981;
+  --color-industrial-950: #09090b;
+  --color-industrial-900: #18181b;
+  --color-industrial-800: #27272a;
+  --color-industrial-400: #a1a1aa;
+  --color-industrial-50: #fafafa;
   
-  --color-industrial-950: #0B132B;
-  --color-industrial-900: #1C2541;
-  --color-industrial-800: #3A506B;
-  --color-industrial-400: #64748B;
-  --color-industrial-50: #F8FAFC;
-  
-  --color-hazard-orange: #2563EB;
-  --color-hazard-electric: #22D3EE;
+  --color-hazard-orange: #f97316;
+  --color-hazard-electric: #fb923c;
   
   --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --font-mono: 'Roboto Mono', 'SFMono-Regular', monospace;
@@ -43,7 +39,7 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    border-color: #3B82F6;
+    border-color: #f97316;
     border-style: solid;
     pointer-events: none;
     z-index: 10;
@@ -66,20 +62,20 @@
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8FAFC;
+  background: #fafafa;
 }
 .dark ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #09090b;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #d4d4d8;
   border-radius: 4px;
 }
 .dark ::-webkit-scrollbar-thumb {
-  background: #1E293B;
+  background: #27272a;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3B82F6;
+  background: #f97316;
 }
 
 html {
@@ -96,8 +92,8 @@ body {
 }
 
 .dark body {
-  background-color: #030712;
-  color: #94A3B8;
+  background-color: #09090b;
+  color: #a1a1aa;
 }
 
 @keyframes marquee {
@@ -133,11 +129,11 @@ body {
 .glass-panel {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid rgba(228, 228, 231, 0.8);
 }
 
 .dark .glass-panel {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(9, 9, 11, 0.8);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(39, 39, 42, 0.5);
 }

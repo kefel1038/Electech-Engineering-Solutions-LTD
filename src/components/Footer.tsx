@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Col 1: Brand overview (Col size 4) */}
           <div className="lg:col-span-4 space-y-4">
             <a href="#home" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-full border border-blue-600 overflow-hidden bg-slate-100 flex items-center justify-center p-1.5 shadow-sm">
+              <div className="w-10 h-10 rounded-full border border-orange-600 overflow-hidden bg-slate-100 flex items-center justify-center p-1.5 shadow-sm">
                 <img
                   src="/img/electech-logo.png"
                   alt="Electech Logo"
@@ -42,7 +42,7 @@ export default function Footer() {
               </div>
               <span className="font-sans font-extrabold tracking-widest text-white text-xs uppercase leading-tight">
                 Electech Engineering<br />
-                <span className="text-[9px] text-blue-450 tracking-wider">Solutions LTD</span>
+                <span className="text-[9px] text-orange-500 tracking-wider">Solutions LTD</span>
               </span>
             </a>
             
@@ -58,39 +58,39 @@ export default function Footer() {
 
           {/* Col 2: Quick Links (Col size 2) */}
           <div className="lg:col-span-2 space-y-4">
-            <h4 className="text-xs font-bold text-white uppercase font-mono tracking-widest border-l-2 border-blue-600 pl-2">
+            <h4 className="text-xs font-bold text-white uppercase font-mono tracking-widest border-l-2 border-orange-600 pl-2">
               Navigation
             </h4>
             <ul className="space-y-2 text-xs font-mono">
-              <li><a href="#home" className="hover:text-blue-500 transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-blue-500 transition-colors">About Us</a></li>
-              <li><a href="#services" className="hover:text-blue-500 transition-colors">Services</a></li>
-              <li><a href="#projects" className="hover:text-blue-500 transition-colors">Projects</a></li>
-              <li><a href="#industries" className="hover:text-blue-500 transition-colors">Industries</a></li>
-              <li><a href="#research" className="hover:text-blue-500 transition-colors">R&D Hub</a></li>
-              <li><a href="#careers" className="hover:text-blue-500 transition-colors">Careers</a></li>
-              <li><a href="#blog" className="hover:text-blue-500 transition-colors">Blog</a></li>
+              <li><a href="#home" className="hover:text-orange-500 transition-colors">Home</a></li>
+              <li><a href="#about" className="hover:text-orange-500 transition-colors">About Us</a></li>
+              <li><a href="#services" className="hover:text-orange-500 transition-colors">Services</a></li>
+              <li><a href="#projects" className="hover:text-orange-500 transition-colors">Projects</a></li>
+              <li><a href="#industries" className="hover:text-orange-500 transition-colors">Industries</a></li>
+              <li><a href="#research" className="hover:text-orange-500 transition-colors">R&D Hub</a></li>
+              <li><a href="#careers" className="hover:text-orange-500 transition-colors">Careers</a></li>
+              <li><a href="#blog" className="hover:text-orange-500 transition-colors">Blog</a></li>
             </ul>
           </div>
 
           {/* Col 3: Services (Col size 3) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold text-white uppercase font-mono tracking-widest border-l-2 border-blue-600 pl-2">
+            <h4 className="text-xs font-bold text-white uppercase font-mono tracking-widest border-l-2 border-orange-600 pl-2">
               Capabilities
             </h4>
             <ul className="space-y-2 text-xs font-sans">
-              <li><a href="#services" className="hover:text-blue-500 transition-colors">Electrical Grid Substation EPC</a></li>
-              <li><a href="#services" className="hover:text-blue-500 transition-colors">FTTx Fiber & GSM Networks</a></li>
-              <li><a href="#services" className="hover:text-blue-500 transition-colors">Commercial Solar & BESS Storage</a></li>
-              <li><a href="#services" className="hover:text-blue-500 transition-colors">SCADA & Industrial PLC Loops</a></li>
-              <li><a href="#services" className="hover:text-blue-500 transition-colors">Hardware Prototyping (IoT/AI)</a></li>
-              <li><a href="#services" className="hover:text-blue-500 transition-colors">Technical Engineering Audits</a></li>
+              <li><a href="#services" className="hover:text-orange-500 transition-colors">Electrical Grid Substation EPC</a></li>
+              <li><a href="#services" className="hover:text-orange-500 transition-colors">FTTx Fiber & GSM Networks</a></li>
+              <li><a href="#services" className="hover:text-orange-500 transition-colors">Commercial Solar & BESS Storage</a></li>
+              <li><a href="#services" className="hover:text-orange-500 transition-colors">SCADA & Industrial PLC Loops</a></li>
+              <li><a href="#services" className="hover:text-orange-500 transition-colors">Hardware Prototyping (IoT/AI)</a></li>
+              <li><a href="#services" className="hover:text-orange-500 transition-colors">Technical Engineering Audits</a></li>
             </ul>
           </div>
 
           {/* Col 4: Newsletter signup (Col size 3) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold text-white uppercase font-mono tracking-widest border-l-2 border-blue-600 pl-2">
+            <h4 className="text-xs font-bold text-white uppercase font-mono tracking-widest border-l-2 border-orange-600 pl-2">
               Knowledge Dispatch
             </h4>
             <p className="text-xs leading-relaxed text-slate-400 dark:text-zinc-500 font-sans">
@@ -108,7 +108,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-3 flex items-center justify-center cursor-pointer transition-colors shadow-sm"
+                  className="bg-orange-600 hover:bg-orange-700 text-white px-3 flex items-center justify-center cursor-pointer transition-colors shadow-sm"
                   title="Subscribe to Newsletter"
                 >
                   <Send className="w-3.5 h-3.5" />
@@ -138,14 +138,14 @@ export default function Footer() {
 
           {/* Middle links */}
           <div className="flex gap-4">
-            <a href="#contact" className="hover:text-blue-500 transition-colors uppercase tracking-wider">Privacy Policy</a>
+            <a href="#contact" className="hover:text-orange-500 transition-colors uppercase tracking-wider">Privacy Policy</a>
             <span className="text-slate-800">|</span>
-            <a href="#contact" className="hover:text-blue-500 transition-colors uppercase tracking-wider">Terms & Conditions</a>
+            <a href="#contact" className="hover:text-orange-500 transition-colors uppercase tracking-wider">Terms & Conditions</a>
           </div>
 
           {/* Right badge */}
           <div className="flex items-center gap-1 text-[9px] uppercase tracking-widest text-slate-600">
-            <Cpu className="w-3.5 h-3.5 text-blue-500 animate-pulse" />
+            <Cpu className="w-3.5 h-3.5 text-orange-500 animate-pulse" />
             EAC Systems integrators
           </div>
 

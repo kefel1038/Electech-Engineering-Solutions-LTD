@@ -196,7 +196,7 @@ export default function RfqIntakePipeline() {
       {/* Visual Header */}
       <div className="flex justify-between items-center mb-8 border-b border-zinc-900 pb-4">
         <div>
-          <span className="font-mono text-[10px] text-emerald-400 uppercase tracking-widest block mb-0.5">
+          <span className="font-mono text-[10px] text-orange-500 uppercase tracking-widest block mb-0.5">
             [ LEAD CAPTURE ENGINE ]
           </span>
           <h4 className="text-lg font-bold text-zinc-50">Enterprise Project Intake</h4>
@@ -209,13 +209,13 @@ export default function RfqIntakePipeline() {
       {submitted ? (
         /* SUCCESS PAGE */
         <div className="py-8 space-y-6 text-center animate-fadeIn">
-          <div className="w-16 h-16 border-2 border-emerald-500 mx-auto flex items-center justify-center bg-emerald-500/10">
-            <Check className="w-8 h-8 text-emerald-400" />
+          <div className="w-16 h-16 border-2 border-orange-600 mx-auto flex items-center justify-center bg-orange-600/10">
+            <Check className="w-8 h-8 text-orange-500" />
           </div>
           <div className="space-y-2">
             <h3 className="text-xl font-bold text-zinc-50">Intake Pipeline Initiated</h3>
             <p className="text-xs text-zinc-400 font-mono">
-              PORTAL ID: <span className="text-cyan-400 font-bold">{rfqNumber}</span>
+              PORTAL ID: <span className="text-orange-500 font-bold">{rfqNumber}</span>
             </p>
           </div>
           <div className="bg-zinc-900 border border-zinc-800 p-6 text-left space-y-4 max-w-md mx-auto rounded-none font-mono text-[11px] leading-relaxed">
@@ -223,12 +223,12 @@ export default function RfqIntakePipeline() {
             <div>&gt; Pipeline route: Secure industrial cloud container created</div>
             <div>&gt; Engineering matching: Directing specifications to Senior Project Architect</div>
             <div>&gt; Turnaround benchmark: Response survey dispatched within 12 business hours</div>
-            <div>&gt; Audit trails: Confirmation logs transmitted to: <span className="text-emerald-400 font-bold">{form.email}</span></div>
+            <div>&gt; Audit trails: Confirmation logs transmitted to: <span className="text-orange-500 font-bold">{form.email}</span></div>
           </div>
           <div className="pt-4">
             <button
               onClick={resetForm}
-              className="border border-zinc-800 hover:border-emerald-500 bg-zinc-900 text-zinc-300 font-mono text-xs px-6 py-3 tracking-wider uppercase transition-colors"
+              className="border border-zinc-800 hover:border-orange-600 bg-zinc-900 text-zinc-300 font-mono text-xs px-6 py-3 tracking-wider uppercase transition-colors"
             >
               Initiate New Intake Pipeline
             </button>
@@ -247,7 +247,7 @@ export default function RfqIntakePipeline() {
               <div
                 className={`w-8 h-8 font-mono text-xs font-bold border flex items-center justify-center transition-colors ${
                   step >= 1
-                    ? "bg-emerald-500 text-zinc-950 border-emerald-500"
+                    ? "bg-orange-600 text-zinc-950 border-orange-600"
                     : "bg-zinc-950 text-zinc-500 border-zinc-850"
                 }`}
               >
@@ -263,7 +263,7 @@ export default function RfqIntakePipeline() {
               <div
                 className={`w-8 h-8 font-mono text-xs font-bold border flex items-center justify-center transition-colors ${
                   step >= 2
-                    ? "bg-emerald-500 text-zinc-950 border-emerald-500"
+                    ? "bg-orange-600 text-zinc-950 border-orange-600"
                     : "bg-zinc-950 text-zinc-500 border-zinc-850"
                 }`}
               >
@@ -279,7 +279,7 @@ export default function RfqIntakePipeline() {
               <div
                 className={`w-8 h-8 font-mono text-xs font-bold border flex items-center justify-center transition-colors ${
                   step === 3
-                    ? "bg-emerald-500 text-zinc-950 border-emerald-500"
+                    ? "bg-orange-600 text-zinc-950 border-orange-600"
                     : "bg-zinc-950 text-zinc-500 border-zinc-850"
                 }`}
               >
@@ -300,7 +300,7 @@ export default function RfqIntakePipeline() {
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
                     <Building2 className="w-3.5 h-3.5 text-zinc-500" />
-                    Company Name <span className="text-emerald-500">*</span>
+                    Company Name <span className="text-orange-600">*</span>
                   </label>
                   <input
                     type="text"
@@ -308,7 +308,7 @@ export default function RfqIntakePipeline() {
                     value={form.companyName}
                     onChange={handleInputChange}
                     placeholder="e.g. Kakira Sugar Ltd"
-                    className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-emerald-500 font-mono transition-colors"
+                    className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-orange-600 font-mono transition-colors"
                   />
                   {errors.companyName && <span className="text-[10px] text-amber-500 font-mono">{errors.companyName}</span>}
                 </div>
@@ -317,7 +317,7 @@ export default function RfqIntakePipeline() {
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
                     <Mail className="w-3.5 h-3.5 text-zinc-500" />
-                    Representative Email <span className="text-emerald-500">*</span>
+                    Representative Email <span className="text-orange-600">*</span>
                   </label>
                   <input
                     type="email"
@@ -325,7 +325,7 @@ export default function RfqIntakePipeline() {
                     value={form.email}
                     onChange={handleInputChange}
                     placeholder="e.g. technical-lead@kakirasugar.com"
-                    className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-emerald-500 font-mono transition-colors"
+                    className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-orange-600 font-mono transition-colors"
                   />
                   {errors.email && <span className="text-[10px] text-amber-500 font-mono">{errors.email}</span>}
                 </div>
@@ -336,13 +336,13 @@ export default function RfqIntakePipeline() {
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
                     <Globe className="w-3.5 h-3.5 text-zinc-500" />
-                    Country Select <span className="text-emerald-500">*</span>
+                    Country Select <span className="text-orange-600">*</span>
                   </label>
                   <select
                     name="country"
                     value={form.country}
                     onChange={handleInputChange}
-                    className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-emerald-500 font-mono transition-colors"
+                    className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-orange-600 font-mono transition-colors"
                   >
                     {countries.map((country) => (
                       <option key={country} value={country}>
@@ -357,13 +357,13 @@ export default function RfqIntakePipeline() {
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 flex items-center gap-1.5">
                     <Cpu className="w-3.5 h-3.5 text-zinc-500" />
-                    Industry Vertical <span className="text-emerald-500">*</span>
+                    Industry Vertical <span className="text-orange-600">*</span>
                   </label>
                   <select
                     name="vertical"
                     value={form.vertical}
                     onChange={handleInputChange}
-                    className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-emerald-500 font-mono transition-colors"
+                    className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-orange-600 font-mono transition-colors"
                   >
                     <option value="">-- Select Industry --</option>
                     {verticals.map((v) => (
@@ -386,7 +386,7 @@ export default function RfqIntakePipeline() {
               {/* Category Radio Group */}
               <div className="space-y-2">
                 <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 block">
-                  Project Category <span className="text-emerald-500">*</span>
+                  Project Category <span className="text-orange-600">*</span>
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {categories.map((cat) => (
@@ -394,7 +394,7 @@ export default function RfqIntakePipeline() {
                       key={cat.value}
                       className={`border p-3 flex items-center gap-3 cursor-pointer select-none transition-all duration-200 ${
                         form.category === cat.value
-                          ? "border-emerald-500 bg-emerald-500/5 text-zinc-50"
+                          ? "border-orange-600 bg-orange-600/5 text-zinc-50"
                           : "border-zinc-850 bg-zinc-900/30 text-zinc-400 hover:border-zinc-800 hover:text-zinc-300"
                       }`}
                     >
@@ -412,7 +412,7 @@ export default function RfqIntakePipeline() {
                       <span
                         className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center shrink-0 ${
                           form.category === cat.value
-                            ? "border-emerald-500 after:content-[''] after:w-1.5 after:h-1.5 after:bg-emerald-500 after:rounded-full"
+                            ? "border-orange-600 after:content-[''] after:w-1.5 after:h-1.5 after:bg-orange-600 after:rounded-full"
                             : "border-zinc-700"
                         }`}
                       />
@@ -427,14 +427,14 @@ export default function RfqIntakePipeline() {
               {form.category && (
                 <div className="border border-zinc-850 bg-zinc-900/20 p-5 animate-slideDown space-y-4">
                   <div className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest border-b border-zinc-900 pb-2 flex items-center gap-1.5">
-                    <Cpu className="w-3.5 h-3.5 text-emerald-400" />
+                    <Cpu className="w-3.5 h-3.5 text-orange-500" />
                     Category Specific Technical Inputs
                   </div>
 
                   {form.category === "Solar" && (
                     <div className="space-y-1.5">
                       <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 block">
-                        Target Capacity (MW) <span className="text-emerald-500">*</span>
+                        Target Capacity (MW) <span className="text-orange-600">*</span>
                       </label>
                       <input
                         type="number"
@@ -443,7 +443,7 @@ export default function RfqIntakePipeline() {
                         value={form.targetCapacityMw}
                         onChange={handleInputChange}
                         placeholder="e.g. 2.5"
-                        className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-emerald-500 font-mono transition-colors"
+                        className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-orange-600 font-mono transition-colors"
                       />
                       {errors.targetCapacityMw && <span className="text-[10px] text-amber-500 font-mono">{errors.targetCapacityMw}</span>}
                     </div>
@@ -452,7 +452,7 @@ export default function RfqIntakePipeline() {
                   {form.category === "Fiber" && (
                     <div className="space-y-1.5">
                       <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 block">
-                        Deployment Distance (KM) <span className="text-emerald-500">*</span>
+                        Deployment Distance (KM) <span className="text-orange-600">*</span>
                       </label>
                       <input
                         type="number"
@@ -461,7 +461,7 @@ export default function RfqIntakePipeline() {
                         value={form.distanceKm}
                         onChange={handleInputChange}
                         placeholder="e.g. 45"
-                        className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-emerald-500 font-mono transition-colors"
+                        className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-orange-600 font-mono transition-colors"
                       />
                       {errors.distanceKm && <span className="text-[10px] text-amber-500 font-mono">{errors.distanceKm}</span>}
                     </div>
@@ -470,13 +470,13 @@ export default function RfqIntakePipeline() {
                   {form.category === "Substation" && (
                     <div className="space-y-1.5">
                       <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 block">
-                        Voltage Level (kV) <span className="text-emerald-500">*</span>
+                        Voltage Level (kV) <span className="text-orange-600">*</span>
                       </label>
                       <select
                         name="voltageLevelKv"
                         value={form.voltageLevelKv}
                         onChange={handleInputChange}
-                        className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-emerald-500 font-mono transition-colors"
+                        className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-orange-600 font-mono transition-colors"
                       >
                         <option value="">-- Select Grid Voltage --</option>
                         <option value="11kV">11kV (Distribution)</option>
@@ -492,7 +492,7 @@ export default function RfqIntakePipeline() {
                   {form.category === "SCADA" && (
                     <div className="space-y-1.5">
                       <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 block">
-                        Estimated Number of RTU Endpoints <span className="text-emerald-500">*</span>
+                        Estimated Number of RTU Endpoints <span className="text-orange-600">*</span>
                       </label>
                       <input
                         type="number"
@@ -500,7 +500,7 @@ export default function RfqIntakePipeline() {
                         value={form.rtuEndpoints}
                         onChange={handleInputChange}
                         placeholder="e.g. 12"
-                        className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-emerald-500 font-mono transition-colors"
+                        className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-orange-600 font-mono transition-colors"
                       />
                       {errors.rtuEndpoints && <span className="text-[10px] text-amber-500 font-mono">{errors.rtuEndpoints}</span>}
                     </div>
@@ -509,7 +509,7 @@ export default function RfqIntakePipeline() {
                   {form.category === "Audit" && (
                     <div className="space-y-1.5">
                       <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 block">
-                        Facility Size (m²) <span className="text-emerald-500">*</span>
+                        Facility Size (m²) <span className="text-orange-600">*</span>
                       </label>
                       <input
                         type="number"
@@ -517,7 +517,7 @@ export default function RfqIntakePipeline() {
                         value={form.facilitySizeSqm}
                         onChange={handleInputChange}
                         placeholder="e.g. 8500"
-                        className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-emerald-500 font-mono transition-colors"
+                        className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-orange-600 font-mono transition-colors"
                       />
                       {errors.facilitySizeSqm && <span className="text-[10px] text-amber-500 font-mono">{errors.facilitySizeSqm}</span>}
                     </div>
@@ -545,9 +545,9 @@ export default function RfqIntakePipeline() {
                   onClick={() => fileInputRef.current?.click()}
                   className={`border border-dashed p-6 text-center cursor-pointer select-none transition-all duration-300 relative ${
                     dragActive
-                      ? "border-emerald-500 bg-emerald-500/5 text-zinc-50"
+                      ? "border-orange-600 bg-orange-600/5 text-zinc-50"
                       : form.fileName
-                      ? "border-emerald-500/50 bg-zinc-900/40 text-zinc-300"
+                      ? "border-orange-600/50 bg-zinc-900/40 text-zinc-300"
                       : "border-zinc-800 bg-zinc-900/20 text-zinc-500 hover:border-zinc-700 hover:text-zinc-400"
                   }`}
                 >
@@ -562,7 +562,7 @@ export default function RfqIntakePipeline() {
                   <div className="flex flex-col items-center justify-center space-y-3">
                     {form.fileName ? (
                       <>
-                        <FileText className="w-8 h-8 text-emerald-400 animate-pulse" />
+                        <FileText className="w-8 h-8 text-orange-500 animate-pulse" />
                         <div className="space-y-1">
                           <p className="text-xs font-mono font-bold text-zinc-50">{form.fileName}</p>
                           <p className="text-[9px] text-zinc-500 font-mono uppercase">Click or Drag to swap document</p>
@@ -573,7 +573,7 @@ export default function RfqIntakePipeline() {
                         <Upload className="w-8 h-8 text-zinc-600 group-hover:text-zinc-500" />
                         <div className="space-y-1">
                           <p className="text-xs font-mono">
-                            Drag & drop or <span className="text-emerald-400 font-bold">browse</span>
+                            Drag & drop or <span className="text-orange-500 font-bold">browse</span>
                           </p>
                           <p className="text-[9px] text-zinc-600 font-mono uppercase">
                             Accepts .dwg, .pdf, .xlsx up to 20MB
@@ -589,7 +589,7 @@ export default function RfqIntakePipeline() {
               {/* Technical description / Notes */}
               <div className="space-y-1.5">
                 <label className="text-[10px] font-mono uppercase tracking-wider text-zinc-400 block">
-                  Project Technical Overview & Requirements <span className="text-emerald-500">*</span>
+                  Project Technical Overview & Requirements <span className="text-orange-600">*</span>
                 </label>
                 <textarea
                   name="notes"
@@ -597,7 +597,7 @@ export default function RfqIntakePipeline() {
                   value={form.notes}
                   onChange={handleInputChange}
                   placeholder="Outline key mechanical parameters, voltage demands, specific load profiles, fiber paths, or SCADA controller systems..."
-                  className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-emerald-500 font-mono transition-colors placeholder:text-zinc-600"
+                  className="w-full bg-zinc-900 border border-zinc-800 text-zinc-50 text-sm px-4 py-3 focus:outline-none focus:border-orange-600 font-mono transition-colors placeholder:text-zinc-600"
                 />
                 {errors.notes ? (
                   <span className="text-[10px] text-amber-500 font-mono">{errors.notes}</span>
@@ -630,7 +630,7 @@ export default function RfqIntakePipeline() {
               <button
                 type="button"
                 onClick={handleNext}
-                className="flex items-center gap-1.5 bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-mono font-bold text-xs px-5 py-3 tracking-wider uppercase transition-colors"
+                className="flex items-center gap-1.5 bg-orange-600 hover:bg-orange-700 text-zinc-950 font-mono font-bold text-xs px-5 py-3 tracking-wider uppercase transition-colors"
               >
                 Continue <ChevronRight className="w-3.5 h-3.5" />
               </button>
@@ -638,7 +638,7 @@ export default function RfqIntakePipeline() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-mono font-bold text-xs px-6 py-3 tracking-wider uppercase transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-zinc-950 font-mono font-bold text-xs px-6 py-3 tracking-wider uppercase transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>

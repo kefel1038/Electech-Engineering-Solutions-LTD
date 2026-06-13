@@ -119,15 +119,15 @@ export default function SolarRoiCalculator() {
   return (
     <section id="roi" className="py-24 bg-zinc-950 border-b border-zinc-900 relative">
       {/* Background visual accents */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full filter blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full filter blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-600/5 rounded-full filter blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/5 rounded-full filter blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Title */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 border border-zinc-800 bg-zinc-900/50 px-4 py-1.5 rounded-full text-xs font-mono text-emerald-400 uppercase tracking-widest">
-            <Zap className="w-3.5 h-3.5 animate-pulse text-emerald-400" />
+          <div className="inline-flex items-center gap-2 border border-zinc-800 bg-zinc-900/50 px-4 py-1.5 rounded-full text-xs font-mono text-orange-500 uppercase tracking-widest">
+            <Zap className="w-3.5 h-3.5 animate-pulse text-orange-500" />
             Financial Engineering
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold text-zinc-50 tracking-tight">
@@ -145,7 +145,7 @@ export default function SolarRoiCalculator() {
               onClick={() => currency === "USD" && handleCurrencyToggle()}
               className={`px-5 py-2 font-mono text-xs font-bold uppercase transition-all duration-300 ${
                 currency === "UGX"
-                  ? "bg-emerald-500 text-zinc-950 shadow-md shadow-emerald-500/10"
+                  ? "bg-orange-600 text-zinc-950 shadow-md shadow-orange-600/10"
                   : "text-zinc-400 hover:text-zinc-50"
               }`}
             >
@@ -155,7 +155,7 @@ export default function SolarRoiCalculator() {
               onClick={() => currency === "UGX" && handleCurrencyToggle()}
               className={`px-5 py-2 font-mono text-xs font-bold uppercase transition-all duration-300 ${
                 currency === "USD"
-                  ? "bg-emerald-500 text-zinc-950 shadow-md shadow-emerald-500/10"
+                  ? "bg-orange-600 text-zinc-950 shadow-md shadow-orange-600/10"
                   : "text-zinc-400 hover:text-zinc-50"
               }`}
             >
@@ -170,7 +170,7 @@ export default function SolarRoiCalculator() {
           <div className="lg:col-span-7 border border-zinc-800 bg-zinc-900/40 p-8 tech-corner flex flex-col justify-between space-y-8 backdrop-blur-sm">
             <div>
               <h3 className="text-lg font-bold text-zinc-50 font-sans flex items-center gap-3 border-b border-zinc-800/60 pb-4 mb-6">
-                <Sun className="w-5 h-5 text-emerald-400" /> 
+                <Sun className="w-5 h-5 text-orange-500" /> 
                 Facility Solar Parameters
               </h3>
 
@@ -178,7 +178,7 @@ export default function SolarRoiCalculator() {
               <div className="space-y-4 mb-8">
                 <div className="flex justify-between items-baseline font-mono text-xs">
                   <span className="text-zinc-400 uppercase tracking-wider">Target System Capacity</span>
-                  <span className="text-emerald-400 text-lg font-bold">
+                  <span className="text-orange-500 text-lg font-bold">
                     {capacity} <span className="text-[10px] text-zinc-500">kWp</span>
                   </span>
                 </div>
@@ -189,7 +189,7 @@ export default function SolarRoiCalculator() {
                   step={10}
                   value={capacity}
                   onChange={(e) => setCapacity(Number(e.target.value))}
-                  className="w-full h-1.5 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-emerald-500 focus:outline-none"
+                  className="w-full h-1.5 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-orange-600 focus:outline-none"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-zinc-500">
                   <span>10 kW (Commercial)</span>
@@ -202,7 +202,7 @@ export default function SolarRoiCalculator() {
               <div className="space-y-4">
                 <div className="flex justify-between items-baseline font-mono text-xs">
                   <span className="text-zinc-400 uppercase tracking-wider">Average Monthly Electricity Bill</span>
-                  <span className="text-cyan-400 text-lg font-bold">
+                  <span className="text-orange-500 text-lg font-bold">
                     {formatCurrency(monthlyBill)}
                   </span>
                 </div>
@@ -213,7 +213,7 @@ export default function SolarRoiCalculator() {
                   step={currency === "USD" ? BILL_USD_STEP : BILL_UGX_STEP}
                   value={monthlyBill}
                   onChange={(e) => setMonthlyBill(Number(e.target.value))}
-                  className="w-full h-1.5 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-cyan-400 focus:outline-none"
+                  className="w-full h-1.5 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-orange-500 focus:outline-none"
                 />
                 <div className="flex justify-between text-[10px] font-mono text-zinc-500">
                   <span>
@@ -243,7 +243,7 @@ export default function SolarRoiCalculator() {
           <div className="lg:col-span-5 border border-zinc-800 bg-zinc-900/60 p-8 tech-corner flex flex-col justify-between space-y-6 backdrop-blur-sm">
             <div>
               <h3 className="text-lg font-bold text-zinc-50 font-sans flex items-center gap-3 border-b border-zinc-800/60 pb-4 mb-6">
-                <Landmark className="w-5 h-5 text-emerald-400" />
+                <Landmark className="w-5 h-5 text-orange-500" />
                 Financial Modeling Outputs
               </h3>
 
@@ -259,7 +259,7 @@ export default function SolarRoiCalculator() {
                 {/* Out 2: Payback Period */}
                 <div className="border border-zinc-800/60 bg-zinc-950/40 p-4 rounded-none">
                   <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest mb-1">Payback Period</div>
-                  <div className="text-2xl font-mono font-bold text-emerald-400 flex items-baseline gap-1">
+                  <div className="text-2xl font-mono font-bold text-orange-500 flex items-baseline gap-1">
                     {paybackPeriod.toFixed(1)}
                     <span className="text-xs text-zinc-500 font-normal">Years</span>
                   </div>
@@ -268,7 +268,7 @@ export default function SolarRoiCalculator() {
                 {/* Out 3: Cumulative 25 Year Savings */}
                 <div className="border border-zinc-800/60 bg-zinc-950/40 p-4 rounded-none">
                   <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest mb-1">25-Year Net Savings (After CAPEX)</div>
-                  <div className="text-2xl font-mono font-bold text-cyan-400">
+                  <div className="text-2xl font-mono font-bold text-orange-500">
                     {formatCurrency(Math.max(0, financialModel.totalActive))}
                   </div>
                 </div>
@@ -283,7 +283,7 @@ export default function SolarRoiCalculator() {
                 <div className="space-y-1">
                   <div className="h-12 bg-zinc-950 border border-zinc-850 flex items-end justify-center p-[2px]">
                     <div 
-                      className="bg-emerald-500/80 w-full transition-all duration-500" 
+                      className="bg-orange-600/80 w-full transition-all duration-500" 
                       style={{ height: `${Math.max(5, Math.min(100, (financialModel.projections[4].netBenefit / (financialModel.totalActive || 1)) * 100))}%` }}
                     />
                   </div>
@@ -293,7 +293,7 @@ export default function SolarRoiCalculator() {
                 <div className="space-y-1">
                   <div className="h-12 bg-zinc-950 border border-zinc-850 flex items-end justify-center p-[2px]">
                     <div 
-                      className="bg-emerald-500/80 w-full transition-all duration-500" 
+                      className="bg-orange-600/80 w-full transition-all duration-500" 
                       style={{ height: `${Math.max(5, Math.min(100, (financialModel.projections[9].netBenefit / (financialModel.totalActive || 1)) * 100))}%` }}
                     />
                   </div>
@@ -303,7 +303,7 @@ export default function SolarRoiCalculator() {
                 <div className="space-y-1">
                   <div className="h-12 bg-zinc-950 border border-zinc-850 flex items-end justify-center p-[2px]">
                     <div 
-                      className="bg-cyan-400/80 w-full transition-all duration-500" 
+                      className="bg-orange-500/80 w-full transition-all duration-500" 
                       style={{ height: `${Math.max(5, Math.min(100, (financialModel.projections[19].netBenefit / (financialModel.totalActive || 1)) * 100))}%` }}
                     />
                   </div>
@@ -313,11 +313,11 @@ export default function SolarRoiCalculator() {
                 <div className="space-y-1">
                   <div className="h-12 bg-zinc-950 border border-zinc-850 flex items-end justify-center p-[2px]">
                     <div 
-                      className="bg-cyan-400 w-full transition-all duration-500" 
+                      className="bg-orange-500 w-full transition-all duration-500" 
                       style={{ height: '100%' }}
                     />
                   </div>
-                  <div className="text-cyan-400 font-bold">Yr 25</div>
+                  <div className="text-orange-500 font-bold">Yr 25</div>
                 </div>
               </div>
             </div>
@@ -326,7 +326,7 @@ export default function SolarRoiCalculator() {
             <div className="pt-2">
               <a
                 href="#contact"
-                className="w-full bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-mono font-bold text-xs py-3.5 tracking-wider uppercase transition-all duration-200 flex items-center justify-center gap-2 group shadow-lg shadow-emerald-500/10"
+                className="w-full bg-orange-600 hover:bg-orange-700 text-zinc-950 font-mono font-bold text-xs py-3.5 tracking-wider uppercase transition-all duration-200 flex items-center justify-center gap-2 group shadow-lg shadow-orange-600/10"
               >
                 Request Custom Solar Feasibility Study
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

@@ -132,7 +132,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-1.5 rounded-full text-xs font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-1.5 rounded-full text-xs font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest">
             <Calculator className="w-3.5 h-3.5" />
             Interactive Quotation
           </div>
@@ -150,7 +150,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
           <div className="lg:col-span-7 border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/60 p-8 tech-corner flex flex-col justify-between space-y-8 shadow-sm">
             <div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white font-sans flex items-center gap-3 border-b border-slate-150 dark:border-slate-900 pb-4 mb-6">
-                <Cpu className="w-5 h-5 text-blue-650 dark:text-cyan-400" />
+                <Cpu className="w-5 h-5 text-orange-600 dark:text-orange-500" />
                 Configure Project Specs
               </h3>
 
@@ -162,7 +162,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
                     onClick={() => setService(s)}
                     className={`py-2 px-3 border uppercase font-bold tracking-wider transition-colors cursor-pointer text-center ${
                       service === s
-                        ? "bg-blue-600 border-blue-600 text-white dark:bg-cyan-400 dark:border-cyan-400 dark:text-slate-950"
+                        ? "bg-orange-600 border-orange-600 text-white dark:bg-orange-500 dark:border-orange-500 dark:text-slate-950"
                         : "border-slate-200 dark:border-slate-800 text-slate-500 dark:text-zinc-400 hover:border-slate-300 dark:hover:border-slate-700 hover:text-slate-700 dark:hover:text-zinc-200"
                     }`}
                   >
@@ -176,7 +176,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
                 <div className="space-y-4 animate-fadeIn">
                   <div className="flex justify-between items-baseline font-mono text-xs">
                     <span className="text-slate-500 dark:text-zinc-400 uppercase tracking-wider">PV Array Target Capacity</span>
-                    <span className="text-blue-655 dark:text-cyan-400 text-lg font-bold">
+                    <span className="text-orange-600 dark:text-orange-500 text-lg font-bold">
                       {solarCapacity} <span className="text-[10px] text-slate-400">kWp</span>
                     </span>
                   </div>
@@ -187,7 +187,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
                     step={10}
                     value={solarCapacity}
                     onChange={(e) => setSolarCapacity(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-850 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:accent-cyan-450 focus:outline-none"
+                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-850 rounded-lg appearance-none cursor-pointer accent-orange-600 dark:accent-orange-500 focus:outline-none"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-400 dark:text-zinc-500">
                     <span>10 kW (Commercial)</span>
@@ -202,7 +202,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
                 <div className="space-y-4 animate-fadeIn">
                   <div className="flex justify-between items-baseline font-mono text-xs">
                     <span className="text-slate-500 dark:text-zinc-400 uppercase tracking-wider">Fiber Backhaul Distance</span>
-                    <span className="text-blue-655 dark:text-cyan-400 text-lg font-bold">
+                    <span className="text-orange-600 dark:text-orange-500 text-lg font-bold">
                       {fiberDistance} <span className="text-[10px] text-slate-400">KM</span>
                     </span>
                   </div>
@@ -213,7 +213,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
                     step={1}
                     value={fiberDistance}
                     onChange={(e) => setFiberDistance(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-850 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:accent-cyan-450 focus:outline-none"
+                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-850 rounded-lg appearance-none cursor-pointer accent-orange-600 dark:accent-orange-500 focus:outline-none"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-400 dark:text-zinc-500">
                     <span>1 KM (Short Link)</span>
@@ -228,7 +228,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
                 <div className="space-y-4 animate-fadeIn">
                   <div className="flex justify-between items-baseline font-mono text-xs">
                     <span className="text-slate-500 dark:text-zinc-400 uppercase tracking-wider">Substation Transformer Capacity</span>
-                    <span className="text-blue-655 dark:text-cyan-400 text-lg font-bold">
+                    <span className="text-orange-600 dark:text-orange-500 text-lg font-bold">
                       {substationMva} <span className="text-[10px] text-slate-400">MVA</span>
                     </span>
                   </div>
@@ -239,7 +239,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
                     step={1}
                     value={substationMva}
                     onChange={(e) => setSubstationMva(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-850 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:accent-cyan-450 focus:outline-none"
+                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-850 rounded-lg appearance-none cursor-pointer accent-orange-600 dark:accent-orange-500 focus:outline-none"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-400 dark:text-zinc-500">
                     <span>1 MVA (Distribution)</span>
@@ -254,7 +254,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
                 <div className="space-y-4 animate-fadeIn">
                   <div className="flex justify-between items-baseline font-mono text-xs">
                     <span className="text-slate-500 dark:text-zinc-400 uppercase tracking-wider">Remote Telemetry Endpoints (RTUs)</span>
-                    <span className="text-blue-655 dark:text-cyan-400 text-lg font-bold">
+                    <span className="text-orange-600 dark:text-orange-500 text-lg font-bold">
                       {scadaEndpoints} <span className="text-[10px] text-slate-400">Endpoints</span>
                     </span>
                   </div>
@@ -265,7 +265,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
                     step={5}
                     value={scadaEndpoints}
                     onChange={(e) => setScadaEndpoints(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-850 rounded-lg appearance-none cursor-pointer accent-blue-600 dark:accent-cyan-450 focus:outline-none"
+                    className="w-full h-1.5 bg-slate-200 dark:bg-slate-850 rounded-lg appearance-none cursor-pointer accent-orange-600 dark:accent-orange-500 focus:outline-none"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-400 dark:text-zinc-500">
                     <span>5 RTUs (Small Plant)</span>
@@ -289,7 +289,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
           <div className="lg:col-span-5 border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/60 p-8 tech-corner flex flex-col justify-between space-y-6 shadow-sm">
             <div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white font-sans flex items-center gap-3 border-b border-slate-150 dark:border-slate-900 pb-4 mb-6">
-                <Layers className="w-5 h-5 text-blue-650 dark:text-cyan-400" />
+                <Layers className="w-5 h-5 text-orange-600 dark:text-orange-500" />
                 Preliminary Feasibility Estimates
               </h3>
 
@@ -315,9 +315,9 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
                 {/* Delivery Timeline Output */}
                 <div className="border border-slate-150 dark:border-slate-850 bg-slate-50/50 dark:bg-slate-900/40 p-4">
                   <div className="text-[10px] font-mono text-slate-400 dark:text-zinc-550 uppercase tracking-widest mb-1 flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 text-blue-500" /> Commissioning Timeline
+                    <Calendar className="w-3.5 h-3.5 text-orange-500" /> Commissioning Timeline
                   </div>
-                  <div className="text-2xl font-mono font-bold text-blue-600 dark:text-cyan-400">
+                  <div className="text-2xl font-mono font-bold text-orange-600 dark:text-orange-500">
                     {currentEst.timelineWeeks}{" "}
                     <span className="text-xs text-slate-500 font-normal">Weeks</span>
                   </div>
@@ -331,7 +331,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
               <ul className="space-y-1.5">
                 {currentEst.specs.map((spec, index) => (
                   <li key={index} className="flex gap-2 items-center">
-                    <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                    <Check className="w-3.5 h-3.5 text-orange-600 shrink-0" />
                     <span className="font-mono text-[11px] text-slate-750 dark:text-zinc-300">{spec}</span>
                   </li>
                 ))}
@@ -343,7 +343,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
               <button
                 onClick={handleDownloadProposal}
                 disabled={downloading}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-mono font-bold text-xs py-3.5 tracking-wider uppercase transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/10 cursor-pointer"
+                className="w-full bg-orange-600 hover:bg-orange-700 text-white font-mono font-bold text-xs py-3.5 tracking-wider uppercase transition-colors flex items-center justify-center gap-2 shadow-lg shadow-orange-500/10 cursor-pointer"
               >
                 {downloading ? (
                   <>
@@ -353,7 +353,7 @@ URL: http://electech.co.ug/#contact | Tel: +256 787 531 336
                 ) : proposalDownloaded ? (
                   <>
                     Feasibility Sheet Downloaded!
-                    <Check className="w-4 h-4 text-emerald-400" />
+                    <Check className="w-4 h-4 text-orange-500" />
                   </>
                 ) : (
                   <>

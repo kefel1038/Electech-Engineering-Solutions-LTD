@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-1.5 rounded-full text-xs font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-1.5 rounded-full text-xs font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest">
             <ShieldCheck className="w-3.5 h-3.5" />
             Core Differentiators
           </div>
@@ -62,13 +62,13 @@ export default function WhyChooseUs() {
             return (
               <div 
                 key={index} 
-                className="group border border-slate-200 dark:border-slate-850 bg-slate-50/50 dark:bg-slate-900/20 p-8 tech-corner hover:bg-white dark:hover:bg-slate-900/40 hover:border-blue-600 dark:hover:border-cyan-400 hover:shadow-lg dark:hover:shadow-slate-950/10 transition-all duration-300"
+                className="group border border-slate-200 dark:border-slate-850 bg-slate-50/50 dark:bg-slate-900/20 p-8 tech-corner hover:bg-white dark:hover:bg-slate-900/40 hover:border-orange-600 dark:hover:border-orange-500 hover:shadow-lg dark:hover:shadow-slate-950/10 transition-all duration-300"
               >
-                <div className="w-12 h-12 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center text-blue-600 dark:text-cyan-400 group-hover:scale-105 transition-transform duration-300 shadow-sm mb-6">
+                <div className="w-12 h-12 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center text-orange-600 dark:text-orange-500 group-hover:scale-105 transition-transform duration-300 shadow-sm mb-6">
                   <Icon className="w-6 h-6" />
                 </div>
                 
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white font-sans mb-3 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white font-sans mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-500 transition-colors">
                   {p.title}
                 </h3>
                 

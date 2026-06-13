@@ -32,14 +32,14 @@ export default function About() {
                 {/* Visual Label */}
                 <div className="absolute bottom-4 left-4 right-4 bg-slate-900/95 dark:bg-zinc-950/95 border border-slate-800 p-4 font-mono text-[11px] leading-relaxed text-zinc-350">
                   <div className="text-zinc-50 font-bold uppercase tracking-wider">Eng. Lubega Felix Ken</div>
-                  <div className="text-blue-500 dark:text-cyan-400 font-bold uppercase tracking-widest text-[9px]">Founder & Lead Systems Architect</div>
+                  <div className="text-orange-500 dark:text-orange-500 font-bold uppercase tracking-widest text-[9px]">Founder & Lead Systems Architect</div>
                   <div className="text-zinc-500 text-[9px] mt-1">Reg: ERB-2024-18 // Corporate Member: UIPE</div>
                 </div>
               </div>
             </div>
             
             {/* EST Badge */}
-            <div className="absolute -top-3 -right-3 bg-blue-600 text-white dark:bg-cyan-400 dark:text-slate-950 px-4 py-2 font-mono font-bold text-xs shadow-lg uppercase tracking-wider">
+            <div className="absolute -top-3 -right-3 bg-orange-600 text-white dark:bg-orange-500 dark:text-slate-950 px-4 py-2 font-mono font-bold text-xs shadow-lg uppercase tracking-wider">
               EST. 2018
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function About() {
           {/* Right Side: Tabbed Interface Content */}
           <div className="lg:col-span-7 space-y-6 lg:pl-6">
             
-            <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-3 py-1.5 text-[10px] font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-3 py-1.5 text-[10px] font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest">
               <Building2 className="w-3.5 h-3.5" />
               Corporate Identity & Credentials
             </div>
@@ -63,7 +63,7 @@ export default function About() {
                 onClick={() => setActiveTab("profile")}
                 className={`py-3 px-4 border-b-2 font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap ${
                   activeTab === "profile"
-                    ? "border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400"
+                    ? "border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-500"
                     : "border-transparent text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200"
                 }`}
               >
@@ -73,7 +73,7 @@ export default function About() {
                 onClick={() => setActiveTab("mission")}
                 className={`py-3 px-4 border-b-2 font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap ${
                   activeTab === "mission"
-                    ? "border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400"
+                    ? "border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-500"
                     : "border-transparent text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200"
                 }`}
               >
@@ -83,7 +83,7 @@ export default function About() {
                 onClick={() => setActiveTab("leadership")}
                 className={`py-3 px-4 border-b-2 font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap ${
                   activeTab === "leadership"
-                    ? "border-blue-600 dark:border-cyan-400 text-blue-600 dark:text-cyan-400"
+                    ? "border-orange-600 dark:border-orange-500 text-orange-600 dark:text-orange-500"
                     : "border-transparent text-slate-500 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200"
                 }`}
               >
@@ -102,19 +102,19 @@ export default function About() {
                 </p>
                 <div className="grid grid-cols-2 gap-4 pt-4 text-xs font-mono">
                   <div className="flex items-center gap-2 text-slate-700 dark:text-zinc-350 border-b border-slate-200 dark:border-slate-800 pb-2">
-                    <CheckCircle className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-orange-600 dark:text-orange-500 shrink-0" />
                     <span>ERA Licensed (Class A)</span>
                   </div>
                   <div className="flex items-center gap-2 text-slate-700 dark:text-zinc-350 border-b border-slate-200 dark:border-slate-800 pb-2">
-                    <CheckCircle className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-orange-600 dark:text-orange-500 shrink-0" />
                     <span>UIPE Certified Personnel</span>
                   </div>
                   <div className="flex items-center gap-2 text-slate-700 dark:text-zinc-350 pb-2">
-                    <CheckCircle className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-orange-600 dark:text-orange-500 shrink-0" />
                     <span>ISO 9001 Alignment</span>
                   </div>
                   <div className="flex items-center gap-2 text-slate-700 dark:text-zinc-350 pb-2">
-                    <CheckCircle className="w-4 h-4 text-blue-600 dark:text-cyan-400 shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-orange-600 dark:text-orange-500 shrink-0" />
                     <span>Sub-saharan Operations</span>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export default function About() {
               <div className="space-y-6 animate-fadeIn">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 rounded-none">
-                    <div className="text-[10px] font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
+                    <div className="text-[10px] font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
                       <Milestone className="w-4 h-4" /> OUR MISSION
                     </div>
                     <p className="text-xs text-slate-650 dark:text-zinc-400 leading-relaxed font-sans">
@@ -135,7 +135,7 @@ export default function About() {
                   </div>
                   
                   <div className="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-4 rounded-none">
-                    <div className="text-[10px] font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
+                    <div className="text-[10px] font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
                       <Cpu className="w-4 h-4" /> OUR VISION
                     </div>
                     <p className="text-xs text-slate-650 dark:text-zinc-400 leading-relaxed font-sans">
@@ -149,7 +149,7 @@ export default function About() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                     {coreValues.map((value, i) => (
                       <div key={i} className="flex gap-2.5 items-start">
-                        <CheckCircle className="w-4 h-4 text-blue-600 dark:text-cyan-400 mt-0.5 shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-orange-600 dark:text-orange-500 mt-0.5 shrink-0" />
                         <div>
                           <strong className="text-slate-900 dark:text-white block font-mono">{value.title}</strong>
                           <span className="text-slate-500 dark:text-zinc-400">{value.desc}</span>
@@ -170,7 +170,7 @@ export default function About() {
                 
                 <div className="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-5 rounded-none font-mono text-xs space-y-2 text-slate-700 dark:text-zinc-300">
                   <div className="text-slate-900 dark:text-white font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    <UserCheck className="w-4 h-4 text-blue-600 dark:text-cyan-400" />
+                    <UserCheck className="w-4 h-4 text-orange-600 dark:text-orange-500" />
                     Technical Leadership Profile
                   </div>
                   <div>&gt; Chief Executive: Eng. Lubega Felix Ken</div>
@@ -185,7 +185,7 @@ export default function About() {
             <div className="pt-4">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-slate-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400 group transition-colors duration-200"
+                className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-slate-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-500 group transition-colors duration-200"
               >
                 Initiate Corporate Consultation Review 
                 <span className="group-hover:translate-x-1 transition-transform duration-200 text-sm">→</span>

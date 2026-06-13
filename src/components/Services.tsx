@@ -15,7 +15,7 @@ export default function Services() {
         "HVAC & building electrical systems",
         "Power quality analysis & stabilization"
       ],
-      colorClass: "border-blue-600/20 group-hover:border-blue-600 text-blue-600 dark:text-blue-400"
+      colorClass: "border-orange-600/20 group-hover:border-orange-600 text-orange-600 dark:text-orange-400"
     },
     {
       icon: Wifi,
@@ -27,7 +27,7 @@ export default function Services() {
         "Structured corporate cabling systems",
         "ICT data center architectures"
       ],
-      colorClass: "border-cyan-500/20 group-hover:border-cyan-400 text-cyan-500 dark:text-cyan-400"
+      colorClass: "border-orange-500/20 group-hover:border-orange-500 text-orange-500 dark:text-orange-500"
     },
     {
       icon: Sun,
@@ -85,7 +85,7 @@ export default function Services() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-1.5 rounded-full text-xs font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-1.5 rounded-full text-xs font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest">
             <Cpu className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: '10s' }} />
             Operational Divisions
           </div>
@@ -112,14 +112,14 @@ export default function Services() {
                     <div className={`w-12 h-12 border bg-white dark:bg-slate-900 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300 ${service.colorClass}`}>
                       <Icon className="w-6 h-6" />
                     </div>
-                    <a href="#contact" className="text-slate-300 dark:text-slate-800 group-hover:text-blue-500 dark:group-hover:text-cyan-400 transition-colors" title="Request consultation">
+                    <a href="#contact" className="text-slate-300 dark:text-slate-800 group-hover:text-orange-500 dark:group-hover:text-orange-500 transition-colors" title="Request consultation">
                       <ArrowUpRight className="w-5 h-5" />
                     </a>
                   </div>
 
                   {/* Title and Tagline */}
                   <div className="space-y-1 mb-4">
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-white font-sans group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white font-sans group-hover:text-orange-600 dark:group-hover:text-orange-500 transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-[10px] font-mono text-slate-400 dark:text-zinc-500 uppercase tracking-widest">
@@ -131,7 +131,7 @@ export default function Services() {
                   <ul className="space-y-2 border-t border-slate-200 dark:border-slate-800/80 pt-4">
                     {service.items.map((item, idx) => (
                       <li key={idx} className="flex gap-2 text-xs text-slate-600 dark:text-zinc-400 items-start">
-                        <span className="text-blue-600 dark:text-cyan-400 mt-1 shrink-0">•</span>
+                        <span className="text-orange-600 dark:text-orange-500 mt-1 shrink-0">•</span>
                         <span>{item}</span>
                       </li>
                     ))}

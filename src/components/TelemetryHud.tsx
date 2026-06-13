@@ -149,10 +149,10 @@ export default function TelemetryHud() {
       ctx.stroke();
 
       // Waving sine trendline mimicking grid cycles
-      ctx.strokeStyle = "#22d3ee"; // Cyan-400
+      ctx.strokeStyle = "#f97316";
       ctx.lineWidth = 2;
       ctx.shadowBlur = 8;
-      ctx.shadowColor = "rgba(34, 211, 238, 0.5)";
+      ctx.shadowColor = "rgba(249, 115, 22, 0.5)";
       ctx.beginPath();
 
       for (let x = 0; x < width; x++) {
@@ -192,7 +192,7 @@ export default function TelemetryHud() {
       {/* Header bar */}
       <div className="flex justify-between items-center border-b border-zinc-800 pb-3">
         <div className="flex items-center gap-2">
-          <Cpu className="w-4 h-4 text-cyan-400 animate-spin" style={{ animationDuration: '6s' }} />
+          <Cpu className="w-4 h-4 text-orange-500 animate-spin" style={{ animationDuration: '6s' }} />
           <span className="text-xs text-zinc-50 font-bold tracking-wider">
             SCADA_TELEMETRY // FEED
           </span>
@@ -248,10 +248,10 @@ export default function TelemetryHud() {
       <div className="space-y-1.5">
         <div className="flex justify-between items-center text-[10px] text-zinc-400 uppercase tracking-wider">
           <span className="flex items-center gap-1">
-            <span className="w-2 h-2 rounded-none bg-cyan-400 animate-pulse" />
+            <span className="w-2 h-2 rounded-none bg-orange-500 animate-pulse" />
             Phase Cycle Oscillation
           </span>
-          <span className="text-cyan-400 text-right">λ = 50.0 Hz</span>
+          <span className="text-orange-500 text-right">λ = 50.0 Hz</span>
         </div>
         <div className="h-28 w-full bg-zinc-950 border border-zinc-850 relative overflow-hidden">
           <canvas ref={canvasRef} className="w-full h-full block" />
@@ -279,7 +279,7 @@ export default function TelemetryHud() {
                   isError
                     ? "text-amber-400"
                     : isSolar
-                    ? "text-cyan-400"
+                    ? "text-orange-500"
                     : "text-zinc-400"
                 } transition-opacity duration-300`}
               >

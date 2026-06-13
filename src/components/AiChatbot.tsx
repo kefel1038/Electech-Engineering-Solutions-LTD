@@ -93,7 +93,7 @@ export default function AiChatbot() {
             setIsOpen(true);
             setNotification(false);
           }}
-          className="relative w-14 h-14 bg-blue-600 dark:bg-cyan-400 hover:scale-105 transition-all duration-300 flex items-center justify-center shadow-lg shadow-blue-500/30 text-white dark:text-slate-950 cursor-pointer"
+          className="relative w-14 h-14 bg-orange-600 dark:bg-orange-500 hover:scale-105 transition-all duration-300 flex items-center justify-center shadow-lg shadow-orange-500/30 text-white dark:text-slate-950 cursor-pointer"
           title="Open Engineering Support Assistant"
         >
           <MessageSquare className="w-6 h-6" />
@@ -114,7 +114,7 @@ export default function AiChatbot() {
           <div className="bg-slate-900 text-white dark:bg-zinc-900 border-b border-slate-200 dark:border-zinc-800 p-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <div className="relative">
-                <Bot className="w-5 h-5 text-blue-500 dark:text-cyan-400" />
+                <Bot className="w-5 h-5 text-orange-500 dark:text-orange-500" />
                 <span className="absolute -bottom-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-500" />
               </div>
               <div>
@@ -142,7 +142,7 @@ export default function AiChatbot() {
                 <div 
                   className={`p-3 rounded-none border leading-relaxed ${
                     msg.sender === "user"
-                      ? "bg-blue-600 border-blue-600 text-white"
+                      ? "bg-orange-600 border-orange-600 text-white"
                       : "bg-white dark:bg-zinc-900 border-slate-200 dark:border-zinc-850 text-slate-800 dark:text-zinc-300"
                   }`}
                 >
@@ -156,7 +156,7 @@ export default function AiChatbot() {
 
             {isTyping && (
               <div className="flex items-center gap-1.5 text-slate-400 dark:text-zinc-550 mr-auto max-w-[80%]">
-                <Loader2 className="w-3.5 h-3.5 animate-spin text-blue-500" />
+                <Loader2 className="w-3.5 h-3.5 animate-spin text-orange-500" />
                 <span className="font-mono text-[9px] uppercase tracking-widest">AI compiling diagnostics...</span>
               </div>
             )}
@@ -172,7 +172,7 @@ export default function AiChatbot() {
                   <button
                     key={i}
                     onClick={() => handleSendMessage(reply.text)}
-                    className="border border-slate-200 dark:border-slate-800 hover:border-blue-600 dark:hover:border-cyan-400 bg-slate-50 dark:bg-zinc-900 text-slate-700 dark:text-zinc-350 px-2.5 py-1 text-left cursor-pointer transition-colors"
+                    className="border border-slate-200 dark:border-slate-800 hover:border-orange-600 dark:hover:border-orange-500 bg-slate-50 dark:bg-zinc-900 text-slate-700 dark:text-zinc-350 px-2.5 py-1 text-left cursor-pointer transition-colors"
                   >
                     {reply.text}
                   </button>
@@ -191,11 +191,11 @@ export default function AiChatbot() {
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
               placeholder="Ask about substations, fiber, audits..."
-              className="flex-1 bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-slate-850 text-slate-900 dark:text-white px-3 py-2 text-xs font-mono focus:outline-none focus:border-blue-600 dark:focus:border-cyan-400 transition-colors"
+              className="flex-1 bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-slate-850 text-slate-900 dark:text-white px-3 py-2 text-xs font-mono focus:outline-none focus:border-orange-600 dark:focus:border-orange-500 transition-colors"
             />
             <button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 dark:bg-cyan-400 dark:hover:bg-cyan-500 text-white dark:text-slate-950 px-3.5 flex items-center justify-center cursor-pointer transition-colors shadow-sm"
+              className="bg-orange-600 hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-500 text-white dark:text-slate-950 px-3.5 flex items-center justify-center cursor-pointer transition-colors shadow-sm"
             >
               <Send className="w-3.5 h-3.5" />
             </button>

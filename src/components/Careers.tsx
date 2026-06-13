@@ -131,7 +131,7 @@ export default function Careers() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-1.5 rounded-full text-xs font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-1.5 rounded-full text-xs font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest">
             <GraduationCap className="w-3.5 h-3.5" />
             Talent Acquisition
           </div>
@@ -147,7 +147,7 @@ export default function Careers() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="border border-slate-200 dark:border-slate-850 bg-slate-50/50 dark:bg-slate-900/20 p-6 tech-corner flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-2.5 font-mono text-xs text-blue-600 dark:text-cyan-400 uppercase font-bold mb-3">
+              <div className="flex items-center gap-2.5 font-mono text-xs text-orange-600 dark:text-orange-500 uppercase font-bold mb-3">
                 <GraduationCap className="w-5 h-5" /> Graduate Engineer Trainee Program (GET)
               </div>
               <p className="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed font-sans">
@@ -161,7 +161,7 @@ export default function Careers() {
 
           <div className="border border-slate-200 dark:border-slate-850 bg-slate-50/50 dark:bg-slate-900/20 p-6 tech-corner flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-2.5 font-mono text-xs text-blue-600 dark:text-cyan-400 uppercase font-bold mb-3">
+              <div className="flex items-center gap-2.5 font-mono text-xs text-orange-600 dark:text-orange-500 uppercase font-bold mb-3">
                 <Award className="w-5 h-5" /> Technical Internship Portal
               </div>
               <p className="text-xs text-slate-600 dark:text-zinc-400 leading-relaxed font-sans">
@@ -184,11 +184,11 @@ export default function Careers() {
             {JOBS_DATA.map((job) => (
               <div 
                 key={job.id} 
-                className="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/60 p-6 tech-corner flex flex-col justify-between hover:border-blue-600 dark:hover:border-cyan-400 transition-colors"
+                className="border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/60 p-6 tech-corner flex flex-col justify-between hover:border-orange-600 dark:hover:border-orange-500 transition-colors"
               >
                 <div className="space-y-3">
                   <div className="flex justify-between items-start">
-                    <span className="bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-slate-800 text-[9px] font-mono font-bold text-blue-600 dark:text-cyan-400 px-2 py-0.5 uppercase">
+                    <span className="bg-slate-100 dark:bg-zinc-900 border border-slate-200 dark:border-slate-800 text-[9px] font-mono font-bold text-orange-600 dark:text-orange-500 px-2 py-0.5 uppercase">
                       {job.department}
                     </span>
                     <span className="text-[9px] font-mono text-slate-400 dark:text-zinc-550">
@@ -209,7 +209,7 @@ export default function Careers() {
                 <div className="pt-5 mt-4 border-t border-slate-200 dark:border-slate-800/80">
                   <button
                     onClick={() => handleApply(job)}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-mono text-xs font-bold py-2.5 uppercase tracking-wider transition-colors flex items-center justify-center gap-1 group cursor-pointer"
+                    className="w-full bg-orange-600 hover:bg-orange-700 text-white font-mono text-xs font-bold py-2.5 uppercase tracking-wider transition-colors flex items-center justify-center gap-1 group cursor-pointer"
                   >
                     Apply Now
                     <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -230,7 +230,7 @@ export default function Careers() {
             {/* Close */}
             <button
               onClick={() => setSelectedJob(null)}
-              className="absolute top-4 right-4 p-1.5 border border-slate-200 dark:border-slate-800 hover:border-blue-600 dark:hover:border-cyan-400 text-slate-500 dark:text-zinc-400 cursor-pointer"
+              className="absolute top-4 right-4 p-1.5 border border-slate-200 dark:border-slate-800 hover:border-orange-600 dark:hover:border-orange-500 text-slate-500 dark:text-zinc-400 cursor-pointer"
             >
               <X className="w-4 h-4" />
             </button>
@@ -238,13 +238,13 @@ export default function Careers() {
             {submitted ? (
               /* Success screen */
               <div className="py-8 space-y-6 text-center">
-                <div className="w-14 h-14 border-2 border-emerald-500 mx-auto flex items-center justify-center bg-emerald-500/10">
-                  <Check className="w-6 h-6 text-emerald-400" />
+                <div className="w-14 h-14 border-2 border-orange-600 mx-auto flex items-center justify-center bg-orange-600/10">
+                  <Check className="w-6 h-6 text-orange-500" />
                 </div>
                 <div className="space-y-1">
                   <h4 className="text-lg font-bold text-slate-900 dark:text-white">Application Received</h4>
                   <p className="text-[10px] font-mono text-slate-400 dark:text-zinc-500 uppercase">
-                    TALENT PATH ID: <span className="text-cyan-400 font-bold">{trackingId}</span>
+                    TALENT PATH ID: <span className="text-orange-500 font-bold">{trackingId}</span>
                   </p>
                 </div>
                 <p className="text-xs text-slate-600 dark:text-zinc-400 font-sans leading-relaxed max-w-sm mx-auto">
@@ -263,7 +263,7 @@ export default function Careers() {
               /* Form */
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="border-b border-slate-200 dark:border-slate-850 pb-3">
-                  <span className="font-mono text-[9px] text-blue-600 dark:text-cyan-400 uppercase tracking-widest block font-bold mb-0.5">
+                  <span className="font-mono text-[9px] text-orange-600 dark:text-orange-500 uppercase tracking-widest block font-bold mb-0.5">
                     [ Candidate Intake ]
                   </span>
                   <h4 className="text-base font-bold text-slate-900 dark:text-white">
@@ -284,7 +284,7 @@ export default function Careers() {
                   {/* Name */}
                   <div className="space-y-1">
                     <label className="text-[9px] font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-400 block">
-                      Full Name <span className="text-blue-600 dark:text-cyan-400">*</span>
+                      Full Name <span className="text-orange-600 dark:text-orange-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -292,14 +292,14 @@ export default function Careers() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="e.g. Okot John"
-                      className="w-full bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-3 py-2.5 font-mono focus:outline-none focus:border-blue-600 dark:focus:border-cyan-400 transition-colors"
+                      className="w-full bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-3 py-2.5 font-mono focus:outline-none focus:border-orange-600 dark:focus:border-orange-500 transition-colors"
                     />
                   </div>
 
                   {/* Email */}
                   <div className="space-y-1">
                     <label className="text-[9px] font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-400 block">
-                      Email Address <span className="text-blue-600 dark:text-cyan-400">*</span>
+                      Email Address <span className="text-orange-600 dark:text-orange-500">*</span>
                     </label>
                     <input
                       type="email"
@@ -307,14 +307,14 @@ export default function Careers() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="e.g. john.okot@gmail.com"
-                      className="w-full bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-3 py-2.5 font-mono focus:outline-none focus:border-blue-600 dark:focus:border-cyan-400 transition-colors"
+                      className="w-full bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-3 py-2.5 font-mono focus:outline-none focus:border-orange-600 dark:focus:border-orange-500 transition-colors"
                     />
                   </div>
 
                   {/* Resume Upload */}
                   <div className="space-y-1">
                     <label className="text-[9px] font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-400 block">
-                      Resume CV Upload (.pdf / .docx) <span className="text-blue-600 dark:text-cyan-400">*</span>
+                      Resume CV Upload (.pdf / .docx) <span className="text-orange-600 dark:text-orange-500">*</span>
                     </label>
                     <div
                       onDragEnter={handleDrag}
@@ -324,10 +324,10 @@ export default function Careers() {
                       onClick={() => fileInputRef.current?.click()}
                       className={`border border-dashed p-4 text-center cursor-pointer select-none transition-colors relative ${
                         dragActive
-                          ? "border-blue-500 bg-blue-500/5"
+                          ? "border-orange-500 bg-orange-500/5"
                           : fileName
-                          ? "border-emerald-500/50 bg-slate-50 dark:bg-zinc-900"
-                          : "border-slate-250 dark:border-slate-800 hover:border-blue-600 dark:hover:border-cyan-400 bg-slate-50 dark:bg-zinc-900"
+                          ? "border-orange-600/50 bg-slate-50 dark:bg-zinc-900"
+                          : "border-slate-250 dark:border-slate-800 hover:border-orange-600 dark:hover:border-orange-500 bg-slate-50 dark:bg-zinc-900"
                       }`}
                     >
                       <input
@@ -341,7 +341,7 @@ export default function Careers() {
                       <div className="flex flex-col items-center justify-center space-y-1 text-slate-500 dark:text-zinc-400">
                         {fileName ? (
                           <>
-                            <FileText className="w-6 h-6 text-emerald-400" />
+                            <FileText className="w-6 h-6 text-orange-500" />
                             <span className="font-mono text-[10px] text-slate-850 dark:text-zinc-200 font-bold">{fileName}</span>
                             <span className="text-[8px] uppercase text-zinc-500">Resume attached</span>
                           </>
@@ -366,7 +366,7 @@ export default function Careers() {
                       value={notes}
                       onChange={(e) => setNotes(e.target.value)}
                       placeholder="Outline your engineering registry tags, software capabilities, or site references..."
-                      className="w-full bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-3 py-2.5 font-mono focus:outline-none focus:border-blue-600 dark:focus:border-cyan-400 transition-colors placeholder:text-slate-400 dark:placeholder:text-zinc-600"
+                      className="w-full bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-3 py-2.5 font-mono focus:outline-none focus:border-orange-600 dark:focus:border-orange-500 transition-colors placeholder:text-slate-400 dark:placeholder:text-zinc-600"
                     />
                   </div>
                 </div>
@@ -383,7 +383,7 @@ export default function Careers() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-mono text-xs font-bold py-3 uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50"
+                    className="flex-1 bg-orange-600 hover:bg-orange-700 text-white font-mono text-xs font-bold py-3 uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <>

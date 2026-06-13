@@ -26,7 +26,7 @@ export default function Industries() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-1.5 rounded-full text-xs font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-1.5 rounded-full text-xs font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest">
             <Landmark className="w-3.5 h-3.5" />
             Market Sectors
           </div>
@@ -45,10 +45,10 @@ export default function Industries() {
             return (
               <div 
                 key={index} 
-                className="group border border-slate-250 dark:border-slate-850 bg-slate-50/50 dark:bg-slate-900/20 p-5 tech-corner hover:bg-white dark:hover:bg-slate-900/40 hover:border-blue-600 dark:hover:border-cyan-400 hover:shadow-lg dark:hover:shadow-slate-950/20 transition-all duration-300 flex flex-col justify-between"
+                className="group border border-slate-250 dark:border-slate-850 bg-slate-50/50 dark:bg-slate-900/20 p-5 tech-corner hover:bg-white dark:hover:bg-slate-900/40 hover:border-orange-600 dark:hover:border-orange-500 hover:shadow-lg dark:hover:shadow-slate-950/20 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center text-blue-600 dark:text-cyan-400 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-cyan-400 dark:group-hover:text-slate-950 transition-all duration-300 shadow-sm mb-4">
+                  <div className="w-10 h-10 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center text-orange-600 dark:text-orange-500 group-hover:bg-orange-600 group-hover:text-white dark:group-hover:bg-orange-500 dark:group-hover:text-slate-950 transition-all duration-300 shadow-sm mb-4">
                     <Icon className="w-5 h-5" />
                   </div>
                   
@@ -63,7 +63,7 @@ export default function Industries() {
 
                 <div className="pt-4 font-mono text-[9px] text-slate-400 dark:text-zinc-550 border-t border-slate-200 dark:border-slate-800/80 mt-4 flex justify-between">
                   <span>SECTOR // 0{index + 1}</span>
-                  <span className="uppercase text-[8px] text-blue-500 dark:text-cyan-500 font-semibold">Ready</span>
+                  <span className="uppercase text-[8px] text-orange-500 dark:text-orange-500 font-semibold">Ready</span>
                 </div>
               </div>
             );

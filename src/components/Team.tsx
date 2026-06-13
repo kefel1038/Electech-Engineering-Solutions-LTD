@@ -45,7 +45,7 @@ export default function Team() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-1.5 rounded-full text-xs font-mono text-blue-600 dark:text-cyan-400 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-1.5 rounded-full text-xs font-mono text-orange-600 dark:text-orange-500 uppercase tracking-widest">
             <Users className="w-3.5 h-3.5" />
             Engineering Team
           </div>
@@ -62,7 +62,7 @@ export default function Team() {
           {members.map((member, idx) => (
             <div 
               key={idx} 
-              className="group border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/60 p-4 tech-corner hover:border-blue-600 dark:hover:border-cyan-400 transition-all duration-300 flex flex-col justify-between"
+              className="group border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/60 p-4 tech-corner hover:border-orange-600 dark:hover:border-orange-500 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Photo Frame */}
@@ -80,7 +80,7 @@ export default function Team() {
                   <h4 className="text-sm font-extrabold text-slate-900 dark:text-white font-mono uppercase tracking-wider">
                     {member.name}
                   </h4>
-                  <div className="text-[10px] font-mono text-blue-600 dark:text-cyan-400 font-bold uppercase tracking-widest leading-normal">
+                  <div className="text-[10px] font-mono text-orange-600 dark:text-orange-500 font-bold uppercase tracking-widest leading-normal">
                     {member.role}
                   </div>
                 </div>
@@ -88,15 +88,15 @@ export default function Team() {
                 {/* Details box */}
                 <div className="space-y-2 border-t border-slate-150 dark:border-slate-800/80 pt-3 text-[11px] leading-relaxed text-slate-600 dark:text-zinc-400">
                   <div className="flex gap-1.5 items-start">
-                    <GraduationCap className="w-3.5 h-3.5 text-blue-600 dark:text-cyan-400 mt-0.5 shrink-0" />
+                    <GraduationCap className="w-3.5 h-3.5 text-orange-600 dark:text-orange-500 mt-0.5 shrink-0" />
                     <span>{member.qual}</span>
                   </div>
                   <div className="flex gap-1.5 items-start font-sans">
-                    <Award className="w-3.5 h-3.5 text-blue-600 dark:text-cyan-400 mt-0.5 shrink-0" />
+                    <Award className="w-3.5 h-3.5 text-orange-600 dark:text-orange-500 mt-0.5 shrink-0" />
                     <span>{member.exp}</span>
                   </div>
                   <div className="flex gap-1.5 items-start font-sans">
-                    <Settings className="w-3.5 h-3.5 text-blue-600 dark:text-cyan-400 mt-0.5 shrink-0" />
+                    <Settings className="w-3.5 h-3.5 text-orange-600 dark:text-orange-500 mt-0.5 shrink-0" />
                     <span>
                       <strong className="font-mono text-[9px] uppercase block text-slate-800 dark:text-white">Specialization</strong>
                       {member.specialization}
