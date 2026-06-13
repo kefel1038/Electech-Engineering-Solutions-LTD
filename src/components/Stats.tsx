@@ -28,8 +28,10 @@ function Counter({ target, suffix = "", decimals = 0 }: { target: number; suffix
             start += stepValue;
             if (currentStep >= steps) {
               setCount(target);
-              clearInterval(timerRef.current);
-              timerRef.current = null;
+              if (timerRef.current) {
+                clearInterval(timerRef.current);
+                timerRef.current = null;
+              }
             } else {
               setCount(parseFloat(start.toFixed(decimals)));
             }
