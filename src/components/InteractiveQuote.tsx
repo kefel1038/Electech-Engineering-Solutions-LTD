@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Calculator, ArrowRight, Download, FileText, Check, Cpu, Zap, Wifi, Layers, Calendar } from "lucide-react";
+import { Calculator, ArrowRight, Download, FileText, Check, Cpu, Zap, Wifi, Layers, Calendar, Loader2 } from "lucide-react";
 
 type ServiceType = "Solar" | "Fiber" | "Substation" | "SCADA";
 
