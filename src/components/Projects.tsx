@@ -55,7 +55,7 @@ const PROJECTS_DATA: ProjectItem[] = [
     category: "Security",
     image: "/img/472309956_1102018888388022_3791014398111395147_n.jpg",
     industry: "National Security",
-    scope: "Energy Efficiency, Demand Response, and Water Loss Management i.e. :Assessment & Baseline Auditing, Target Setting & KPIs, Engineering & Solution Design.",
+    scope: "Install low-cost IoT security systems that improve communication between at-risk homes and local security agencies.",
     tech: ["IoT Hardware: (PCBs), motion sensors, sirens, and strobe lights.", "Wireless Mesh / RF Networks: local networks that work even without reliable internet or mobile data.", "Cloud & Mobile Integration: Backend servers synced with user mobile apps", "Bluetooth / GPS Integration: for geo-locating houses and remote communication"],
     result: "Reduced Crime Rates Rapid Rescue Response: Cut response times down to under 5 minutes Community Cohesion: Fosters trust and mutual aid within neighborhoods. Cost Efficiency: a low-cost, decentralized security solution. Future Goals: to secure 5 million homes, with full integration with central police command GPS systems."
   },
