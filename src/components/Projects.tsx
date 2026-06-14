@@ -5,7 +5,7 @@ import { FolderGit2, Calendar, Target, Settings, ChevronRight, Check } from "luc
 
 interface ProjectItem {
   title: string;
-  category: "Electrical" | "Telecom" | "Solar" | "SCADA" | "Research";
+  category: "Electrical" | "Telecom" | "Solar" | "SCADA" | "Research" | "Security";
   image: string;
   industry: string;
   scope: string;
@@ -51,13 +51,13 @@ const PROJECTS_DATA: ProjectItem[] = [
     result: "Mitigated municipal line pressure leaks and chemical dosing variances by 40% with continuous live dashboards."
   },
   {
-    title: "IoT Smart Electric Meter Prototyping",
-    category: "Research",
+    title: "IoT based Community Security Project",
+    category: "Security",
     image: "/img/472309956_1102018888388022_3791014398111395147_n.jpg",
-    industry: "Smart Cities & Grid R&D",
-    scope: "Designing custom telemetry PCB, embedded firmware development, and LoRaWAN testing.",
-    tech: ["PCB Prototyping", "LoRaWAN Protocol", "STM32 MCU", "AI Load Predictor"],
-    result: "Developed functional meter prototypes showing real-time utility telemetry, currently in localized pilot testing."
+    industry: "National Security",
+    scope: "Energy Efficiency, Demand Response, and Water Loss Management i.e. :Assessment & Baseline Auditing, Target Setting & KPIs, Engineering & Solution Design.",
+    tech: ["IoT Hardware: (PCBs), motion sensors, sirens, and strobe lights.", "Wireless Mesh / RF Networks: local networks that work even without reliable internet or mobile data.", "Cloud & Mobile Integration: Backend servers synced with user mobile apps", "Bluetooth / GPS Integration: for geo-locating houses and remote communication"],
+    result: "Reduced Crime Rates Rapid Rescue Response: Cut response times down to under 5 minutes Community Cohesion: Fosters trust and mutual aid within neighborhoods. Cost Efficiency: a low-cost, decentralized security solution. Future Goals: to secure 5 million homes, with full integration with central police command GPS systems."
   },
   {
     title: "Hybrid Off-Grid Power System (100kW + 200kWh Storage)",
@@ -76,7 +76,8 @@ const categories: { value: "All" | ProjectItem["category"]; label: string }[] = 
   { value: "Solar", label: "Solar & Renewables" },
   { value: "Telecom", label: "Telecommunications" },
   { value: "SCADA", label: "SCADA & SCADA Automation" },
-  { value: "Research", label: "R&D Systems" }
+  { value: "Research", label: "R&D Systems" },
+  { value: "Security", label: "Security Systems" }
 ];
 
 export default function Projects() {
