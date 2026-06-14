@@ -33,13 +33,13 @@ const PROJECTS_DATA: ProjectItem[] = [
     result: "Displaced grid operational utility consumption by 62.4% with an estimated payback timeline of 4.1 years."
   },
   {
-    title: "Metro Fiber Backbone Expansion",
-    category: "Telecom",
-    image: "/img/bridge.jpg",
-    industry: "Telecommunications Carrier",
-    scope: "Aerial and underground FTTx GPON deployment, ducting, testing, and optical audits.",
-    tech: ["GPON Fiber", "OTDR Testing", "Fusion Splicing", "Underground Ducting"],
-    result: "Extended high-speed internet pathways across 45+ kilometers with average optical power readings within -14 dBm."
+    title: "Demand Side Management Program for National Water utility Co.",
+    category: "SCADA",
+    image: "/img/147398970_176437527612834_7077236171885483964_n.jpg",
+    industry: "National Water Utilities",
+    scope: "Energy Efficiency, Demand Response, and Water Loss Management i.e. :Assessment & Baseline Auditing, Target Setting & KPIs, Engineering & Solution Design.",
+    tech: ["Solar Mini-Grids", "SCADA Systems", "Smart Metering", "Pressure Regulating Valves (PRVs)", "Water Efficiency Audits", "Public Standpipes/Kiosks", "Leak Detection Tools"],
+    result: "Supply reliability: Raised system network availability up to 85%. Grid energy savings Reduced CO2 emissions"
   },
   {
     title: "Jinja Water Treatment plant SCADA Overhaul",
