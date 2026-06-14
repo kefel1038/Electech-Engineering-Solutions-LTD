@@ -127,10 +127,10 @@ export default function Projects() {
           {filteredProjects.map((project, index) => (
             <div 
               key={index}
-              className="group border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/60 p-4 tech-corner hover:border-orange-600 dark:hover:border-orange-500 transition-all duration-300 flex flex-col justify-between"
+              className="group border border-slate-200 dark:border-slate-850 bg-white dark:bg-slate-950/60 p-4 tech-corner hover:border-orange-600 dark:hover:border-orange-500 transition-all duration-300 project-card"
             >
               {/* Image Frame */}
-              <div className="relative h-48 w-full overflow-hidden border border-slate-200 dark:border-slate-800/80 mb-4 bg-slate-100">
+              <div className="relative w-full aspect-video overflow-hidden border border-slate-200 dark:border-slate-800/80 mb-4 bg-slate-100 shrink-0">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -142,9 +142,9 @@ export default function Projects() {
               </div>
 
               {/* Text content */}
-              <div className="space-y-4">
-                <div>
-                  <h4 className="text-base font-bold text-slate-900 dark:text-white font-sans group-hover:text-orange-600 dark:group-hover:text-orange-500 transition-colors">
+              <div className="project-card-body">
+                <div className="mb-4">
+                  <h4 className="text-base font-bold text-slate-900 dark:text-white font-sans group-hover:text-orange-600 dark:group-hover:text-orange-500 transition-colors min-h-[2.8em]">
                     {project.title}
                   </h4>
                   <div className="text-[10px] font-mono text-slate-400 dark:text-zinc-500 uppercase tracking-widest mt-1">
@@ -153,8 +153,8 @@ export default function Projects() {
                 </div>
 
                 {/* Technical Specs box */}
-                <div className="bg-slate-50 dark:bg-slate-900/50 p-4 border border-slate-200 dark:border-slate-900 text-xs leading-relaxed space-y-2.5">
-                  <div className="flex gap-1.5 items-start">
+                <div className="bg-slate-50 dark:bg-slate-900/50 p-4 border border-slate-200 dark:border-slate-900 text-xs leading-relaxed flex flex-col gap-2.5">
+                  <div className="scope-container flex gap-1.5 items-start">
                     <Target className="w-4 h-4 text-orange-600 dark:text-orange-500 mt-0.5 shrink-0" />
                     <span className="text-slate-600 dark:text-zinc-400 font-sans">
                       <strong className="text-slate-800 dark:text-white block font-mono text-[10px] uppercase">Scope of Work</strong>
@@ -162,7 +162,7 @@ export default function Projects() {
                     </span>
                   </div>
 
-                  <div className="flex gap-1.5 items-start">
+                  <div className="tech-tags-container flex gap-1.5 items-start pt-2.5 border-t border-slate-200 dark:border-slate-800">
                     <Settings className="w-4 h-4 text-orange-600 dark:text-orange-500 mt-0.5 shrink-0" />
                     <span className="text-slate-600 dark:text-zinc-400 font-sans">
                       <strong className="text-slate-800 dark:text-white block font-mono text-[10px] uppercase">Technologies Used</strong>
@@ -176,7 +176,7 @@ export default function Projects() {
                     </span>
                   </div>
 
-                  <div className="flex gap-1.5 items-start">
+                  <div className="flex gap-1.5 items-start pt-2.5 border-t border-slate-200 dark:border-slate-800">
                     <Calendar className="w-4 h-4 text-orange-600 dark:text-orange-500 mt-0.5 shrink-0" />
                     <span className="text-slate-600 dark:text-zinc-400 font-sans">
                       <strong className="text-slate-800 dark:text-white block font-mono text-[10px] uppercase">Results Achieved</strong>
@@ -184,17 +184,17 @@ export default function Projects() {
                     </span>
                   </div>
                 </div>
-              </div>
 
-              {/* B2B call to Action */}
-              <div className="pt-4 mt-2">
-                <a
-                  href="#contact"
-                  className="w-full border border-slate-200 dark:border-slate-850 hover:bg-slate-100 dark:hover:bg-slate-900/60 text-slate-700 dark:text-zinc-300 font-mono text-[10px] py-2.5 tracking-wider uppercase transition-colors flex items-center justify-center gap-1 group"
-                >
-                  Request Similar Implementation Spec
-                  <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                </a>
+                {/* B2B call to Action */}
+                <div className="action-button-wrapper pt-4">
+                  <a
+                    href="#contact"
+                    className="w-full border border-slate-200 dark:border-slate-850 hover:bg-slate-100 dark:hover:bg-slate-900/60 text-slate-700 dark:text-zinc-300 font-mono text-[10px] py-2.5 tracking-wider uppercase transition-colors flex items-center justify-center gap-1 group"
+                  >
+                    Request Similar Implementation Spec
+                    <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </div>
               </div>
             </div>
           ))}
